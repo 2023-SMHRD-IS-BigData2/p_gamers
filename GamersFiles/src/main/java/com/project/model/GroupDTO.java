@@ -13,8 +13,10 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class GroupDTO {
-
+	
+	@NonNull
 	private int g_num;
+	@NonNull
 	private int c_num;
 	@NonNull
 	private String m_id;

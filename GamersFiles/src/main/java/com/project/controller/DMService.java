@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.project.frontcontroller.Service;
 import com.project.model.MemberDAO;
 
-public class DelMemberService implements Service {
+public class DMService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {

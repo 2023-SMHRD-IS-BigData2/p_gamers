@@ -9,8 +9,9 @@ import com.project.model.MemberDTO;
 
 import lombok.NonNull;
 
-public class JoinService implements Service {
-	public String execute(HttpServletRequest request, HttpServletResponse response, @NonNull String m_id, @NonNull String m_pw, String m_nick, String m_position) {
+public class IMService implements Service {
+
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("[회원가입 서비스]");
 
 		// 요청 데이터 받기

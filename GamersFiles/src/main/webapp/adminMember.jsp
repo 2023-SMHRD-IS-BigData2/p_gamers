@@ -49,7 +49,7 @@ table#allMember th {
 </head>
 <body>
 	<%
-	List<MemberDTO> members = new MemberDAO().allMember();
+	List<MemberDTO> members = new MemberDAO().memberList();
 	int cnt = 0;
 	%>
 	<div class="member_container">
@@ -73,14 +73,14 @@ table#allMember th {
 					%>
 					<tr>
 						<td width="150" style="text-align: center;"><%=cnt%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_email()%></td>
+						<td width="150" style="text-align: center;"><%=members.get(i).getM_id()%></td>
 						<td width="150" style="text-align: center;"><%=members.get(i).getM_pw()%></td>
 						<td width="150" style="text-align: center;"><%=members.get(i).getM_nick()%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_class()%></td>
+						<td width="150" style="text-align: center;"><%=members.get(i).getM_position()%></td>
 						<td width="150" style="text-align: center;">파티번호</td>
 						<td width="150" style="text-align: center;">파티명</td>
 						<td width="150" style="text-align: center;"><a
-							href="DelMemberService.do?m_email=<%=members.get(i).getM_email()%>"><button>삭제</button></a></td>
+							href="DelMemberService.do?m_id=<%=members.get(i).getM_id()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
 					}

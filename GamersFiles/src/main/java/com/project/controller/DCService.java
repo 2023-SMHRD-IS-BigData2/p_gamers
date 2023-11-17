@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.project.frontcontroller.Service;
 import com.project.model.ContentDAO;
 
-public class DelConService implements Service {
+public class DCService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {

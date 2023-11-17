@@ -7,7 +7,7 @@ import com.project.frontcontroller.Service;
 import com.project.model.ContentDAO;
 import com.project.model.ContentDTO;
 
-public class insertConService implements Service {
+public class ICService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {

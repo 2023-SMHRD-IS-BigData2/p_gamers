@@ -8,7 +8,7 @@ import com.project.frontcontroller.Service;
 import com.project.model.MemberDAO;
 import com.project.model.MemberDTO;
 
-public class UpdateService implements Service {
+public class UMService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
