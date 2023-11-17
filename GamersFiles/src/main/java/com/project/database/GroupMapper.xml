@@ -4,23 +4,23 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.database.GroupMapper">
 	<insert id="insertGroup" parameterType="GroupDTO">
-		insert into p_group	values(group_num.nextval , #{g_name}, to_date(#{g_date},'yyyy-mm-dd hh24:mi:ss'), #{c_num})
+		insert into p_group	values(group_num.nextval , #{m_id}, to_date(#{g_date},'yyyy-mm-dd hh24:mi:ss'), #{c_num})
 	</insert>
-	<select id="loginGroup" parameterType="GroupDTO"
+	<select id="selectGroup" parameterType="GroupDTO"
 		resultType="GroupDTO">
 		select * from p_group where g_num=#{g_num}
 	</select>
-	<select id="groupCheck" parameterType="String"
+	<select id="GroupCheck" parameterType="String"
 		resultType="boolean">
 		select case when count(*)>0 then 1
 		else 0
 		end result
 		from
-		p_group where g_name=#{g_name}
+		p_group where m_id=#{m_id}
 	</select>
 	<update id="updateGroup" parameterType="GroupDTO">
 		update p_group set
-		g_name=#{g_name}, c_num=#{c_num}, where g_num=#{g_num}
+		m_id=#{m_id}, c_num=#{c_num}, where g_num=#{g_num}
 	</update>
 	<select id="allGroup" resultType="GroupDTO">
 		select * from p_group
@@ -28,6 +28,6 @@
 	<delete id="deleteGroup" parameterType="String">
 		delete from p_group
 		where
-		g_name=#{g_name}
+		m_id=#{m_id}
 	</delete>
 </mapper>

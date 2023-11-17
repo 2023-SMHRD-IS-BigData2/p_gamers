@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -7,35 +6,35 @@
 <!-- namespace : Mapper의 id를 그룹화하는 속성 sql 태그의 id 값이 중복될 수 있기 때문에 원하는 id 값으로 
 	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
 <mapper namespace="com.project.database.MemberMapper">
-	<insert id="joinMember" parameterType="MemberDTO">
+	<insert id="insertMember" parameterType="MemberDTO">
 		insert into p_member
-		values(#{m_email}, #{m_pw}, #{m_nick}, #{m_class}, null, null)
+		values(#{m_id}, #{m_pw}, #{m_nick}, #{m_position}, sysdate)
 	</insert>
-	<select id="loginMember" parameterType="MemberDTO"
+	<select id="selectMember" parameterType="MemberDTO"
 		resultType="MemberDTO">
-		select * from p_member where m_email=#{m_email} and
+		select * from p_member where m_id=#{m_id} and
 		m_pw=#{m_pw}
 	</select>
-	<select id="emailCheck" parameterType="String"
+	<select id="EmailCheck" parameterType="String"
 		resultType="boolean">
 		select case when count(*)>0 then 1
 		else 0
 		end result
 		from
-		p_member where m_email=#{m_email}
+		p_member where m_id=#{m_id}
 	</select>
 	<update id="updateMember" parameterType="MemberDTO">
 		update p_member set
-		m_pw=#{m_pw}, m_nick=#{m_nick}, m_class=#{m_class} where
-		m_email=#{m_email}
+		m_pw=#{m_pw}, m_nick=#{m_nick}, m_position=#{m_position} where
+		m_id=#{m_id}
 	</update>
 	<select id="allMember" resultType="MemberDTO">
 		select * from p_member where
-		not(m_email='admin')
+		not(m_id='admin')
 	</select>
-	<delete id="delMember" parameterType="String">
+	<delete id="deleteMember" parameterType="String">
 		delete from p_member
 		where
-		m_email=#{m_email}
+		m_id=#{m_id}
 	</delete>
 </mapper>
