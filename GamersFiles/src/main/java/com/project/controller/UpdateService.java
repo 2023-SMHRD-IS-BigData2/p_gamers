@@ -13,19 +13,19 @@ public class UpdateService implements Service {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-		String u_email = request.getParameter("update_email");
-		String u_pw = request.getParameter("update_pw");
-		String u_nick = request.getParameter("update_nick");
-		String u_class = request.getParameter("update_class");
+		String m_id = request.getParameter("m_id");
+		String m_pw = request.getParameter("m_pw");
+		String m_nick = request.getParameter("m_nick");
+		String m_position = request.getParameter("m_position");
 
-		MemberDTO udto = new MemberDTO(u_email, u_pw, u_nick, u_class);
+		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, m_position);
 
-		int cnt = new MemberDAO().updateMember(udto);
+		int cnt = new MemberDAO().updateMember(mdto);
 
 		if (cnt > 0) {
 			System.out.println("정보 수정 완료");
 			HttpSession session = request.getSession();
-			session.setAttribute("login", udto);
+			session.setAttribute("login", mdto);
 		} else {
 			System.out.println("정보 수정 실패");
 		}

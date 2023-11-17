@@ -5,15 +5,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.project.frontcontroller.Service;
 import com.project.model.ContentDAO;
-import com.project.model.MemberDAO;
 
 public class DelConService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("[DelConService.do]");
-		String c_name = request.getParameter("c_email");
-		int cnt = new ContentDAO().delContent(c_name);
+		int c_num = Integer.parseInt(request.getParameter("c_num"));
+		int cnt = new ContentDAO().deleteContent(c_num);
 		if (cnt > 0) {
 			System.out.println("컨텐츠 삭제 성공");
 			return "adminContent.jsp";
