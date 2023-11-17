@@ -18,16 +18,16 @@ public class insertGroupService implements Service {
 		System.out.println("[파티 생성 서비스]");
 
 		// 요청 데이터 받기
-		String g_name = request.getParameter("g_name");
+		int g_member = Integer.parseInt(request.getParameter("g_member"));
 		String g_date = request.getParameter("g_date");
 		int findIndex = g_date.indexOf('T');
 		g_date = g_date.substring(0, findIndex) + ' ' + g_date.substring(findIndex + 1) + ":00" ;
 		System.out.println(g_date);
-		System.out.println(g_name);
+		System.out.println(g_member);
 		
 		int c_num = Integer.parseInt(request.getParameter("c_num"));
 
-		GroupDTO gdto = new GroupDTO(g_name, g_date, c_num);
+		GroupDTO gdto = new GroupDTO(g_member, g_date, c_num);
 
 		int cnt = new GroupDAO().insertGroup(gdto);
 

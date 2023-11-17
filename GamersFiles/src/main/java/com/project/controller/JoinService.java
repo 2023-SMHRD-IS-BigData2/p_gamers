@@ -7,19 +7,21 @@ import com.project.frontcontroller.Service;
 import com.project.model.MemberDAO;
 import com.project.model.MemberDTO;
 
+import lombok.NonNull;
+
 public class JoinService implements Service {
-	public String execute(HttpServletRequest request, HttpServletResponse response) {
+	public String execute(HttpServletRequest request, HttpServletResponse response, @NonNull String m_id, @NonNull String m_pw, String m_nick, String m_position) {
 		System.out.println("[회원가입 서비스]");
 
 		// 요청 데이터 받기
-		String join_email = request.getParameter("join_email");
-		String join_pw = request.getParameter("join_pw");
-		String join_nick = request.getParameter("join_nick");
-		String join_class = request.getParameter("join_class");
+		String m_id = request.getParameter("m_id");
+		String m_pw = request.getParameter("m_pw");
+		String m_nick = request.getParameter("m_nick");
+		String m_position = request.getParameter("m_position");
 
-		MemberDTO mdto = new MemberDTO(join_email, join_pw, join_nick, join_class);
+		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, m_position);
 
-		int cnt = new MemberDAO().joinMember(mdto);
+		int cnt = new MemberDAO().insertMember(mdto);
 
 		System.out.println("cnt : " + cnt);
 
