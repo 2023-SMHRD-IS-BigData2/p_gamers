@@ -76,7 +76,7 @@ public class ContentDAO {
 	public List<ContentDTO> contentList() {
 		List<ContentDTO> contents = null;
 		try {
-			contents = sqlSession.selectList("com.project.database.MemberMapper.contentList");
+			contents = sqlSession.selectList("com.project.database.ContentMapper.contentList");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -97,4 +97,6 @@ public class ContentDAO {
 		}
 		return cnt;
 	}
+	
+	// 데이터 선택
 }

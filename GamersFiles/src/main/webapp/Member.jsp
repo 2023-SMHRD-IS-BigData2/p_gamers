@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 및 회원가입 페이지</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style type="text/css">
 * {
 	padding: 0;
@@ -141,8 +142,8 @@ body {
 			<div class="login-wrapper">
 				<h2>로그인</h2>
 				<form method="post" action="LoginService.do" id="login-form">
-					<input type="text" name="login_email" placeholder="이메일"> <input
-						type="password" name="login_pw" placeholder="비밀번호"> <input
+					<input type="text" name="m_id" placeholder="아이디"> <input
+						type="password" name="m_pw" placeholder="비밀번호"> <input
 						type="submit" value="로그인">
 				</form>
 			</div>
@@ -151,20 +152,63 @@ body {
 			<div class="join-wrapper">
 				<h2>회원가입</h2>
 				<form method="post" action="JoinService.do" id="join-form">
-					<input type="text" name="join_email" placeholder="이메일">
-					<input type="password" name="join_pw" placeholder="비밀번호">
-					<input type="text" name="join_nick" placeholder="닉네임">
-					<input type="text" list="positions" name="join_position" placeholder="역할">
-						<datalist id="positions">
-							<option value="탱커"></option>
-							<option value="딜러"></option>
-							<option value="힐러"></option>
-						</datalist>
-					<input type="text" list="classes" name="join_class" placeholder="직업">
+					<input type="text" name="m_id" placeholder="아이디"> <input
+						type="password" name="m_pw" placeholder="비밀번호"> <input
+						type="text" name="m_nick" placeholder="닉네임"> <input
+						type="text" list="positions" name="m_position" placeholder="역할">
+					<datalist id="positions">
+						<option>딜러</option>
+						<option>탱커</option>
+						<option>힐러</option>
+						<!-- 추가된 input 태그 -->
+						<div id="dynamicInputContainer">
+							<!-- JavaScript에서 동적으로 생성될 input 태그가 들어갈 자리 -->
+							<input type="text" name="m_class">
+
+						</div>
+					</datalist>
 					<input type="submit" value="회원가입">
 				</form>
 			</div>
 		</div>
 	</div>
+	<script>
+		// 역할에 따라 동적으로 input 태그 생성
+		$('#m_position').on('input', function() {
+			var position = $(this).val();
+			updateDynamicInput(position);
+		});
+
+		// 초기에도 동적 input 태그 생성
+		updateDynamicInput('class');
+
+		// 역할에 따라 동적으로 input 태그 생성하는 함수
+		function updateDynamicInput(position) {
+			// 기존 동적 input 태그 초기화
+			$('#dynamicInputContainer').empty();
+
+			// 역할에 따라 동적으로 input 태그 생성
+			switch (position) {
+			case '딜러':
+				addInputToContainer('dynamicInputContainer', 'A');
+				addInputToContainer('dynamicInputContainer', 'B');
+				addInputToContainer('dynamicInputContainer', 'C');
+				break;
+			case '탱커':
+				addInputToContainer('dynamicInputContainer', 'D');
+				addInputToContainer('dynamicInputContainer', 'E');
+				addInputToContainer('dynamicInputContainer', 'F');
+				break;
+			case '힐러':
+				addInputToContainer('dynamicInputContainer', 'G');
+				addInputToContainer('dynamicInputContainer', 'H');
+				addInputToContainer('dynamicInputContainer', 'I');
+				break;
+			// 다른 역할에 대한 처리 추가 가능
+			default:
+				break;
+			}
+		}
+	</script>
 </body>
 </html>

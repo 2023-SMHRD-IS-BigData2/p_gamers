@@ -15,10 +15,10 @@
 		delete from p_content
 		where c_name=#{c_name}
 	</delete>
-	<select id="allContent" resultType="ContentDTO">
+	<select id="contentList" resultType="ContentDTO">
 		select * from p_content
 	</select>
-	<select id="viewContent" resultType="String">
+	<select id="choiceContent" resultType="String">
 		select c_name from p_content
 		where c_num = #{c_num}
 	</select>

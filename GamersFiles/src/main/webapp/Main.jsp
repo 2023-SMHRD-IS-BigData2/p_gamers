@@ -19,7 +19,7 @@
 </head>
 <body class="is-preload">
 	<%
-	MemberDTO logindto = (MemberDTO) session.getAttribute("login");
+	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -41,7 +41,7 @@
 		</header>
 
 		<%
-		if (logindto == null) {
+		if (login == null) {
 		%>
 		<!-- Menu -->
 		<nav id="menu">
@@ -53,7 +53,7 @@
 			</ul>
 		</nav>
 		<%
-		} else if (logindto.getM_email().equals("admin")) {
+		} else if (login.getM_id().equals("admin")) {
 		%>
 		<nav id="menu">
 			<h2>Menu</h2>
@@ -71,8 +71,8 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="Main.jsp"> 홈 </a></li>
-				<li><a href="Update.jsp?m_email=<%=logindto.getM_email()%>">
-						내 정보 수정 </a></li>
+				<li><a href="Update.jsp?m_id=<%=login.getM_id()%>"> 내 정보 수정
+				</a></li>
 				<li><a href="userParty.jsp"> 내 파티 </a></li>
 			</ul>
 		</nav>
@@ -83,12 +83,14 @@
 		<div id="main">
 			<div class="inner">
 				<%
-				if (logindto == null) {
+				if (login == null) {
 				%>
 				<header>
-					<h1>
-						회원가입 후 이용할 수 있습니다. <a href="Member.jsp"> 회원가입 </a>
-					</h1>
+					<h3>
+						회원가입 후 이용할 수 있습니다. <a href="Member.jsp">
+							<button>회원가입</button>
+						</a>
+					</h3>
 				</header>
 				<%
 				} else {
@@ -101,8 +103,10 @@
 				<%
 				}
 				%>
+
 				<%
-				List<ContentDTO> contents = new ContentDAO().allContent();
+				List<ContentDTO> contents = null;
+				contents = new ContentDAO().contentList();
 				if (contents != null) {
 				%>
 				<section class="tiles">
@@ -110,7 +114,8 @@
 					for (int i = 0; i < contents.size(); i++) {
 					%>
 					<article class="style<%=i%>">
-						<span class="image"> <img src="images/con01.jpg" alt="" />
+						<span class="image"> <img src="pocketmons/con<%=contents.get(i).getC_num()%>.jpg"
+							alt="" />
 						</span> <a href="contentDetail.jsp?c_num=<%=contents.get(i).getC_num()%>">
 							<h2><%=contents.get(i).getC_num()%>번 레이드
 							</h2>
@@ -123,9 +128,20 @@
 					}
 					%>
 					<%
+					} else {
+					%>
+					<article class="style1">
+						<span class="image"> <img src="pocketmons/con1.jpg" alt="" />
+						</span> <a href="contentDetail.jsp?c_num=">
+							<h2>번 레이드</h2>
+							<div class="content">
+								<p>컨텐츠 명</p>
+							</div>
+						</a>
+					</article>
+					<%
 					}
 					%>
-
 				</section>
 			</div>
 		</div>
@@ -174,7 +190,7 @@
 				</section>
 				<ul class="copyright">
 					<li>&copy; Untitled. All rights reserved</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>Design: <a href="#">게이머즈></li>
 				</ul>
 			</div>
 		</footer>

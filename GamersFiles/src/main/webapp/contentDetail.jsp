@@ -112,7 +112,7 @@
 			</ul>
 		</nav>
 		<%
-		} else if (logindto.getM_email().equals("admin")) {
+		} else if (logindto.getM_id().equals("admin")) {
 		%>
 		<nav id="menu">
 			<h2>Menu</h2>
@@ -130,7 +130,7 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html"> 홈 </a></li>
-				<li><a href="Update.jsp?m_email=<%=logindto.getM_email()%>">
+				<li><a href="Update.jsp?m_email=<%=logindto.getM_id()%>">
 						내 정보 수정 </a></li>
 				<li><a href="Member.jsp"> 내 파티 </a></li>
 			</ul>
@@ -143,7 +143,7 @@
 		<%
 		request.setCharacterEncoding("utf-8");
 		String c_num = request.getParameter("c_num");
-		String c_name = new ContentDAO().viewContent(c_num);
+		String c_name = new ContentDAO().selectContent(c_num);
 		%>
 		<div id="main">
 			<div class="inner">

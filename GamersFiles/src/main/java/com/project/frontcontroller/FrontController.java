@@ -46,7 +46,9 @@ public class FrontController extends HttpServlet {
 			service = new insertConService();
 		} else if (result.equals("/insertGroupService.do")) {
 			service = new insertGroupService();
-		}	
+		} else if (result.equals("/contentList.do")) {
+			service = new contentLi
+		}
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);
