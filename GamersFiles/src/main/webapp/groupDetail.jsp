@@ -7,7 +7,7 @@
 <title>게이머즈</title>
 </head>
 <body class="detailGroup">
-	<!-- Wrapper -->
+	<!-- Wrapper --> 
 	<div id="groupWrapper" style="width: 600; height: 600;">
 		<!-- Main -->
 		<div id="groupMain" style="width: 400; height: 400">
