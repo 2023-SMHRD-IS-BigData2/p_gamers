@@ -19,7 +19,7 @@ public class JoinService implements Service {
 
 		MemberDTO mdto = new MemberDTO(join_email, join_pw, join_nick, join_class);
 
-		int cnt = new MemberDAO().joinMember(mdto);
+		int cnt = new MemberDAO().insertMember(mdto);
 
 		System.out.println("cnt : " + cnt);
 
