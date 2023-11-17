@@ -16,7 +16,7 @@
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
-</head>
+</head> 
 <body class="is-preload">
 	<%
 	MemberDTO logindto = (MemberDTO) session.getAttribute("login");
