@@ -7,8 +7,11 @@
 	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
 <mapper namespace="com.project.database.CalendarMapper">
 	<insert id="insertCalendar" parameterType="CalendarDTO">
-		insert into calendar
+		insert into p_calendar
 		values(cal_seq.nextval, #{g_name}, #{c_start},#{c_end},#{c_content}, sysdate)
 	</insert>
+	<select id="calendarList" parameterType="String" resultType="CalendarDTO">
+		select * from p_calendar where g_name=#{g_name} order by c_start
+	</select>
 	
 </mapper>

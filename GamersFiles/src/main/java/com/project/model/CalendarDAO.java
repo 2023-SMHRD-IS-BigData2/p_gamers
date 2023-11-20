@@ -75,10 +75,10 @@ public class CalendarDAO {
 	}
 
 	// 데이터 리스트
-	public List<CalendarDTO> calendarList() {
+	public List<CalendarDTO> calendarList(String g_name) {
 		List<CalendarDTO> calendars = null;
 		try {
-			calendars = sqlSession.selectList("com.project.database.CalendarMapper.calendarList");
+			calendars = sqlSession.selectList("com.project.database.CalendarMapper.calendarList",g_name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
