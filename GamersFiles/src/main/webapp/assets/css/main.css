@@ -91,9 +91,6 @@ html {
 	box-sizing: border-box;
 }
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
 
 body {
 	background: #ffffff;
@@ -2182,7 +2179,6 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	postiion: relative;
-	margin: -2.5em 0 0 -2.5em;
 }
 
 .tiles article {
@@ -2192,7 +2188,6 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	position: relative;
 	width: calc(33.33333% - 2.5em);
-	margin: 2.5em 0 0 2.5em;
 }
 
 .tiles article>.image {
@@ -2357,10 +2352,6 @@ body:not(.is-touch) .tiles article:hover>.image:after {
 body:not(.is-touch) .tiles article:hover .content {
 	max-height: 15em;
 	opacity: 1;
-}
-
-*+.tiles {
-	margin-top: 2em;
 }
 
 body.is-preload .tiles article {

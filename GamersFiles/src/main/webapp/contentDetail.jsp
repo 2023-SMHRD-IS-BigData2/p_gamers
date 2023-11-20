@@ -67,6 +67,22 @@
 	text-shadow: 1px 1px 2px gray;
 	color: white;
 }
+
+.tiles {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+
+.tiles>article {
+	width: 200px;
+	height: 200px;
+}
+
+.tiles>article>a {
+	width: 200px;
+	height: 200px;
+}
 </style>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -130,8 +146,8 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html"> 홈 </a></li>
-				<li><a href="Update.jsp?m_email=<%=logindto.getM_id()%>">
-						내 정보 수정 </a></li>
+				<li><a href="Update.jsp?m_email=<%=logindto.getM_id()%>"> 내
+						정보 수정 </a></li>
 				<li><a href="Member.jsp"> 내 파티 </a></li>
 			</ul>
 		</nav>
@@ -139,38 +155,30 @@
 		}
 		%>
 		<!-- Main -->
-
-		<%
-		request.setCharacterEncoding("utf-8");
-		int c_num = Integer.parseInt(request.getParameter("c_num"));
-		String c_name = new ContentDAO().selectContent(c_num);
-		%>
 		<div id="main">
 			<div class="inner">
 				<header>
-					<h1><%=c_num
-					%>번
-						<%=c_name%>
-						레이드 페이지입니다.
-						</h1>
-					<p>파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_num=<%=c_num%>&c_name=<%=c_name%>"> <button> 파티생성 </button></a></p>
+					<h1>레이드 페이지입니다.</h1>
+					<p>
+						파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_num=">
+							<button>파티생성</button>
+						</a>
+					</p>
 				</header>
 				<section class="tiles">
-				
-				
-					<article class="style1">
-						<span class="image"> <img src="images/con01.jpg" alt="" />
-						</span><a id="btn-modal">
+					<article class="style1" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/con01.jpg" alt=""
+							width="200px" height="200px" />
+						</span> <a id="btn-modal">
 							<h2>그룹명</h2>
 							<div class="content">
 								<p>그룹장명</p>
 							</div>
 						</a>
 					</article>
-					
-					
-					<article class="style2">
-						<span class="image"> <img src="images/con02.jpg" alt="" />
+					<article class="style2" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/con02.jpg" alt=""
+							width="200px" height="200px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -178,8 +186,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style3">
-						<span class="image"> <img src="images/con03.jpg" alt="" />
+					<article class="style3" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/con03.jpg" alt=""
+							width="200px" height="200px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -187,8 +196,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style4">
-						<span class="image"> <img src="images/con04.jpg" alt="" />
+					<article class="style4" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/con04.jpg" alt=""
+							width="200px" height="200px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -196,8 +206,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style5">
-						<span class="image"> <img src="images/con05.jpg" alt="" />
+					<article class="style5" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/con05.jpg" alt=""
+							width="200px" height="200px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -205,8 +216,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style6">
-						<span class="image"> <img src="images/pic06.jpg" alt="" />
+					<article class="style6" style="width: 200px; height: 200px;">
+						<span class="image"> <img src="images/pic06.jpg" alt=""
+							width="200px" height="200px" />
 						</span> <a href="generic.html">
 							<h2>Veroeros</h2>
 							<div class="content">
@@ -215,7 +227,7 @@
 							</div>
 						</a>
 					</article>
-					<article class="style2">
+					<article class="style2" style="width: 200px; height: 200px;">
 						<span class="image"> <img src="images/pic07.jpg" alt="" />
 						</span> <a href="generic.html">
 							<h2>Ipsum</h2>
@@ -225,7 +237,7 @@
 							</div>
 						</a>
 					</article>
-					<article class="style3">
+					<article class="style3" style="width: 250px; height: 250px;">
 						<span class="image"> <img src="images/pic08.jpg" alt="" />
 						</span> <a href="generic.html">
 							<h2>Dolor</h2>
@@ -235,7 +247,7 @@
 							</div>
 						</a>
 					</article>
-					<article class="style1">
+					<article class="style1" style="width: 250px; height: 250px;">
 						<span class="image"> <img src="images/pic09.jpg" alt="" />
 						</span> <a href="generic.html">
 							<h2>Nullam</h2>

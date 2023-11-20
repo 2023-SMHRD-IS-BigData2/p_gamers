@@ -250,7 +250,6 @@
 				</div>
 			</section>
 		</div>
-
 		<!-- Contact -->
 		<section id="contact">
 			<div class="inner">
