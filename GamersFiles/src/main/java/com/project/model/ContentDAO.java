@@ -19,7 +19,7 @@ public class ContentDAO {
 		int cnt = 0;
 
 		try {
-			cnt = sqlSession.insert("com.project.database.MemberMapper.insertContent", cdto);
+			cnt = sqlSession.insert("com.project.database.ContentMapper.insertContent", cdto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -30,17 +30,15 @@ public class ContentDAO {
 	}
 
 	// 데이터 조회
-	public ContentDTO selectContent(ContentDTO cdto) {
-		ContentDTO select = null;
+	public String selectContent(int c_num) {
+		String select = null;
 		try {
-			select = sqlSession.selectOne("com.project.database.MemberMapper.selectContent", cdto);
-
+			select = sqlSession.selectOne("com.project.database.ContentMapper.selectContent", c_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
-
 		return select;
 
 	}
@@ -49,7 +47,7 @@ public class ContentDAO {
 	public boolean contentCheck(String inputC) {
 		boolean isCheck = false;
 		try {
-			isCheck = sqlSession.selectOne("com.project.database.MemberMapper.contentCheck", inputC);
+			isCheck = sqlSession.selectOne("com.project.database.ContentMapper.contentCheck", inputC);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -63,7 +61,7 @@ public class ContentDAO {
 	public int updateContent(ContentDTO cdto) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.update("com.project.database.MemberMapper.updateContent", cdto);
+			cnt = sqlSession.update("com.project.database.ContentMapper.updateContent", cdto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -89,7 +87,7 @@ public class ContentDAO {
 	public int deleteContent(int c_num) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.delete("com.project.database.MemberMapper.deleteContent", c_num);
+			cnt = sqlSession.delete("com.project.database.ContentMapper.deleteContent", c_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -8,12 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.project.controller.DelMemberService;
-import com.project.controller.JoinService;
-import com.project.controller.LoginService;
-import com.project.controller.insertConService;
-import com.project.controller.insertGroupService;
-import com.project.controller.UpdateService;
+import org.apache.http.impl.io.ContentLengthInputStream;
+
+import com.project.controller.DMService;
+import com.project.controller.IMService;
+import com.project.controller.SMService;
+import com.project.controller.ICService;
+import com.project.controller.IGService;
+import com.project.controller.UMService;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -34,21 +36,11 @@ public class FrontController extends HttpServlet {
 		String url = null;
 		Service service = null;
 
-		if (result.equals("/LoginService.do")) { // 로그인
-			service = new LoginService();
-		} else if (result.equals("/JoinService.do")) { // 회원가입
-			service = new JoinService();
-		} else if (result.equals("/UpdateService.do")) {
-			service = new UpdateService();
-		} else if (result.equals("/DelMemberService.do")) {
-			service = new DelMemberService();
-		} else if (result.equals("/insertConService.do")) {
-			service = new insertConService();
-		} else if (result.equals("/insertGroupService.do")) {
-			service = new insertGroupService();
-		} else if (result.equals("/contentList.do")) {
-			service = new contentLi
-		}
+		if (result.equals("/SMService.do")) { // 로그인
+			service = new SMService();
+		} else if (result.equals("/IMService.do")) { // 회원가입
+			service = new IMService();
+		} 
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);

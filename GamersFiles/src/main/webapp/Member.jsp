@@ -141,7 +141,7 @@ body {
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>로그인</h2>
-				<form method="post" action="LoginService.do" id="login-form">
+				<form method="post" action="SMService.do" id="login-form">
 					<input type="text" name="m_id" placeholder="아이디"> <input
 						type="password" name="m_pw" placeholder="비밀번호"> <input
 						type="submit" value="로그인">
@@ -151,7 +151,7 @@ body {
 		<div class="member_bottom">
 			<div class="join-wrapper">
 				<h2>회원가입</h2>
-				<form method="post" action="JoinService.do" id="join-form">
+				<form method="post" action="IMService.do" id="join-form">
 					<input type="text" name="m_id" placeholder="아이디"> <input
 						type="password" name="m_pw" placeholder="비밀번호"> <input
 						type="text" name="m_nick" placeholder="닉네임"> <input

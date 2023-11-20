@@ -142,7 +142,7 @@
 
 		<%
 		request.setCharacterEncoding("utf-8");
-		String c_num = request.getParameter("c_num");
+		int c_num = Integer.parseInt(request.getParameter("c_num"));
 		String c_name = new ContentDAO().selectContent(c_num);
 		%>
 		<div id="main">

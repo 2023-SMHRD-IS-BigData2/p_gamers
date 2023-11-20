@@ -18,7 +18,7 @@
 	<select id="contentList" resultType="ContentDTO">
 		select * from p_content
 	</select>
-	<select id="choiceContent" resultType="String">
+	<select id="selectContent" resultType="String">
 		select c_name from p_content
 		where c_num = #{c_num}
 	</select>
