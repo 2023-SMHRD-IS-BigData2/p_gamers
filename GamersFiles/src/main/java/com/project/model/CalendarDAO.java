@@ -17,10 +17,11 @@ public class CalendarDAO {
 
 	// 데이터 생성
 	public int insertCalendar(CalendarDTO adto) {
+		
 		int cnt = 0;
 
 		try {
-			cnt = sqlSession.insert("com.project.database.MemberMapper.insertCalendar", adto);
+			cnt = sqlSession.insert("com.project.database.CalendarMapper.insertCalendar", adto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -34,7 +35,7 @@ public class CalendarDAO {
 	public CalendarDTO selectCalendar(CalendarDTO adto) {
 		CalendarDTO select = null;
 		try {
-			select = sqlSession.selectOne("com.project.database.MemberMapper.selectCalendar", adto);
+			select = sqlSession.selectOne("com.project.database.CalendarMapper.selectCalendar", adto);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +51,7 @@ public class CalendarDAO {
 	public boolean calendarCheck(String inputA) {
 		boolean isCheck = false;
 		try {
-			isCheck = sqlSession.selectOne("com.project.database.MemberMapper.emailCheck", inputA);
+			isCheck = sqlSession.selectOne("com.project.database.CalendarMapper.emailCheck", inputA);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -64,7 +65,7 @@ public class CalendarDAO {
 	public int updateCalendar(CalendarDTO adto) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.update("com.project.database.MemberMapper.updateGroup", adto);
+			cnt = sqlSession.update("com.project.database.CalendarMapper.updateGroup", adto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -77,7 +78,7 @@ public class CalendarDAO {
 	public List<CalendarDTO> calendarList() {
 		List<CalendarDTO> calendars = null;
 		try {
-			calendars = sqlSession.selectList("com.project.database.MemberMapper.calendarList");
+			calendars = sqlSession.selectList("com.project.database.CalendarMapper.calendarList");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -90,7 +91,7 @@ public class CalendarDAO {
 	public int deleteCalendar(int a_num) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.delete("com.project.database.MemberMapper.deleteCalendar", a_num);
+			cnt = sqlSession.delete("com.project.database.CalendarMapper.deleteCalendar", a_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -7,7 +7,7 @@
 <script src='./calendar_js/index.global.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
 <script>
-
+//풀캘린더 부분
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
@@ -24,7 +24,10 @@
       selectable: true,
       locale: 'ko', // 한국어 설정
       events: [
-        {
+        //이 밑에서 일정 반복할 생각
+    	  
+    	  
+    	  {
           title: 'Business Lunch',
           start: '2023-01-03T13:00:00',
           constraint: 'businessHours'

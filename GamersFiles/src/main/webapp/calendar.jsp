@@ -52,7 +52,7 @@
 							<span class="group image main">
 							<img src="images/con01.jpg" alt="" width="400" height="200" id="groupImage" />
 							</span>
-							<div><a href="calendar_insert.html"><button>일정 생성</button></a><a href="calendar_delete.jsp"><button>일정 삭제</button> </a></div>					
+							<div><a href="calendar_edit.jsp"><button>일정 생성</button></a><a href="calendar_delete.jsp"><button>일정 삭제</button> </a></div>					
 							<iframe src="calendar_iframe.jsp" width="700px" height="800px"></iframe>
 						</div>
 					</div>
