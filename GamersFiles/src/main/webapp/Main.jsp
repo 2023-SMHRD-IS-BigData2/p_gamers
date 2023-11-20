@@ -13,10 +13,11 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="imgSlider.css" type="text/css">
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
-</head> 
+</head>
 <body class="is-preload">
 	<%
 	MemberDTO login = (MemberDTO) session.getAttribute("login");
@@ -107,29 +108,24 @@
 				<%
 				List<ContentDTO> contents = null;
 				contents = new ContentDAO().contentList();
-				if (contents != null) {
 				%>
 				<section class="tiles">
-					<%
-					for (int i = 0; i < contents.size(); i++) {
-					%>
-					<article class="style<%=i%>">
-						<span class="image"> <img src="pocketmons/con<%=contents.get(i).getC_num()%>.jpg"
-							alt="" />
-						</span> <a href="contentDetail.jsp?c_num=<%=contents.get(i).getC_num()%>">
-							<h2><%=contents.get(i).getC_num()%>번 레이드
-							</h2>
-							<div class="content">
-								<p><%=contents.get(i).getC_name()%></p>
-							</div>
-						</a>
-					</article>
-					<%
-					}
-					%>
-					<%
-					} else {
-					%>
+					<div class="slider">
+						<input type="radio" name="slide" id="slide1" checked> <input
+							type="radio" name="slide" id="slide2"> <input
+							type="radio" name="slide" id="slide3"> <input
+							type="radio" name="slide" id="slide4">
+						<ul id="imgholder" class="imgs">
+							<li><a href="contentDetail.jsp"><img src="pocketmons/con1.jpg"></a></li>
+							<li><img src="pocketmons/con2.jpg"></li>
+							<li><img src="pocketmons/con3.jpg"></li>
+							<li><img src="pocketmons/con4.jpg"></li>
+						</ul>
+						<div class="bullets">
+							<label for="slide1">&nbsp;</label> <label for="slide2">&nbsp;</label>
+							<label for="slide3">&nbsp;</label> <label for="slide4">&nbsp;</label>
+						</div>
+					</div>
 					<article class="style1">
 						<span class="image"> <img src="pocketmons/con1.jpg" alt="" />
 						</span> <a href="contentDetail.jsp?c_num=">
@@ -139,9 +135,6 @@
 							</div>
 						</a>
 					</article>
-					<%
-					}
-					%>
 				</section>
 			</div>
 		</div>
@@ -203,6 +196,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="./imgSlider.css"></script>
 
 </body>
 </html>

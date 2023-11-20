@@ -19,13 +19,13 @@ public class SMService implements Service {
 		MemberDTO mdto = new MemberDTO(m_id, m_pw);
 
 		// 3. DAO loginMember() 호출
-		MemberDTO logindto = new MemberDAO().selectMember(mdto);
+		MemberDTO login = new MemberDAO().selectMember(mdto);
 
 		// 4. DB 값 가져와 콘솔에 'tel' 값 출력
-		if (logindto != null) {
+		if (login != null) {
 			System.out.println("로그인 성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("login", logindto);
+			session.setAttribute("login", login);
 		} else {
 			System.out.println("로그인 실패");
 		}

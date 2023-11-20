@@ -71,7 +71,7 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
-	
+
 	// 데이터 리스트
 	public List<MemberDTO> memberList() {
 		List<MemberDTO> members = null;
@@ -84,7 +84,7 @@ public class MemberDAO {
 		}
 		return members;
 	}
-	
+
 	// 데이터 삭제
 	public int deleteMember(String m_email) {
 		int cnt = 0;

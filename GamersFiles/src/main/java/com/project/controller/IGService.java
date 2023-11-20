@@ -28,7 +28,7 @@ public class IGService implements Service {
 		int findIndex1 = g_start.indexOf('T');
 		g_start = g_start.substring(0, findIndex1) + ' ' + g_start.substring(findIndex1 + 1) + ":00";
 		System.out.println(g_start);
-		int findIndex2 = g_start.indexOf('T');
+		int findIndex2 = g_end.indexOf('T');
 		g_end = g_end.substring(0, findIndex2) + ' ' + g_end.substring(findIndex2 + 1) + ":00";
 		System.out.println(g_end);
 

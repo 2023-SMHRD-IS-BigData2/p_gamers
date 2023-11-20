@@ -153,7 +153,7 @@
 						<%=c_name%>
 						레이드 페이지입니다.
 						</h1>
-					<p>파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="insertGroup.jsp?c_num=<%=c_num%>&c_name=<%=c_name%>"> <button> 파티생성 </button></a></p>
+					<p>파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_num=<%=c_num%>&c_name=<%=c_name%>"> <button> 파티생성 </button></a></p>
 				</header>
 				<section class="tiles">
 				

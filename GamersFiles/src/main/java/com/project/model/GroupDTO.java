@@ -28,6 +28,6 @@ public class GroupDTO {
 	private int g_member;
 	@NonNull
 	private String m_position;
-	private int g_date;
+	private String g_date;
 
 }
