@@ -40,7 +40,7 @@
 
 .calendar_iframe {
 	margin: 10px;
-	border: 5px solid skyblue;
+	border: 5px solid #8C8C8C;
 	border-radius: 10px;
 	padding: 10px;
 	width: 750px;
@@ -51,20 +51,47 @@
 	margin-left: 100px;
 }
 
+.sub_title {
+	display: inline;
+}
+
 .main_header {
-	margin-left: 100px;
+	margin-left: 50px;
+	width: 60%;
+	display: inline-block;
+	font-size: 30px;
+}
+
+.sub_header {
+	width: 30%;
+	display: inline-block;
+	font-size: 30px;
 }
 
 .cal_table {
 	font-size: 18px;
 	width: 100%;
-	height: 40%;
+	height: 45%;
+	border: 5px solid #8C8C8C;
+	border-radius: 10px;
+	margin-top: 10px;
+	
+	
 }
 
 .cal_result_table {
 	font-size: 18px;
 	width: 100%;
-	height: 60%;
+	height: 50%;
+	border: 5px solid #8C8C8C;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.blank {
+	width: 20px;
+	height: 100%;
+	display: inline-block;
 }
 
 input {
@@ -75,7 +102,10 @@ input {
 <body class="is-preload">
 	<%
 	session.setAttribute("g_name", "g_name");
+	session.setAttribute("m_nick", "m_nick");
 	String g_name = (String) session.getAttribute("g_name");
+	String m_nick = (String) session.getAttribute("m_nick");
+	
 
 	List<CalendarDTO> list = new CalendarDAO().calendarList(g_name);
 	%>
@@ -89,7 +119,7 @@ input {
 						src="images/logo.svg" alt="" /></span><span class="title">Gamers</span>
 				</a>
 				<!-- Nav -->
-				<
+
 				<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
@@ -119,7 +149,10 @@ input {
 					</h1>
 				</div>
 			</div>
-			<div class="main_header">일정</div>
+			<div class="subtitle">
+				<div class="main_header">일정</div>
+				<div class="sub_header">미니 게시판</div>
+			</div>
 			<div class="main_body">
 				<div class="calendar_iframe">
 					<iframe src="calendar_iframe.jsp" width="700px" , height="640px"></iframe>
@@ -155,7 +188,7 @@ input {
 								<td>제목</td>
 								<td>시작일</td>
 								<td>종료일</td>
-								<td>삭제</td>
+								<td></td>
 							</tr>
 							<%
 							for (CalendarDTO tmp : list) {
@@ -175,15 +208,31 @@ input {
 						</table>
 					</div>
 				</div>
+				<div>
+					<form action="" align="center">
+						<table width="300px" >
+							<tr>
+								<td><textarea name="bd_text" rows="20" cols="30"></textarea> </td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="게시"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
 
 
 
 
-				<!-- Scripts -->
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/browser.min.js"></script>
-				<script src="assets/js/breakpoints.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 </body>
 </html>
