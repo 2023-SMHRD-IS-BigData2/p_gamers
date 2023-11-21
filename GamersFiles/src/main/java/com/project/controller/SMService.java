@@ -29,7 +29,7 @@ public class SMService implements Service {
 		} else {
 			System.out.println("로그인 실패");
 		}
-		return "Main.jsp";
+		return "GamersMain.jsp";
 	}
 
 }

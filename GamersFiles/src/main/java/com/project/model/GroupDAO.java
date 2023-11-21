@@ -49,7 +49,7 @@ public class GroupDAO {
 		public boolean groupCheck(String inputG) {
 			boolean isCheck = false;
 			try {
-				isCheck = sqlSession.selectOne("com.project.database.MemberMapper.emailCheck", inputG);
+				isCheck = sqlSession.selectOne("com.project.database.MemberMapper.groupCheck", inputG);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

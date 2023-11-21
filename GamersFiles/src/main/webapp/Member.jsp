@@ -21,17 +21,15 @@ body {
 
 .login-wrapper {
 	display: inline-block;
-	width: 400px;
-	height: 350px;
 	padding: 40px;
 	box-sizing: border-box;
-	width: 400px;
+	background-color: lightgray;
 }
 
 .login-wrapper>h2 {
-	font-size: 24px;
-	color: #6A24FE;
+	font-size: 24px; color : #6A24FE;
 	margin-bottom: 20px;
+	color: #6A24FE;
 }
 
 #login-form>input {
@@ -45,7 +43,7 @@ body {
 }
 
 #login-form>input::placeholder {
-	color: #D2D2D2;
+	color: gray;
 }
 
 #login-form>input[type="submit"] {
@@ -79,11 +77,9 @@ body {
 
 .join-wrapper {
 	display: inline-block;
-	width: 400px;
-	height: 350px;
 	padding: 40px;
 	box-sizing: border-box;
-	width: 400px;
+	background-color: lightgray;
 }
 
 .join-wrapper>h2 {
@@ -103,7 +99,7 @@ body {
 }
 
 #join-form>input::placeholder {
-	color: #D2D2D2;
+	color: gray;
 }
 
 #join-form>input[type="submit"] {
@@ -139,7 +135,7 @@ body {
 <body>
 	<div class="member_container">
 		<div class="main_top">
-			<div class="login-wrapper">
+			<div class="login-wrapper" style="width: 400px;">
 				<h2>로그인</h2>
 				<form method="post" action="SMService.do" id="login-form">
 					<input type="text" name="m_id" placeholder="아이디"> <input
@@ -149,23 +145,24 @@ body {
 			</div>
 		</div>
 		<div class="member_bottom">
-			<div class="join-wrapper">
+			<div class="join-wrapper" style="width: 400px;">
 				<h2>회원가입</h2>
 				<form method="post" action="IMService.do" id="join-form">
-					<input type="text" name="m_id" placeholder="아이디"> <input
-						type="password" name="m_pw" placeholder="비밀번호"> <input
-						type="text" name="m_nick" placeholder="닉네임"> <input
-						type="text" list="positions" name="m_position" placeholder="역할">
+					<input type="text" name="m_id" id="inputI" placeholder="아이디">
+					<input type="button" value="중복체크" onclick="checkI()"
+						style="width: 100px; height: 50px;"> <span
+						id="memberCheck"></span> <input type="password" name="m_pw"
+						placeholder="비밀번호"> <input type="text" name="m_nick"
+						placeholder="닉네임"> <input type="text" name="g_name"
+						id="inputG" placeholder="파티명"> <input type="button"
+						value="중복체크" onclick="checkG()"
+						style="width: 100px; height: 50px;"> <span id="groupCheck"></span>
+					<input type="text" list="positions" name="m_position"
+						placeholder="역할">
 					<datalist id="positions">
 						<option>딜러</option>
 						<option>탱커</option>
 						<option>힐러</option>
-						<!-- 추가된 input 태그 -->
-						<div id="dynamicInputContainer">
-							<!-- JavaScript에서 동적으로 생성될 input 태그가 들어갈 자리 -->
-							<input type="text" name="m_class">
-
-						</div>
 					</datalist>
 					<input type="submit" value="회원가입">
 				</form>
@@ -173,41 +170,55 @@ body {
 		</div>
 	</div>
 	<script>
-		// 역할에 따라 동적으로 input 태그 생성
-		$('#m_position').on('input', function() {
-			var position = $(this).val();
-			updateDynamicInput(position);
-		});
-
-		// 초기에도 동적 input 태그 생성
-		updateDynamicInput('class');
-
-		// 역할에 따라 동적으로 input 태그 생성하는 함수
-		function updateDynamicInput(position) {
-			// 기존 동적 input 태그 초기화
-			$('#dynamicInputContainer').empty();
-
-			// 역할에 따라 동적으로 input 태그 생성
-			switch (position) {
-			case '딜러':
-				addInputToContainer('dynamicInputContainer', 'A');
-				addInputToContainer('dynamicInputContainer', 'B');
-				addInputToContainer('dynamicInputContainer', 'C');
-				break;
-			case '탱커':
-				addInputToContainer('dynamicInputContainer', 'D');
-				addInputToContainer('dynamicInputContainer', 'E');
-				addInputToContainer('dynamicInputContainer', 'F');
-				break;
-			case '힐러':
-				addInputToContainer('dynamicInputContainer', 'G');
-				addInputToContainer('dynamicInputContainer', 'H');
-				addInputToContainer('dynamicInputContainer', 'I');
-				break;
-			// 다른 역할에 대한 처리 추가 가능
-			default:
-				break;
-			}
+		function checkI() {
+			var inputI = $('#inputI').val();
+			$.ajax({ /* {} 표현식 : json */
+				// 요청
+				url : 'MCService.do',
+				// 데이터(json, {key:value})
+				data : {
+					'inputI' : inputI
+				},
+				// 방식
+				type : 'get',
+				// 성공
+				success : function(data) {
+					if (data == 'true') {
+						$('#memberCheck').text('사용할 수 없는 ID입니다.')
+					} else if (data == 'false') {
+						alert('사용할 수 있는 ID입니다.')
+					}
+				},
+				// 실패
+				error : function() {
+					alert("통신실패")
+				}
+			})
+		}
+		function checkG() {
+			var inputG = $('#inputG').val();
+			$.ajax({ /* {} 표현식 : json */
+				// 요청
+				url : 'GCService.do',
+				// 데이터(json, {key:value})
+				data : {
+					'inputG' : inputG
+				},
+				// 방식
+				type : 'get',
+				// 성공
+				success : function(data) {
+					if (data == 'true') {
+						$('#groupCheck').text('파티 확인 실패')
+					} else if (data == 'false') {
+						alert('파티 확인 성공')
+					}
+				},
+				// 실패
+				error : function() {
+					alert("통신실패")
+				}
+			})
 		}
 	</script>
 </body>

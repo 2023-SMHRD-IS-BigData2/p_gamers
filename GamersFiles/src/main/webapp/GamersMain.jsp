@@ -1,114 +1,11 @@
+<%@page import="org.apache.tomcat.util.descriptor.web.LoginConfig"%>
+<%@page import="com.project.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>게이머즈</title>
-<style type="text/css">
-#login {
-	width: 100%;
-	height: 100%;
-}
-
-#login.login-overlay {
-	display: none;
-	position: relative;
-	left: 0;
-	top: 0;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
-	border-radius: 10px;
-	margin-right: 50px;
-}
-
-#login .login-window {
-	background: white;
-	border-radius: 10px;
-	width: 600px;
-	height: 450px;
-	position: relative;
-	top: 10px;
-	padding: 10px;
-	text-align: center;
-}
-
-#login .title {
-	padding-left: 10px;
-	display: inline;
-	color: black;
-}
-
-#login .title h2 {
-	display: inline;
-	color: black;
-}
-
-#login .close-login {
-	display: inline;
-	float: right;
-	padding-right: 10px;
-	cursor: pointer;
-	color: black;
-}
-
-#login .group-content {
-	padding: 0px 10px;
-	color: white;
-}
-
-#join {
-	width: 100%;
-	height: 100%;
-}
-
-#join.join-overlay {
-	display: none;
-	position: relative;
-	left: 0;
-	top: 0;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
-	border-radius: 10px;
-	margin-right: 50px;
-}
-
-#join .join-window {
-	background: white;
-	border-radius: 10px;
-	width: 600px;
-	height: 550px;
-	position: relative;
-	top: 10px;
-	padding: 10px;
-	text-align: center;
-}
-
-#join .title {
-	padding-left: 10px;
-	display: inline;
-	color: black;
-}
-
-#join .title h2 {
-	display: inline;
-	color: black;
-}
-
-#join .close-join {
-	display: inline;
-	float: right;
-	padding-right: 10px;
-	cursor: pointer;
-	color: black;
-}
-
-#join .group-content {
-	padding: 0px 10px;
-	color: white;
-}
-</style>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -118,19 +15,36 @@
 </noscript>
 </head>
 <body class="is-preload">
+	<%
+	MemberDTO login = (MemberDTO)session.getAttribute("login");
+	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Header -->
 		<header id="header" class="alt">
 			<a href="GamersMain.jsp" class="logo"><strong>게이머즈</strong></a>
+			<%
+			if (login == null) {
+			%>
 			<nav>
-				<a id="btn-login"> 로그인 </a>
-				<a id="btn-join"> 회원가입 </a>
-				<a> Menu </a>
+				<a href="Member.jsp"> 로그인&회원가입 </a>
 			</nav>
+			<%
+			} else {
+			%>
+			<nav>
+				<a href="Member.jsp"> 내 정보 수정 </a>
+				<a href="Member.jsp"> 내 파티 </a>
+			</nav>
+			<%
+			}
+			%>
 		</header>
 		<!-- Banner -->
 		<section id="banner" class="major">
+			<%
+			if(login==null){
+			%>
 			<div id="inner" class="inner">
 				<header class="major">
 					<h1>안녕하세요. 게이머즈입니다.</h1>
@@ -144,35 +58,42 @@
 					</ul>
 				</div>
 			</div>
-			<div id="login" class="login-overlay">
-				<div class="login-window" style="align-content: center;">
-					<div class="close-login">X</div>
-					<iframe src="SM.jsp" style="width: 100%; height: 100%;"></iframe>
+			<%
+			} else {
+			%>
+			<div id="inner" class="inner">
+				<header class="major">
+					<h1><%=login.getM_nick() %>님 환영합니다.</h1>
+				</header>
+				<div class="content">
+					<p>
+						레이드를 선택해 파티를 찾아보세요. <br /> 회원가입 시 더 많은 기능을 사용하실 수 있습니다.
+					</p>
+					<ul class="actions">
+						<li><a href="#one" class="button next scrolly">컨텐츠 보기</a></li>
+					</ul>
 				</div>
 			</div>
-			<div id="join" class="join-overlay">
-				<div class="join-window" style="align-content: center;">
-					<div class="close-join">X</div>
-					<iframe src="IM.jsp" style="width: 100%; height: 100%;"></iframe>
-				</div>
-			</div>
+			<%} %>
 		</section>
 		<!-- Main -->
 		<div id="main">
 			<!-- One -->
 			<section id="one" class="tiles">
 				<article>
-					<span class="image"> <img src="images/pic01.jpg" alt="" />
+					<span class="image" style="display: inline-block;"> <img
+						src="images/신생에오르제아_타이틀.png" alt="" width="auto" height="auto" />
 					</span>
 					<header class="major">
 						<h3>
-							<a href="landing.html" class="link">신생 에오르제아</a>
+							<a href="contentDetail.jsp" class="link">신생 에오르제아</a>
 						</h3>
 						<p>대미궁 바하무트</p>
 					</header>
 				</article>
 				<article>
-					<span class="image"> <img src="images/pic02.jpg" alt="" />
+					<span class="image" style="display: inline-block;"> <img
+						src="images/창천의이슈가르드_타이틀.png" alt="" width="auto" height="auto" />
 					</span>
 					<header class="major">
 						<h3>
@@ -182,7 +103,8 @@
 					</header>
 				</article>
 				<article>
-					<span class="image"> <img src="images/pic03.jpg" alt="" />
+					<span class="image" style="display: inline-block;"> <img
+						src="images/홍련의해방자_타이틀.png" alt="" width="auto" height="auto" />
 					</span>
 					<header class="major">
 						<h3>
@@ -192,7 +114,8 @@
 					</header>
 				</article>
 				<article>
-					<span class="image"> <img src="images/pic04.jpg" alt="" />
+					<span class="image" style="display: inline-block;"> <img
+						src="images/칠흑의반역자_타이틀.png" alt="" width="auto" height="auto" />
 					</span>
 					<header class="major">
 						<h3>
@@ -202,7 +125,8 @@
 					</header>
 				</article>
 				<article>
-					<span class="image"> <img src="images/pic05.jpg" alt="" />
+					<span class="image" style="display: inline-block;"> <img
+						src="images/효월의종언_타이틀.png" alt="" width="auto" height="auto" />
 					</span>
 					<header class="major">
 						<h3>
@@ -271,31 +195,61 @@
 						</ul>
 					</form>
 				</section>
+				<%
+				if (login == null) {
+				%>
 				<section class="split">
 					<section>
 						<div class="contact-method">
 							<span class="icon solid alt fa-envelope"></span>
-							<h3>ID</h3>
-							<a href="#">information@untitled.tld</a>
+							<h3>내 ID</h3>
+							<span>로그인이 필요합니다.</span>
 						</div>
 					</section>
 					<section>
 						<div class="contact-method">
 							<span class="icon solid alt fa-phone"></span>
-							<h3>닉네임</h3>
-							<span>(000) 000-0000 x12387</span>
+							<h3>내 닉네임</h3>
+							<span>로그인이 필요합니다.</span>
 						</div>
 					</section>
 					<section>
 						<div class="contact-method">
 							<span class="icon solid alt fa-home"></span>
-							<h3>파티명</h3>
-							<span>1234 Somewhere Road #5432<br /> Nashville, TN 00000<br />
-								United States of America
-							</span>
+							<h3>내 파티명</h3>
+							<span>로그인이 필요합니다.</span>
 						</div>
 					</section>
 				</section>
+				<%
+				} else {
+				%>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>내 ID</h3>
+							<a href="#"><%=login.getM_id()%></a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>내 닉네임</h3>
+							<span><%=login.getM_nick()%></span>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>내 파티명</h3>
+							<a href="calendar.jsp"><%=login.getG_name()%> </a>
+						</div>
+					</section>
+				</section>
+				<%
+				}
+				%>
 			</div>
 		</section>
 
@@ -331,8 +285,10 @@
 	<script src="MainAssets/js/breakpoints.min.js"></script>
 	<script src="MainAssets/js/util.js"></script>
 	<script src="MainAssets/js/main.js"></script>
-	<script src="login.js"></script>
-	<script src="join.js"></script>
-
+	<script type="text/javascript">
+		function parentsUrl(url) {
+			location.href = url;
+		}
+	</script>
 </body>
 </html>

@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.http.impl.io.ContentLengthInputStream;
 
 import com.project.controller.DMService;
+import com.project.controller.GCService;
 import com.project.controller.IMService;
+import com.project.controller.MCService;
 import com.project.controller.SMService;
 import com.project.controller.ICService;
 import com.project.controller.IGService;
@@ -40,6 +42,10 @@ public class FrontController extends HttpServlet {
 			service = new SMService();
 		} else if (result.equals("/IMService.do")) { // 회원가입
 			service = new IMService();
+		} else if (result.equals("/MCService.do")) { // 이메일 중복체크
+			service = new MCService();
+		} else if (result.equals("/GCService.do")) { // 파티 내 유저 확인
+			service = new GCService();
 		} 
 		url = service.execute(request, response);
 		if (url != null) {

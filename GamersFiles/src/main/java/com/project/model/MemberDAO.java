@@ -46,10 +46,10 @@ public class MemberDAO {
 	}
 
 	// 데이터 중복 체크
-	public boolean emailCheck(String inputE) {
+	public boolean memberCheck(String inputI) {
 		boolean isCheck = false;
 		try {
-			isCheck = sqlSession.selectOne("com.project.database.MemberMapper.emailCheck", inputE);
+			isCheck = sqlSession.selectOne("com.project.database.MemberMapper.memberCheck", inputI);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

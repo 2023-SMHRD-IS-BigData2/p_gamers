@@ -8,14 +8,14 @@
 <mapper namespace="com.project.database.MemberMapper">
 	<insert id="insertMember" parameterType="MemberDTO">
 		insert into p_member
-		values(#{m_id}, #{m_pw}, #{m_nick}, #{m_position}, sysdate)
+		values(#{m_id}, #{m_pw}, #{m_nick}, #{g_name}, #{m_position}, sysdate)
 	</insert>
 	<select id="selectMember" parameterType="MemberDTO"
 		resultType="MemberDTO">
 		select * from p_member where m_id=#{m_id} and
 		m_pw=#{m_pw}
 	</select>
-	<select id="EmailCheck" parameterType="String"
+	<select id="memberCheck" parameterType="String"
 		resultType="boolean">
 		select case when count(*)>0 then 1
 		else 0

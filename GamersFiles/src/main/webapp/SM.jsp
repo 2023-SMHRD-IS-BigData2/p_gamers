@@ -21,8 +21,8 @@ body {
 
 .login-wrapper {
 	display: inline-block;
-	text-align : center;
-	padding : 20px;
+	text-align: center;
+	padding: 20px;
 	box-sizing: border-box;
 	background-color: lightgray;
 }
@@ -89,5 +89,10 @@ body {
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$('a').click(function() {
+			parent.parentsUrl($(this).attr('href'));
+		});
+	</script>
 </body>
 </html>
