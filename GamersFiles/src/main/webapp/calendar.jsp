@@ -130,7 +130,7 @@ input {
 	String m_nick = (String) session.getAttribute("m_nick");
 
 	List<CalendarDTO> c_list = new CalendarDAO().calendarList(g_name);
-	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name);
+	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name); 
 	%>
 	<!-- Wrapper -->
 	<div id="groupWrapper" style="width: 100; height: 100px;">
