@@ -16,9 +16,11 @@ public class UMService implements Service {
 		String m_id = request.getParameter("m_id");
 		String m_pw = request.getParameter("m_pw");
 		String m_nick = request.getParameter("m_nick");
+		String g_name = request.getParameter("g_name");
 		String m_position = request.getParameter("m_position");
+		String m_date = "sysdate";
 
-		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, m_position);
+		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position, m_date);
 
 		int cnt = new MemberDAO().updateMember(mdto);
 

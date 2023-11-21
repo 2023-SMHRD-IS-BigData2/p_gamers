@@ -77,11 +77,22 @@
 .tiles>article {
 	width: 200px;
 	height: 200px;
+	margin-left: auto;
+	margin-bottom: auto;
 }
 
 .tiles>article>a {
 	width: 200px;
 	height: 200px;
+	display: inline-block;
+}
+a#btn-modal{
+	display: flex;
+	width: 200px;
+	height: 200px;
+	padding: 12.5px;
+	justify-content: center;
+	align-items: center;
 }
 </style>
 <meta charset="utf-8" />
@@ -166,19 +177,19 @@
 					</p>
 				</header>
 				<section class="tiles">
-					<article class="style1" style="width: 200px; height: 200px;">
+					<article class="style1" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/con01.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a id="btn-modal">
-							<h2>그룹명</h2>
+							<h2> 그룹명</h2>
 							<div class="content">
 								<p>그룹장명</p>
 							</div>
 						</a>
 					</article>
-					<article class="style2" style="width: 200px; height: 200px;">
+					<article class="style2" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/con02.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -186,9 +197,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style3" style="width: 200px; height: 200px;">
+					<article class="style3" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/con03.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -196,9 +207,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style4" style="width: 200px; height: 200px;">
+					<article class="style4" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/con04.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -206,9 +217,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style5" style="width: 200px; height: 200px;">
+					<article class="style5" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/con05.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a href="generic.html">
 							<h2>그룹명</h2>
 							<div class="content">
@@ -216,9 +227,9 @@
 							</div>
 						</a>
 					</article>
-					<article class="style6" style="width: 200px; height: 200px;">
+					<article class="style6" style="width: 225px; height: 225px;">
 						<span class="image"> <img src="images/pic06.jpg" alt=""
-							width="200px" height="200px" />
+							width="225px" height="225px" />
 						</span> <a href="generic.html">
 							<h2>Veroeros</h2>
 							<div class="content">

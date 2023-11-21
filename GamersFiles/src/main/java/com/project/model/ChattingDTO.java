@@ -14,7 +14,7 @@ import lombok.ToString;
 @ToString
 public class ChattingDTO {
 	private int w_num;
-	private int g_num;
+	private int g_name;
 	@NonNull private String m_id;
 	@NonNull private String w_content;
 	private String w_date;	

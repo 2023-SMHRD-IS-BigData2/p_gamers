@@ -14,7 +14,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class MessageDTO {
-	private int e_num;
+	private String e_num;
 	@NonNull private String e_sender;
 	@NonNull private String e_recipient;
 	@NonNull private String e_title;

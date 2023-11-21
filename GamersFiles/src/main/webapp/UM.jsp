@@ -143,7 +143,7 @@ body {
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>내 정보 수정</h2>
-				<form method="post" action="UpdateService.do" id="login-form">
+				<form method="post" action="UMService.do" id="login-form">
 					<input type="text" name="update_email" value="<%=email %>" readonly>
 					<input type="password" name="update_pw" placeholder="비밀번호">
 					<input type="text" name="update_nick" placeholder="닉네임"> <input

@@ -15,7 +15,6 @@ import lombok.ToString;
 @NoArgsConstructor
 public class ContentDTO {
 	
-	private int c_num;
 	@Nonnull private String c_name;
 	private String c_date;
 }

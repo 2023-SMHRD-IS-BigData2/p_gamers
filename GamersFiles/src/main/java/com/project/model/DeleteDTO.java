@@ -14,7 +14,8 @@ import lombok.ToString;
 @ToString
 public class DeleteDTO {
 	private int d_num;
-	private int g_num;
+	@NonNull
+	private String g_name;
 	@NonNull
 	private String m_id;
 	private String d_date;

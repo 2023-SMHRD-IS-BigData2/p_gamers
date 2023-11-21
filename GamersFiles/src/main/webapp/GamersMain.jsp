@@ -49,13 +49,11 @@
 	float: right;
 	padding-right: 10px;
 	cursor: pointer;
-	text-shadow: 1px 1px 2px gray;
 	color: black;
 }
 
 #login .group-content {
 	padding: 0px 10px;
-	text-shadow: 1px 1px 2px gray;
 	color: white;
 }
 
@@ -103,13 +101,11 @@
 	float: right;
 	padding-right: 10px;
 	cursor: pointer;
-	text-shadow: 1px 1px 2px gray;
 	color: black;
 }
 
 #join .group-content {
 	padding: 0px 10px;
-	text-shadow: 1px 1px 2px gray;
 	color: white;
 }
 </style>
