@@ -1,3 +1,7 @@
+<%@page import="com.project.model.CalendarDAO"%>
+<%@page import="com.project.model.CalendarDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="java.time.LocalDate"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,7 +21,11 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
-      initialDate: '2023-01-12',
+      <% LocalDate date = LocalDate.now(); 
+      	String g_name = (String)session.getAttribute("g_name");
+      	List<CalendarDTO> list = new CalendarDAO().calendarList(g_name); 
+      %>
+      initialDate: '<%=date%>',
       navLinks: true, // can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
@@ -25,58 +33,21 @@
       locale: 'ko', // 한국어 설정
       events: [
         //이 밑에서 일정 반복할 생각
-    	  
-    	  
-    	  {
-          title: 'Business Lunch',
-          start: '2023-01-03T13:00:00',
-          constraint: 'businessHours'
-        },
-        {
-          title: 'Meeting',
-          start: '2023-01-13T11:00:00',
-          constraint: 'availableForMeeting', // defined below
-          color: '#257e4a'
-        },
-        {
+       /*  {
           title: 'Conference',
           start: '2023-01-18',
           end: '2023-01-20'
-        },
-        {
-          title: 'Party',
-          start: '2023-01-29T20:00:00'
-        },
-
-        // areas where "Meeting" must be dropped
-        {
-          groupId: 'availableForMeeting',
-          start: '2023-01-11T10:00:00',
-          end: '2023-01-11T16:00:00',
-          display: 'background'
-        },
-        {
-          groupId: 'availableForMeeting',
-          start: '2023-01-13T10:00:00',
-          end: '2023-01-13T16:00:00',
-          display: 'background'
-        },
-
-        // red areas where no events can be dropped
-        {
-          start: '2023-01-24',
-          end: '2023-01-28',
-          overlap: false,
-          display: 'background',
-          color: '#ff9f89'
-        },
-        {
-          start: '2023-01-06',
-          end: '2023-01-08',
-          overlap: false,
-          display: 'background',
-          color: '#ff9f89'
-        }
+        }, */
+    	
+  		<% for(CalendarDTO tmp : list){ %>
+  			{
+            title: '<%=tmp.getC_content() %>',
+            start: '<%=tmp.getC_start() %>',
+            end: '<%=tmp.getC_end() %>'
+            },
+  		
+  		<% }%>
+        
       ]
     });
 

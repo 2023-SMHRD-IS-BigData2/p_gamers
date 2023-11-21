@@ -41,7 +41,7 @@ public class Cd_Insert_Service extends HttpServlet {
 			System.out.println("캘린더 삽입 실패");
 		}
 		
-		response.sendRedirect("calendar_edit.jsp");
+		response.sendRedirect("calendar.jsp");
 	}
 
 }
