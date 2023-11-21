@@ -9,7 +9,7 @@
 <mapper namespace="com.project.database.ContentMapper">
 	<insert id="insertContent" parameterType="ContentDTO">
 		insert into p_content
-		values(content_num.nextval ,#{c_name})
+		values(#{c_name}, sysdate, #{c_title})
 	</insert>
 	<delete id="delContent" parameterType="String">
 		delete from p_content

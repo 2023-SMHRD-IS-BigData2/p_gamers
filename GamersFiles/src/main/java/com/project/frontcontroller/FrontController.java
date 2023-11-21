@@ -46,6 +46,8 @@ public class FrontController extends HttpServlet {
 			service = new MCService();
 		} else if (result.equals("/GCService.do")) { // 파티 내 유저 확인
 			service = new GCService();
+		} else if (result.equals("/ICService.do")) { // 관리자 컨텐츠 생성
+			service = new ICService();
 		} 
 		url = service.execute(request, response);
 		if (url != null) {

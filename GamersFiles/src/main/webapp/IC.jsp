@@ -140,9 +140,10 @@ body {
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>컨텐츠 정보 입력</h2>
-				<form method="post" action="insertConService.do" id="login-form">
-					<input type="text" name="c_name" placeholder="컨텐츠명"> <input
-						type="submit" value="생성하기">
+				<form method="post" action="ICService.do" id="login-form">
+					<input type="text" name="c_name" placeholder="컨텐츠명">
+					<input type="text" name="c_title" placeholder="제목">
+					<input type="submit" value="생성하기">
 				</form>
 			</div>
 		</div>

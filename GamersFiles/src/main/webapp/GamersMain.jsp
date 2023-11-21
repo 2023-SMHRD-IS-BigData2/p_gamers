@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.project.model.ContentDTO"%>
+<%@page import="com.project.model.ContentDAO"%>
+<%@page import="org.apache.catalina.startup.SetAllPropertiesRule"%>
 <%@page import="org.apache.tomcat.util.descriptor.web.LoginConfig"%>
 <%@page import="com.project.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -16,7 +20,10 @@
 </head>
 <body class="is-preload">
 	<%
-	MemberDTO login = (MemberDTO)session.getAttribute("login");
+	MemberDTO login = (MemberDTO) session.getAttribute("login");
+	if (login != null) {
+		session.setAttribute("g_name", login.getG_name());
+	}
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -24,17 +31,26 @@
 		<header id="header" class="alt">
 			<a href="GamersMain.jsp" class="logo"><strong>게이머즈</strong></a>
 			<%
-			if (login == null) {
+			if (login != null) {
+				if (login.getM_id().equals("admin")) {
 			%>
 			<nav>
-				<a href="Member.jsp"> 로그인&회원가입 </a>
+				<a href="adminMember.jsp"> 회원 조회 </a> <a href="adminGroup.jsp">
+					파티 조회 </a> <a href="adminContent.jsp"> 레이드 조회 </a>
 			</nav>
 			<%
 			} else {
 			%>
 			<nav>
-				<a href="Member.jsp"> 내 정보 수정 </a>
-				<a href="calendar.jsp"> 내 파티 </a>
+				<a href="Member.jsp"> 내 정보 수정 </a> <a href="calendar.jsp"> 내 파티
+				</a>
+			</nav>
+			<%
+			}
+			} else {
+			%>
+			<nav>
+				<a href="Member.jsp"> 로그인&회원가입 </a>
 			</nav>
 			<%
 			}
@@ -43,7 +59,7 @@
 		<!-- Banner -->
 		<section id="banner" class="major">
 			<%
-			if(login==null){
+			if (login == null) {
 			%>
 			<div id="inner" class="inner">
 				<header class="major">
@@ -51,7 +67,7 @@
 				</header>
 				<div class="content">
 					<p>
-						레이드를 선택해 파티를 찾아보세요. <br /> 회원가입 시 더 많은 기능을 사용하실 수 있습니다.
+						회원가입 시 더 많은 기능을 사용하실 수 있습니다.
 					</p>
 					<ul class="actions">
 						<li><a href="#one" class="button next scrolly">컨텐츠 보기</a></li>
@@ -63,90 +79,52 @@
 			%>
 			<div id="inner" class="inner">
 				<header class="major">
-					<h1><%=login.getM_nick() %>님 환영합니다.</h1>
+					<h1><%=login.getM_nick()%>님 환영합니다.
+					</h1>
 				</header>
 				<div class="content">
 					<p>
-						레이드를 선택해 파티를 찾아보세요. <br /> 회원가입 시 더 많은 기능을 사용하실 수 있습니다.
+						레이드를 선택해 파티를 찾아보세요.
 					</p>
 					<ul class="actions">
 						<li><a href="#one" class="button next scrolly">컨텐츠 보기</a></li>
 					</ul>
 				</div>
 			</div>
-			<%} %>
+			<%
+			}
+			%>
 		</section>
 		<!-- Main -->
 		<div id="main">
 			<!-- One -->
 			<section id="one" class="tiles">
+				<%
+				List<ContentDTO> contents = new ContentDAO().contentList();
+				int cnt = 0;
+				if (contents != null) {
+					for (int i = 0; i < contents.size(); i++) {
+						cnt++;
+				%>
 				<article>
 					<span class="image" style="display: inline-block;"> <img
-						src="images/신생에오르제아_타이틀.png" alt="" width="auto" height="auto" />
+						src="images/con_logo<%=cnt%>.png" alt="" width="auto"
+						height="auto" />
 					</span>
 					<header class="major">
 						<h3>
-							<a href="contentDetail.jsp" class="link">신생 에오르제아</a>
+							<a
+								href="contentDetail.jsp?c_name=<%=contents.get(i).getC_name()%>"
+								class="link"><%=contents.get(i).getC_name()%></a>
 						</h3>
-						<p>대미궁 바하무트</p>
+						<p><%=contents.get(i).getC_title()%></p>
 					</header>
 				</article>
-				<article>
-					<span class="image" style="display: inline-block;"> <img
-						src="images/창천의이슈가르드_타이틀.png" alt="" width="auto" height="auto" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="landing.html" class="link">창천의 이슈가르드</a>
-						</h3>
-						<p>기공성 알렉산더</p>
-					</header>
-				</article>
-				<article>
-					<span class="image" style="display: inline-block;"> <img
-						src="images/홍련의해방자_타이틀.png" alt="" width="auto" height="auto" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="landing.html" class="link">홍련의 해방자</a>
-						</h3>
-						<p>차원의 틈 오메가</p>
-					</header>
-				</article>
-				<article>
-					<span class="image" style="display: inline-block;"> <img
-						src="images/칠흑의반역자_타이틀.png" alt="" width="auto" height="auto" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="landing.html" class="link">칠흑의 반역자</a>
-						</h3>
-						<p>희망의 낙원 에덴</p>
-					</header>
-				</article>
-				<article>
-					<span class="image" style="display: inline-block;"> <img
-						src="images/효월의종언_타이틀.png" alt="" width="auto" height="auto" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="landing.html" class="link">효월의 종언</a>
-						</h3>
-						<p>마의 전당 판데모니움</p>
-					</header>
-				</article>
-				<article>
-					<span class="image"> <img src="images/pic06.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="landing.html" class="link">절 난이도</a>
-						</h3>
-						<p>토벌전 및 검증전</p>
-					</header>
-				</article>
+				<%
+				}
+				}
+				%>
 			</section>
-
 			<!-- Two -->
 			<section id="two">
 				<div class="inner">

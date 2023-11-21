@@ -16,8 +16,9 @@ public class ICService implements Service {
 
 		// 요청 데이터 받기
 		String c_name = request.getParameter("c_name");
+		String c_title = request.getParameter("c_title");
 
-		ContentDTO cdto = new ContentDTO(c_name);
+		ContentDTO cdto = new ContentDTO(c_name, c_title);
 
 		int cnt = new ContentDAO().insertContent(cdto);
 

@@ -28,7 +28,7 @@
 		m_pw=#{m_pw}, m_nick=#{m_nick}, m_position=#{m_position} where
 		m_id=#{m_id}
 	</update>
-	<select id="allMember" resultType="MemberDTO">
+	<select id="memberList" resultType="MemberDTO">
 		select * from p_member where
 		not(m_id='admin')
 	</select>

@@ -1,3 +1,4 @@
+<%@page import="com.project.model.MemberDTO"%>
 <%@page import="com.project.model.MiniBoardDAO"%>
 <%@page import="com.project.model.MiniBoardDTO"%>
 <%@page import="com.project.model.CalendarDAO"%>

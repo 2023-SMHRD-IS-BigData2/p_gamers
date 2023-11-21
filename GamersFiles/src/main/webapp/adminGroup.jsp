@@ -1,3 +1,5 @@
+<%@page import="com.project.model.GroupDTO"%>
+<%@page import="com.project.model.GroupDAO"%>
 <%@page import="com.project.model.ContentDAO"%>
 <%@page import="com.project.model.ContentDTO"%>
 <%@page import="com.project.model.MemberDAO"%>
@@ -10,7 +12,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="assets/css/main.css" />
-<title>회원 조회</title>
+<title>파티 조회</title>
 <style type="text/css">
 * {
 	padding: 0;
@@ -49,7 +51,7 @@ table#allMember th {
 </head>
 <body>
 	<%
-	List<MemberDTO> members = new MemberDAO().memberList();
+	List<GroupDTO> groups = new GroupDAO().groupList();
 	int cnt = 0;
 	%>
 	<div class="member_container">
@@ -59,27 +61,23 @@ table#allMember th {
 				<table id="allMember">
 					<tr>
 						<th width="150" style="text-align: center;">구분</th>
-						<th width="150" style="text-align: center;">아이디</th>
-						<th width="150" style="text-align: center;">패스워드</th>
-						<th width="150" style="text-align: center;">닉네임</th>
 						<th width="150" style="text-align: center;">파티명</th>
-						<th width="150" style="text-align: center;">역할</th>
+						<th width="150" style="text-align: center;">파티장</th>
+						<th width="150" style="text-align: center;">레이드</th>
 						<th width="150" style="text-align: center;">비고</th>
 					</tr>
 					<%
-					if (members != null) {
-						for (int i = 0; i < members.size(); i++) {
+					if (groups != null) {
+						for (int i = 0; i < groups.size(); i++) {
 							cnt++;
 					%>
 					<tr>
 						<td width="150" style="text-align: center;"><%=cnt%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_id()%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_pw()%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_nick()%></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getG_name() %></td>
-						<td width="150" style="text-align: center;"><%=members.get(i).getM_position()%></td>
+						<td width="150" style="text-align: center;"><%=groups.get(i).getG_name()%></td>
+						<td width="150" style="text-align: center;"><%=groups.get(i).getM_id()%></td>
+						<td width="150" style="text-align: center;"><%=groups.get(i).getG_content()%></td>
 						<td width="150" style="text-align: center;"><a
-							href="DelMemberService.do?m_id=<%=members.get(i).getM_id()%>"><button>삭제</button></a></td>
+							href="DelMemberService.do?m_id=<%=groups.get(i).getG_name()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
 						}

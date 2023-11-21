@@ -49,7 +49,7 @@ table#allMember th {
 </head>
 <body>
 	<%
-	List<ContentDTO> contents = new ContentDAO().allContent();
+	List<ContentDTO> contents = new ContentDAO().contentList();
 	int cnt = 0;
 	%>
 	<div class="member_container">
@@ -90,7 +90,8 @@ table#allMember th {
 					%>
 					<tr>
 						<td colspan="3" width="150" style="text-align: center;"><a
-							href="NewContent.jsp"><button>생성</button></a></td>
+							href="IC.jsp"><button>생성</button></a> <a href="GamersMain.jsp"><button>
+									홈</button></a></td>
 					</tr>
 				</table>
 			</div>
