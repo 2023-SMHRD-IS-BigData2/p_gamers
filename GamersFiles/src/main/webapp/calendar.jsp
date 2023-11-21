@@ -61,7 +61,7 @@
 
 .main_header {
 	margin-left: 50px;
-	width: 60%;
+	width: 65%;
 	display: inline-block;
 	font-size: 30px;
 }
@@ -99,13 +99,15 @@
 }
 
 .mini_board {
-	
+	overflow: auto;
 }
 
 .mb_insert {
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
 }
 
 .mb_content {
