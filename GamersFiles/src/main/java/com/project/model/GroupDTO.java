@@ -30,6 +30,6 @@ public class GroupDTO {
 	private String g_member;
 	@NonNull
 	private String m_position;
-	private String g_date;
+	private String g_file;
 
 }

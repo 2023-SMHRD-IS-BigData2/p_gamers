@@ -106,6 +106,7 @@ a#btn-modal{
 <body class="is-preload">
 	<%
 	MemberDTO logindto = (MemberDTO) session.getAttribute("login");
+	String c_name = request.getParameter("c_name");
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -171,7 +172,7 @@ a#btn-modal{
 				<header>
 					<h1>레이드 페이지입니다.</h1>
 					<p>
-						파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_num=">
+						파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_name=<%=c_name %>">
 							<button>파티생성</button>
 						</a>
 					</p>

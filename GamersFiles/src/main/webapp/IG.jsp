@@ -1,3 +1,4 @@
+<%@page import="com.project.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -139,17 +140,23 @@ body {
 	<%
 	request.setCharacterEncoding("utf-8");
 	String c_name = request.getParameter("c_name");
-	String c_num = request.getParameter("c_num");
+	MemberDTO login = (MemberDTO)session.getAttribute("login");
 	%>
 	<div class="member_container">
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>파티 정보</h2>
-				<form method="post" action="insertGroupService.do?c_num=<%=c_num %>" id="login-form">
-					<input type="text" name="g_name" placeholder="파티명"> <input
-						type="datetime-local" name="g_date" placeholder="일정"> <input
-						type="text" name="c_name" placeholder="컨텐츠명" value="<%=c_name%>" readonly > <input
-						type="submit" value="생성하기">
+				<form method="post" action="IGService.do" id="login-form" enctype="multipart/form-data">
+					<input type="text" name="g_name" placeholder="파티명">
+					<input type="text" name="m_id" value="<%=login.getM_id() %>" readonly>
+					<input type="text" name="c_name" value="<%=c_name %>" readonly>
+					<input type="text" name="g_content" placeholder="컨텐츠">
+					<input type="text" name="g_start" placeholder="시작일정">
+					<input type="text" name="g_end" placeholder="최종일정">
+					<input type="text" name="g_member" placeholder="모집 인원의 수">
+					<input type="text" name="m_position" placeholder="모집 인원의 역할">
+					<input type="file" name="g_file" style="float: right;" placeholder="이미지 선택">
+					<input type="submit" value="생성하기">
 				</form>
 			</div>
 		</div>
