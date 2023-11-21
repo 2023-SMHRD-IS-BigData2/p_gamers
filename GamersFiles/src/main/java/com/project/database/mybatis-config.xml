@@ -18,6 +18,8 @@
 			alias="GroupDTO" />
 		<typeAlias type="com.project.model.CalendarDTO"
 			alias="CalendarDTO" />
+			<typeAlias type="com.project.model.MiniBoardDTO"
+			alias="MiniBoardDTO" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -36,6 +38,7 @@
 		<mapper resource="com/project/database/ContentMapper.xml" />
 		<mapper resource="com/project/database/GroupMapper.xml" />
 		<mapper resource="com/project/database/CalendarMapper.xml" />
+		<mapper resource="com/project/database/MiniBoardMapper.xml" />
 
 	</mappers>
 </configuration>

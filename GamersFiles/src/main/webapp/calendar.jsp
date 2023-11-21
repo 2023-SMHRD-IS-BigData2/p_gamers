@@ -1,3 +1,5 @@
+<%@page import="com.project.model.MiniBoardDAO"%>
+<%@page import="com.project.model.MiniBoardDTO"%>
 <%@page import="com.project.model.CalendarDAO"%>
 <%@page import="com.project.model.CalendarDTO"%>
 <%@page import="java.util.List"%>
@@ -21,10 +23,12 @@
 </noscript>
 <style type="text/css">
 .main_body {
+	height: 700px;
 	margin: 25px;
 	display: flex;
 	justify-content: flex-start;
 	display: flex;
+	margin: 25px;
 }
 
 .cal_btn {
@@ -71,27 +75,43 @@
 .cal_table {
 	font-size: 18px;
 	width: 100%;
-	height: 45%;
+	height: 320px;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
 	margin-top: 10px;
-	
-	
 }
 
 .cal_result_table {
+	overflow: auto;
 	font-size: 18px;
 	width: 100%;
 	height: 50%;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
 	margin-top: 10px;
+	font-size: 18px;
 }
 
 .blank {
 	width: 20px;
 	height: 100%;
 	display: inline-block;
+}
+
+.mini_board {
+	
+}
+
+.mb_insert {
+	border: 5px solid #8C8C8C;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.mb_content {
+	border: 5px solid #8C8C8C;
+	border-radius: 10px;
+	margin-top:10px;
 }
 
 input {
@@ -101,23 +121,24 @@ input {
 </head>
 <body class="is-preload">
 	<%
+	request.setCharacterEncoding("utf-8");
 	session.setAttribute("g_name", "g_name");
 	session.setAttribute("m_nick", "m_nick");
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
-	
 
-	List<CalendarDTO> list = new CalendarDAO().calendarList(g_name);
+	List<CalendarDTO> c_list = new CalendarDAO().calendarList(g_name);
+	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name);
 	%>
 	<!-- Wrapper -->
-	<div id="groupWrapper" style="width: 600; height: 600px;">
+	<div id="groupWrapper" style="width: 100; height: 100px;">
 		<!-- Header -->
 		<header id="header">
 			<div class="groupInner" style="width: 200; height: 200;">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
+				<!-- <a href="index.html" class="logo"> <span class="symbol"><img
 						src="images/logo.svg" alt="" /></span><span class="title">Gamers</span>
-				</a>
+				</a> -->
 				<!-- Nav -->
 
 				<nav>
@@ -127,112 +148,132 @@ input {
 				</nav>
 			</div>
 		</header>
+	</div>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="generic.html">Ipsum veroeros</a></li>
-				<li><a href="generic.html">Tempus etiam</a></li>
-				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a href="elements.html">Elements</a></li>
-			</ul>
-		</nav>
+	<!-- Menu -->
+	<nav id="menu">
+		<h2>Menu</h2>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="generic.html">Ipsum veroeros</a></li>
+			<li><a href="generic.html">Tempus etiam</a></li>
+			<li><a href="generic.html">Consequat dolor</a></li>
+			<li><a href="elements.html">Elements</a></li>
+		</ul>
+	</nav>
 
 
-		<!-- Main -->
-		<div id="groupMain">
-			<div class="groupInner">
-				<div class="main_title">
-					<h1><%=g_name%>공격대 홈페이지
-					</h1>
-				</div>
+	<!-- Main -->
+	<div id="groupMain">
+		<div class="groupInner">
+			<div class="main_title">
+				<h1><%=g_name%>공격대 홈페이지
+				</h1>
 			</div>
-			<div class="subtitle">
-				<div class="main_header">일정</div>
-				<div class="sub_header">미니 게시판</div>
+		</div>
+		<div class="subtitle">
+			<div class="main_header">일정</div>
+			<div class="sub_header">미니 게시판</div>
+		</div>
+		<div class="main_body">
+			<div class="calendar_iframe">
+				<iframe src="calendar_iframe.jsp" width="700px" height="640px"></iframe>
 			</div>
-			<div class="main_body">
-				<div class="calendar_iframe">
-					<iframe src="calendar_iframe.jsp" width="700px" , height="640px"></iframe>
-				</div>
 
-				<div>
-					<div class="cal_table">
-						<form action="Cd_Insert_Service" align="center">
-							<table>
-								<tr>
-									<td>일정 시작</td>
-									<td><input type="datetime-local" name="c_start"></td>
-								</tr>
-								<tr>
-									<td>일정 종료</td>
-									<td><input type="datetime-local" name="c_end"></td>
-								</tr>
-								<tr>
-									<td>내용</td>
-									<td><input type="text" name="c_content"></td>
-								</tr>
-								<tr>
-									<td colspan="2"><input type="submit" value="일정생성"></td>
-								</tr>
-
-
-							</table>
-						</form>
-					</div>
-					<div class="cal_result_table">
+			<div>
+				<div class="cal_table">
+					<form action="Cd_Insert_Service" align="center">
 						<table>
 							<tr>
-								<td>제목</td>
-								<td>시작일</td>
-								<td>종료일</td>
-								<td></td>
+								<td>일정 시작</td>
+								<td><input type="datetime-local" name="c_start"></td>
 							</tr>
-							<%
-							for (CalendarDTO tmp : list) {
+							<tr>
+								<td>일정 종료</td>
+								<td><input type="datetime-local" name="c_end"></td>
+							</tr>
+							<tr>
+								<td>내용</td>
+								<td><input type="text" name="c_content"></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="submit" value="일정생성"></td>
+							</tr>
 
-								String start = tmp.getC_start().substring(5, 10);
-								String end = tmp.getC_end().substring(5, 10);
-							%>
-							<tr>
-								<td><%=tmp.getC_content()%></td>
-								<td><%=start%></td>
-								<td><%=end%></td>
-								<td><a href="Cd_delete_Service?num=<%=tmp.getA_num()%>"><button>삭제</button></a></td>
-							</tr>
-							<%
-							}
-							%>
-						</table>
-					</div>
-				</div>
-				<div>
-					<form action="" align="center">
-						<table width="300px" >
-							<tr>
-								<td><textarea name="bd_text" rows="20" cols="30"></textarea> </td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="게시"></td>
-							</tr>
+
 						</table>
 					</form>
 				</div>
-				<div>
+				<div class="cal_result_table">
+					<table>
+						<tr>
+							<td>제목</td>
+							<td>시작일</td>
+							<td>종료일</td>
+							<td></td>
+						</tr>
+						<%
+						for (CalendarDTO tmp : c_list) {
+							String start = tmp.getC_start();
+							if (start != null) {
+								start = tmp.getC_start().substring(5, 10);
+							}
+							String end = tmp.getC_end();
+							if (end != null) {
+								end = tmp.getC_end().substring(5, 10);
+							}
+						%>
+						<tr>
+							<td><%=tmp.getC_content()%></td>
+							<td><%=start%></td>
+							<td><%=end%></td>
+							<td><a href="Cd_delete_Service?num=<%=tmp.getA_num()%>"><button>삭제</button></a></td>
+						</tr>
+						<%
+						}
+						%>
+					</table>
 				</div>
 			</div>
+			<div class="mb_insert">
+				<form action="MiniBoard_Insert_Service" align="center">
+					<table width="300px">
+						<tr>
+							<td>내용 입력</td>
+						</tr>
+						<tr>
+							<td><textarea name="p_content" rows="20" cols="30"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="게시"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="mini_board">
+				<%
+				for (MiniBoardDTO tmp : mb_list) {
+				%>
+				<div class="mb_content">
+					<b><%=tmp.getM_id()%></b><br>
+					<%=tmp.getP_content()%>
+				</div>
+				<%
+				}
+				%>
+			</div>
 		</div>
+	</div>
 
 
 
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
