@@ -1,3 +1,4 @@
+<%@page import="com.project.model.MemberDAO"%>
 <%@page import="com.project.model.GroupDAO"%>
 <%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.ContentDAO"%>
@@ -195,8 +196,21 @@ a#btn-modal {
 					<%
 					if (groups != null) {
 						int cnt = 0;
+						int[] dealers = new int[groups.size()];
+						int[] tankers = new int[groups.size()];
+						int[] healers = new int[groups.size()];
 						for (int i = 0; i < groups.size(); i++) {
 							cnt++;
+							List<MemberDTO> raids = new MemberDAO().raidMemberList(groups.get(i).getG_name());
+							for (int j = 0; j < raids.size(); j++) {
+						if (raids.get(j).getM_position().equals("딜러")) {
+							dealers[i]++;
+						} else if (raids.get(j).getM_position().equals("탱커")) {
+							tankers[i]++;
+						} else if (raids.get(j).getM_position().equals("힐러")) {
+							healers[i]++;
+						}
+							}
 					%>
 					<article class="style<%=cnt%>" style="width: 225px; height: 225px;">
 						<span class="image"> <img
@@ -211,10 +225,16 @@ a#btn-modal {
 								<p>
 									컨텐츠 :
 									<%=groups.get(i).getG_content()%><br> 현재 인원 <br> 딜러 :
+									<%=dealers[i]%>
+									/
 									<%=groups.get(i).getM_deal()%>
 									<br> 탱커 :
+									<%=tankers[i]%>
+									/
 									<%=groups.get(i).getM_tank()%>
 									<br> 힐러 :
+									<%=healers[i]%>
+									/
 									<%=groups.get(i).getM_heal()%>
 								</p>
 							</div>

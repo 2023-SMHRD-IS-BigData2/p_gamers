@@ -10,6 +10,8 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.project.frontcontroller.Service;
 import com.project.model.GroupDAO;
 import com.project.model.GroupDTO;
+import com.project.model.MemberDAO;
+import com.project.model.MemberDTO;
 
 public class IGService implements Service {
 
@@ -44,10 +46,17 @@ public class IGService implements Service {
 			String g_file = multi.getFilesystemName("g_file");
 			String m_tank = multi.getParameter("m_tank");
 			String m_heal = multi.getParameter("m_heal");
-			
 			System.out.println(g_start);
 			System.out.println(g_end);
-
+			System.out.println(g_name);
+			System.out.println(m_id);
+			MemberDTO mdto = new MemberDTO(g_name, m_id);
+			int party = new MemberDAO().updateGroup(mdto);
+			if (party > 0) {
+				System.out.println("파티명 업데이트 성공");
+			} else {
+				System.out.println("파티명 업데이트 실패");
+			}
 			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
 			int cnt = new GroupDAO().insertGroup(gdto);
 			System.out.println("cnt : " + cnt);
@@ -58,6 +67,7 @@ public class IGService implements Service {
 				System.out.println("파티 생성 실패");
 				return "GamersMain.jsp";
 			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

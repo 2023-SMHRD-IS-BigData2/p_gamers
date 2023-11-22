@@ -8,7 +8,7 @@
 <mapper namespace="com.project.database.MemberMapper">
 	<insert id="insertMember" parameterType="MemberDTO">
 		insert into p_member
-		values(#{m_id}, #{m_pw}, #{m_nick}, #{g_name}, #{m_position}, sysdate, #{m_class}, #{m_coment})
+		values(#{m_id}, #{m_pw}, #{m_nick}, null, #{m_position}, sysdate, #{m_class}, #{m_coment})
 	</insert>
 	<select id="selectMember" parameterType="MemberDTO"
 		resultType="MemberDTO">
@@ -45,5 +45,8 @@
 		update p_member set
 		m_coment=#{m_coment} where
 		m_nick=#{m_nick}
+	</update>
+	<update id="updateGroup" parameterType="MemberDTO">
+		update p_member set g_name=#{g_name} where m_id=#{m_id}
 	</update>
 </mapper>
