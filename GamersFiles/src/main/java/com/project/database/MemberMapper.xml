@@ -32,9 +32,18 @@
 		select * from p_member where
 		not(m_id='admin')
 	</select>
+	<select id="raidMemberList" parameterType="String" resultType="MemberDTO">
+		select * from p_member
+		where g_name = #{g_name}
+	</select>
 	<delete id="deleteMember" parameterType="String">
 		delete from p_member
 		where
 		m_id=#{m_id}
 	</delete>
+	<update id="updateComent" parameterType="ComentDTO">
+		update p_member set
+		m_coment=#{m_coment} where
+		m_nick=#{m_nick}
+	</update>
 </mapper>

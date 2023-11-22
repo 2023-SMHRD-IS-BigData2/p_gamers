@@ -34,5 +34,7 @@ public class MemberDTO {
 		this.m_position = m_position;
 	}
 	
+	
+	
 
 }

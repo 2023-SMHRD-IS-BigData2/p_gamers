@@ -18,8 +18,10 @@
 			alias="GroupDTO" />
 		<typeAlias type="com.project.model.CalendarDTO"
 			alias="CalendarDTO" />
-			<typeAlias type="com.project.model.MiniBoardDTO"
+		<typeAlias type="com.project.model.MiniBoardDTO"
 			alias="MiniBoardDTO" />
+		<typeAlias type="com.project.model.ComentDTO"
+			alias="ComentDTO" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
