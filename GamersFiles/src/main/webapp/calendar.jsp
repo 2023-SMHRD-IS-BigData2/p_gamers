@@ -114,7 +114,7 @@
 .mb_content {
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
-	margin-top: 10px;
+	margin-top:10px;
 }
 
 input {
@@ -129,7 +129,7 @@ input {
 	String m_nick = (String) session.getAttribute("m_nick");
 
 	List<CalendarDTO> c_list = new CalendarDAO().calendarList(g_name);
-	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name);
+	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name); 
 	%>
 	<!-- Wrapper -->
 	<div id="groupWrapper" style="width: 100; height: 100px;">
@@ -158,6 +158,7 @@ input {
 			<li><a href="GamersMain.jsp">홈</a></li>
 			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
 			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
+			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>			
 		</ul>
 	</nav>
 
@@ -264,6 +265,10 @@ input {
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
