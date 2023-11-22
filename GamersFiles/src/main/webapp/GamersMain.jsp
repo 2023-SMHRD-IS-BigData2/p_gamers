@@ -23,7 +23,8 @@
 	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	if (login != null) {
 		session.setAttribute("g_name", login.getG_name());
-		
+		session.setAttribute("m_nick", login.getM_nick());
+		session.setAttribute("m_id", login.getM_id());
 	}
 	%>
 	<!-- Wrapper -->
