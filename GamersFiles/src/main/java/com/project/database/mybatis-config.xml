@@ -20,8 +20,13 @@
 			alias="CalendarDTO" />
 		<typeAlias type="com.project.model.MiniBoardDTO"
 			alias="MiniBoardDTO" />
+<<<<<<< HEAD
 			<typeAlias type="com.project.model.JobDTO"
 			alias="JobDTO" />
+=======
+		<typeAlias type="com.project.model.ComentDTO"
+			alias="ComentDTO" />
+>>>>>>> branch 'main' of https://github.com/2023-SMHRD-IS-BigData2/p_gamers
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">

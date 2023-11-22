@@ -95,4 +95,31 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	
+	// 데이터 리스트
+		public List<MemberDTO> raidMemberList(String g_name) {
+			List<MemberDTO> members = null;
+			try {
+				members = sqlSession.selectList("com.project.database.MemberMapper.raidMemberList",g_name);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return members;
+		}
+		
+		// 데이터 수정
+		public int updateComent(ComentDTO dto) {
+			int cnt = 0;
+			try {
+				cnt = sqlSession.update("com.project.database.MemberMapper.updateComent", dto);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return cnt;
+		}
+
 }
