@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="com.project.model.JobDAO"%>
+<%@page import="com.project.model.JobDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +30,8 @@ body {
 }
 
 .login-wrapper>h2 {
-	font-size: 24px; color : #6A24FE;
+	font-size: 24px;
+	color: #6A24FE;
 	margin-bottom: 20px;
 	color: #6A24FE;
 }
@@ -133,6 +137,10 @@ body {
 </style>
 </head>
 <body>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	List<JobDTO> jobs = new JobDAO().jobList();
+	%>
 	<div class="member_container">
 		<div class="main_top">
 			<div class="login-wrapper" style="width: 400px;">
@@ -157,19 +165,44 @@ body {
 						id="inputG" placeholder="파티명"> <input type="button"
 						value="중복체크" onclick="checkG()"
 						style="width: 100px; height: 50px;"> <span id="groupCheck"></span>
-					<input type="text" list="positions" name="m_position"
-						placeholder="역할">
-					<datalist id="positions">
-						<option>딜러</option>
-						<option>탱커</option>
-						<option>힐러</option>
+					<input type="text" name="m_class" list="classes" id="class"
+						placeholder="직업">
+					<datalist id="classes">
+						<%
+						if (jobs != null) {
+							for (int i = 0; i < jobs.size(); i++) {
+						%>
+						<option value="<%=jobs.get(i).getM_class()%>"><%=jobs.get(i).getM_class()%></option>
+						<%
+						}
+						}
+						%>
 					</datalist>
+					<input type="text" name="m_position" readonly value=""
+						id="m_position"><input type="text" name="m_coment">
 					<input type="submit" value="회원가입">
 				</form>
 			</div>
 		</div>
 	</div>
 	<script>
+		$(document).on('change', '#class', function() {
+			var val = $(this).val();
+			console.log(val)
+			$.ajax({
+				url : 'PCService.do',
+				data : {
+					'm_class' : val
+				},
+				type : 'get',
+				success : function(data) {
+					document.getElementById("m_position").value = data;
+				},
+				error : function() {
+				}
+			})
+		});
+
 		function checkI() {
 			var inputI = $('#inputI').val();
 			$.ajax({ /* {} 표현식 : json */

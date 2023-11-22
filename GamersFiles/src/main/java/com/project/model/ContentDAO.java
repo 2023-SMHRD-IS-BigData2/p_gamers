@@ -30,10 +30,10 @@ public class ContentDAO {
 	}
 
 	// 데이터 조회
-	public String selectContent(int c_num) {
+	public String selectContent(String c_name) {
 		String select = null;
 		try {
-			select = sqlSession.selectOne("com.project.database.ContentMapper.selectContent", c_num);
+			select = sqlSession.selectOne("com.project.database.ContentMapper.selectContent", c_name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -75,6 +75,18 @@ public class ContentDAO {
 		List<ContentDTO> contents = null;
 		try {
 			contents = sqlSession.selectList("com.project.database.ContentMapper.contentList");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return contents;
+	}
+	
+	public List<ContentDTO> contentList2(String c_name) {
+		List<ContentDTO> contents = null;
+		try {
+			contents = sqlSession.selectList("com.project.database.ContentMapper.contentList2", c_name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

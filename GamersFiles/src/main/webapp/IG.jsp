@@ -1,3 +1,6 @@
+<%@page import="com.project.model.ContentDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.project.model.ContentDAO"%>
 <%@page import="com.project.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -141,18 +144,24 @@ body {
 	request.setCharacterEncoding("utf-8");
 	String c_name = request.getParameter("c_name");
 	MemberDTO login = (MemberDTO)session.getAttribute("login");
+	List<ContentDTO> content = new ContentDAO().contentList2(c_name);
 	%>
 	<div class="member_container">
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>파티 정보</h2>
-				<form method="post" action="IGService.do" id="login-form" enctype="multipart/form-data">
+				<form method="post" action="IGService.do?c_name=<%=c_name %>" id="login-form" enctype="multipart/form-data">
 					<input type="text" name="g_name" placeholder="파티명">
 					<input type="text" name="m_id" value="<%=login.getM_id() %>" readonly>
 					<input type="text" name="c_name" value="<%=c_name %>" readonly>
-					<input type="text" name="g_content" placeholder="컨텐츠">
-					<input type="text" name="g_start" placeholder="시작일정">
-					<input type="text" name="g_end" placeholder="최종일정">
+					<input type="text" name="g_content" list="g_contentList" placeholder="컨텐츠">
+					<datalist id="g_contentList">
+						<option><%=content.get(0).getC_1() %></option>
+						<option><%=content.get(0).getC_2() %></option>
+						<option><%=content.get(0).getC_3() %></option>
+					</datalist>
+					<input type="date" name="g_start" placeholder="시작일정">
+					<input type="date" name="g_end" placeholder="최종일정">
 					<input type="text" name="g_member" placeholder="모집 인원의 수">
 					<input type="text" name="m_position" placeholder="모집 인원의 역할">
 					<input type="file" name="g_file" style="float: right;" placeholder="이미지 선택">

@@ -19,7 +19,7 @@ public class GroupDAO {
 			int cnt = 0;
 
 			try {
-				cnt = sqlSession.insert("com.project.database.MemberMapper.insertGroup", gdto);
+				cnt = sqlSession.insert("com.project.database.GroupMapper.insertGroup", gdto);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
@@ -33,7 +33,7 @@ public class GroupDAO {
 		public GroupDTO selectGroup(GroupDTO gdto) {
 			GroupDTO select = null;
 			try {
-				select = sqlSession.selectOne("com.project.database.MemberMapper.selectGroup", gdto);
+				select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroup", gdto);
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -49,7 +49,7 @@ public class GroupDAO {
 		public boolean groupCheck(String inputG) {
 			boolean isCheck = false;
 			try {
-				isCheck = sqlSession.selectOne("com.project.database.MemberMapper.groupCheck", inputG);
+				isCheck = sqlSession.selectOne("com.project.database.GroupMapper.groupCheck", inputG);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
@@ -63,7 +63,7 @@ public class GroupDAO {
 		public int updateGroup(GroupDTO gdto) {
 			int cnt = 0;
 			try {
-				cnt = sqlSession.update("com.project.database.MemberMapper.updateGroup", gdto);
+				cnt = sqlSession.update("com.project.database.GroupMapper.updateGroup", gdto);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
@@ -76,7 +76,7 @@ public class GroupDAO {
 		public List<GroupDTO> groupList() {
 			List<GroupDTO> groups = null;
 			try {
-				groups = sqlSession.selectList("com.project.database.MemberMapper.groupList");
+				groups = sqlSession.selectList("com.project.database.GroupMapper.groupList");
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
@@ -89,7 +89,7 @@ public class GroupDAO {
 		public int deleteMember(String m_id) {
 			int cnt = 0;
 			try {
-				cnt = sqlSession.delete("com.project.database.MemberMapper.deleteMember", m_id);
+				cnt = sqlSession.delete("com.project.database.GroupMapper.deleteMember", m_id);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

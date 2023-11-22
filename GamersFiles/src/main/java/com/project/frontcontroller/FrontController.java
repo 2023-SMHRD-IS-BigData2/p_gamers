@@ -8,16 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.http.impl.io.ContentLengthInputStream;
-
-import com.project.controller.DMService;
 import com.project.controller.GCService;
-import com.project.controller.IMService;
-import com.project.controller.MCService;
-import com.project.controller.SMService;
 import com.project.controller.ICService;
 import com.project.controller.IGService;
-import com.project.controller.UMService;
+import com.project.controller.IMService;
+import com.project.controller.MCService;
+import com.project.controller.PCService;
+import com.project.controller.SMService;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -48,7 +45,11 @@ public class FrontController extends HttpServlet {
 			service = new GCService();
 		} else if (result.equals("/ICService.do")) { // 관리자 컨텐츠 생성
 			service = new ICService();
-		} 
+		} else if (result.equals("/IGService.do")) { // 파티 생성
+			service = new IGService();
+		} else if (result.equals("/PCService.do")) { // 파티 생성
+			service = new PCService();
+		}
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);

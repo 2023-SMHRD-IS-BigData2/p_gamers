@@ -40,9 +40,7 @@ public class MemberDAO {
 		} finally {
 			sqlSession.close();
 		}
-
 		return login;
-
 	}
 
 	// 데이터 중복 체크

@@ -6,21 +6,21 @@
 <!-- 5. Mapper 생성 -> SQL 쿼리문 작성 -->
 <!-- namespace : Mapper의 id를 그룹화하는 속성 sql 태그의 id 값이 중복될 수 있기 때문에 원하는 id 값으로 
 	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
-<mapper namespace="com.project.database.ContentMapper">
-	<insert id="insertContent" parameterType="ContentDTO">
+<mapper namespace="com.project.database.JobMapper">
+	<insert id="insertJob" parameterType="JobDTO">
 		insert into p_content
 		values(#{c_name}, sysdate, #{c_title})
 	</insert>
-	<delete id="delContent" parameterType="String">
+	<delete id="deleteJob" parameterType="String">
 		delete from p_content
 		where c_name=#{c_name}
 	</delete>
-	<select id="contentList" resultType="ContentDTO">
-		select * from p_content
+	<select id="jobList" resultType="JobDTO">
+		select * from p_job
 	</select>
-	<select id="selectContent" resultType="String">
-		select c_name from p_content
-		where c_num = #{c_num}
+	<select id="selectJob" resultType="String">
+		select m_position from p_job
+		where m_class = #{m_class}
 	</select>
 	<select id="contentList2" resultType="ContentDTO">
 		select * from p_content where c_name=#{c_name}

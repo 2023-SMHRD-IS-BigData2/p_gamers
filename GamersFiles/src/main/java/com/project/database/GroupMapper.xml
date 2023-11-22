@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.database.GroupMapper">
 	<insert id="insertGroup" parameterType="GroupDTO">
-		insert into p_group	values(group_num.nextval , #{m_id}, to_date(#{g_date},'yyyy-mm-dd hh24:mi:ss'), #{c_num})
+		insert into p_group	values(#{g_name}, #{m_id}, #{c_name}, #{g_content}, #{g_start}, #{g_end}, #{g_member}, #{m_position}, sysdate, #{g_file})
 	</insert>
 	<select id="selectGroup" parameterType="GroupDTO"
 		resultType="GroupDTO">
