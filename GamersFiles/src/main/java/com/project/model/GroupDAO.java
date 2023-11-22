@@ -73,10 +73,10 @@ public class GroupDAO {
 		}
 		
 		// 데이터 리스트
-		public List<GroupDTO> groupList() {
+		public List<GroupDTO> groupList(String c_name) {
 			List<GroupDTO> groups = null;
 			try {
-				groups = sqlSession.selectList("com.project.database.GroupMapper.groupList");
+				groups = sqlSession.selectList("com.project.database.GroupMapper.groupList", c_name);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

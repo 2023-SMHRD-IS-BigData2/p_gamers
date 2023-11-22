@@ -1,3 +1,5 @@
+<%@page import="com.project.model.GroupDAO"%>
+<%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.ContentDAO"%>
 <%@page import="com.project.model.MemberDTO"%>
 <%@page import="com.project.model.ContentDTO"%>
@@ -107,6 +109,7 @@ a#btn-modal{
 	<%
 	MemberDTO logindto = (MemberDTO) session.getAttribute("login");
 	String c_name = request.getParameter("c_name");
+	List<GroupDTO> groups = new GroupDAO().groupList(c_name);
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -178,127 +181,27 @@ a#btn-modal{
 					</p>
 				</header>
 				<section class="tiles">
-					<article class="style1" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/con01.jpg" alt=""
+					<%
+					if(groups != null){
+						int cnt = 0;
+						for(int i = 0; i < groups.size(); i++){
+							cnt++;
+					%>
+					<article class="style<%=cnt%>" style="width: 225px; height: 225px;">
+						<span class="image"> <img src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
 						</span> <a id="btn-modal">
-							<h2> 그룹명</h2>
+							<h2><%=groups.get(i).getG_name() %></h2>
 							<div class="content">
-								<p>그룹장명</p>
+								<p><%=groups.get(i).getM_id() %></p>
+								<p>딜러2/4 힐러1/2 탱커2/2 </p>
 							</div>
 						</a>
 					</article>
-					<article class="style2" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/con02.jpg" alt=""
-							width="225px" height="225px" />
-						</span> <a href="generic.html">
-							<h2>그룹명</h2>
-							<div class="content">
-								<p>그룹장명</p>
-							</div>
-						</a>
-					</article>
-					<article class="style3" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/con03.jpg" alt=""
-							width="225px" height="225px" />
-						</span> <a href="generic.html">
-							<h2>그룹명</h2>
-							<div class="content">
-								<p>그룹장명</p>
-							</div>
-						</a>
-					</article>
-					<article class="style4" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/con04.jpg" alt=""
-							width="225px" height="225px" />
-						</span> <a href="generic.html">
-							<h2>그룹명</h2>
-							<div class="content">
-								<p>그룹장명</p>
-							</div>
-						</a>
-					</article>
-					<article class="style5" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/con05.jpg" alt=""
-							width="225px" height="225px" />
-						</span> <a href="generic.html">
-							<h2>그룹명</h2>
-							<div class="content">
-								<p>그룹장명</p>
-							</div>
-						</a>
-					</article>
-					<article class="style6" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="images/pic06.jpg" alt=""
-							width="225px" height="225px" />
-						</span> <a href="generic.html">
-							<h2>Veroeros</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style2" style="width: 200px; height: 200px;">
-						<span class="image"> <img src="images/pic07.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Ipsum</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style3" style="width: 250px; height: 250px;">
-						<span class="image"> <img src="images/pic08.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Dolor</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style1" style="width: 250px; height: 250px;">
-						<span class="image"> <img src="images/pic09.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Nullam</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style5">
-						<span class="image"> <img src="images/pic10.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Ultricies</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style6">
-						<span class="image"> <img src="images/pic11.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Dictum</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style4">
-						<span class="image"> <img src="images/pic12.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Pretium</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
-									veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
+					<%
+						}
+					} 
+					%>
 				</section>
 			</div>
 		</div>

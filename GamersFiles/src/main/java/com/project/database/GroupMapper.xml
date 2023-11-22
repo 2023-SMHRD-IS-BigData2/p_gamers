@@ -30,4 +30,7 @@
 		where
 		m_id=#{m_id}
 	</delete>
+	<select id="groupList" resultType="GroupDTO" parameterType="String">
+		select * from p_group where c_name=#{c_name}
+	</select>
 </mapper>
