@@ -181,6 +181,7 @@ h1 {
 			<li><a href="GamersMain.jsp">홈</a></li>
 			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
 			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
+			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>
 		</ul>
 	</nav>
 
@@ -231,7 +232,7 @@ h1 {
 						</div>
 					</div>
 					<div class="inner_box_1_2">
-						<div>
+						<div>상태 메세지 :
 							<%
 							if (tmp.getM_coment() != null) {
 							%>
@@ -251,7 +252,7 @@ h1 {
 							<input type="hidden" name="name" value="<%=tmp.getM_nick()%>">
 						</div>
 						<div class="inner_box_2_2">
-							<input id="input_2" type="submit" value="한마디 갱신">
+							<input id="input_2" type="submit" value="상태메세지 갱신">
 						</div>
 					</form>
 				</div>
