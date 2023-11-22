@@ -156,9 +156,9 @@ body {
 					<input type="text" name="c_name" value="<%=c_name %>" readonly>
 					<input type="text" name="g_content" list="g_contentList" placeholder="컨텐츠">
 					<datalist id="g_contentList">
-						<option><%=content.get(0).getC_1() %></option>
-						<option><%=content.get(0).getC_2() %></option>
-						<option><%=content.get(0).getC_3() %></option>
+						<option><%=content.get(0).getC_content1() %></option>
+						<option><%=content.get(0).getC_content2() %></option>
+						<option><%=content.get(0).getC_content3() %></option>
 					</datalist>
 					<input type="date" name="g_start" placeholder="시작일정">
 					<input type="date" name="g_end" placeholder="최종일정">

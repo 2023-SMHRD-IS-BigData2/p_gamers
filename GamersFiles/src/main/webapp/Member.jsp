@@ -134,6 +134,9 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+textarea{
+	resize: none;
+}
 </style>
 </head>
 <body>
@@ -157,14 +160,13 @@ body {
 				<h2>회원가입</h2>
 				<form method="post" action="IMService.do" id="join-form">
 					<input type="text" name="m_id" id="inputI" placeholder="아이디">
-					<input type="button" value="중복체크" onclick="checkI()"
-						style="width: 100px; height: 50px;"> <span
-						id="memberCheck"></span> <input type="password" name="m_pw"
-						placeholder="비밀번호"> <input type="text" name="m_nick"
-						placeholder="닉네임"> <input type="text" name="g_name"
-						id="inputG" placeholder="파티명"> <input type="button"
-						value="중복체크" onclick="checkG()"
-						style="width: 100px; height: 50px;"> <span id="groupCheck"></span>
+					<input type="button" value="중복체크" onclick="checkI()" style="width: 100px; height: 50px;">
+						<span id="memberCheck"></span>
+					<input type="password" name="m_pw" placeholder="비밀번호">
+					<input type="text" name="m_nick" placeholder="닉네임"> 
+					<input type="text" name="g_name" id="inputG" placeholder="파티명">
+					<input type="button" value="중복체크" onclick="checkG()" 	style="width: 100px; height: 50px;">
+						<span id="groupCheck"></span>
 					<input type="text" name="m_class" list="classes" id="class"
 						placeholder="직업">
 					<datalist id="classes">
@@ -179,7 +181,8 @@ body {
 						%>
 					</datalist>
 					<input type="text" name="m_position" readonly value=""
-						id="m_position"><input type="text" name="m_coment">
+						id="m_position">
+					<textarea name="m_coment" style="width: 320px; height: 48px;" placeholder="간단한 자기 소개"></textarea>
 					<input type="submit" value="회원가입">
 				</form>
 			</div>
@@ -199,6 +202,7 @@ body {
 					document.getElementById("m_position").value = data;
 				},
 				error : function() {
+					alert("잘못된 직업입니다.")
 				}
 			})
 		});

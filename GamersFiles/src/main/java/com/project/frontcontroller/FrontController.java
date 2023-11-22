@@ -15,6 +15,7 @@ import com.project.controller.IMService;
 import com.project.controller.MCService;
 import com.project.controller.PCService;
 import com.project.controller.SMService;
+import com.project.controller.UMService;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -39,7 +40,7 @@ public class FrontController extends HttpServlet {
 			service = new SMService();
 		} else if (result.equals("/IMService.do")) { // 회원가입
 			service = new IMService();
-		} else if (result.equals("/MCService.do")) { // 이메일 중복체크
+		} else if (result.equals("/MCService.do")) { // ID 중복체크
 			service = new MCService();
 		} else if (result.equals("/GCService.do")) { // 파티 내 유저 확인
 			service = new GCService();
@@ -47,8 +48,10 @@ public class FrontController extends HttpServlet {
 			service = new ICService();
 		} else if (result.equals("/IGService.do")) { // 파티 생성
 			service = new IGService();
-		} else if (result.equals("/PCService.do")) { // 파티 생성
+		} else if (result.equals("/PCService.do")) { // 포지션 확인
 			service = new PCService();
+		} else if (result.equals("/UMService.do")) { // 회원 정보 수정
+			service = new UMService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {

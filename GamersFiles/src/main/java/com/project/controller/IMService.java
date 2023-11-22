@@ -22,9 +22,11 @@ public class IMService implements Service {
 		if (g_name == null) {
 			g_name = "Null";
 		}
+		String m_class = request.getParameter("m_class");
 		String m_position = request.getParameter("m_position");
+		String m_coment = request.getParameter("m_coment");
 		
-		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position);
+		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position, m_class, m_coment);
 
 		int cnt = new MemberDAO().insertMember(mdto);
 

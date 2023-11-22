@@ -143,6 +143,9 @@ body {
 				<form method="post" action="ICService.do" id="login-form">
 					<input type="text" name="c_name" placeholder="컨텐츠명">
 					<input type="text" name="c_title" placeholder="제목">
+					<input type="text" name="c_content1" placeholder="1번 컨텐츠">
+					<input type="text" name="c_content2" placeholder="2번 컨텐츠">
+					<input type="text" name="c_content3" placeholder="3번 컨텐츠">
 					<input type="submit" value="생성하기">
 				</form>
 			</div>

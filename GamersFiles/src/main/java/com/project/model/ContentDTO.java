@@ -16,7 +16,7 @@ public class ContentDTO {
 	
 	@Nonnull private String c_name;
 	@Nonnull private String c_title;
-	@Nonnull private String c_1;
-	@Nonnull private String c_2;
-	@Nonnull private String c_3;
+	@Nonnull private String c_content1;
+	@Nonnull private String c_content2;
+	@Nonnull private String c_content3;
 }

@@ -17,10 +17,14 @@ public class UMService implements Service {
 		String m_pw = request.getParameter("m_pw");
 		String m_nick = request.getParameter("m_nick");
 		String g_name = request.getParameter("g_name");
+		if (g_name == null) {
+			g_name = "Null";
+		}
+		String m_class = request.getParameter("m_class");
 		String m_position = request.getParameter("m_position");
-		String m_date = "sysdate";
+		String m_coment = request.getParameter("m_coment");
 
-		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position, m_date);
+		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position, m_class, m_coment);
 
 		int cnt = new MemberDAO().updateMember(mdto);
 
@@ -31,7 +35,7 @@ public class UMService implements Service {
 		} else {
 			System.out.println("정보 수정 실패");
 		}
-		return "Main.jsp";
+		return "GamersMain.jsp";
 	}
 
 }

@@ -42,8 +42,7 @@
 			} else {
 			%>
 			<nav>
-				<a href="Member.jsp"> 내 정보 수정 </a> <a href="calendar.jsp"> 내 파티
-				</a>
+				<a href="UM.jsp"> 내 정보 수정 </a> <a href="calendar.jsp"> 내 파티 </a>
 			</nav>
 			<%
 			}

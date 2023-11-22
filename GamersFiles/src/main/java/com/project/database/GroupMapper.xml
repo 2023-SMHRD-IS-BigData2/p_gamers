@@ -10,7 +10,7 @@
 		resultType="GroupDTO">
 		select * from p_group where g_num=#{g_num}
 	</select>
-	<select id="GroupCheck" parameterType="String"
+	<select id="groupCheck" parameterType="String"
 		resultType="boolean">
 		select case when count(*)>0 then 1
 		else 0
