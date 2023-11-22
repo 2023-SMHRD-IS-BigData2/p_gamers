@@ -22,7 +22,7 @@
 		select c_name from p_content
 		where c_num = #{c_num}
 	</select>
-	<select id="contentList2" resultType="ContentDTO">
+	<select id="contentList2" resultType="ContentDTO" parameterType="String">
 		select * from p_content where c_name=#{c_name}
 	</select>
 </mapper>

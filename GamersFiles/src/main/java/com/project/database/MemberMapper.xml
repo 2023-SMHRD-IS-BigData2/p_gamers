@@ -25,7 +25,7 @@
 	</select>
 	<update id="updateMember" parameterType="MemberDTO">
 		update p_member set
-		m_pw=#{m_pw}, m_nick=#{m_nick}, m_position=#{m_position} where
+		m_pw=#{m_pw}, m_nick=#{m_nick}, g_name=#{g_name}, m_class=#{m_class}, m_position=#{m_position}, m_coment=#{m_coment} where
 		m_id=#{m_id}
 	</update>
 	<select id="memberList" resultType="MemberDTO">

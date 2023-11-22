@@ -18,7 +18,7 @@ public class IMService implements Service {
 		String m_id = request.getParameter("m_id");
 		String m_pw = request.getParameter("m_pw");
 		String m_nick = request.getParameter("m_nick");
-		String g_name = "null";
+		String g_name = null;
 		String m_class = request.getParameter("m_class");
 		String m_position = request.getParameter("m_position");
 		String m_coment = request.getParameter("m_coment");
