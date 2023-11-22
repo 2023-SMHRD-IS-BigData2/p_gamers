@@ -21,6 +21,8 @@ public class MemberDTO {
 	private String m_nick;
 	private String g_name;
 	private String m_position;
+	private String m_class;
+	private String m_coment;
 	private String m_date;
 	
 	public MemberDTO(@NonNull String m_id, @NonNull String m_pw, String m_nick, String g_name, String m_position) {
