@@ -26,8 +26,6 @@ public class MemberDTO {
 	private String m_class;
 	private String m_coment;
 	private String m_date;
-	private String m_class;
-	private String m_coment;
 
 	public MemberDTO(@NonNull String m_id, @NonNull String m_pw, String m_nick, String g_name, String m_position,
 			String m_class, String m_coment) {
@@ -40,11 +38,4 @@ public class MemberDTO {
 		this.m_class = m_class;
 		this.m_coment = m_coment;
 	}
-<<<<<<< HEAD
-=======
-	
-	
-	
->>>>>>> branch 'main' of https://github.com/2023-SMHRD-IS-BigData2/p_gamers
-
 }
