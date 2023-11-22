@@ -125,8 +125,6 @@ input {
 <body class="is-preload">
 	<%
 	request.setCharacterEncoding("utf-8");
-	session.setAttribute("g_name", "g_name");
-	session.setAttribute("m_nick", "m_nick");
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 
@@ -157,8 +155,9 @@ input {
 	<nav id="menu">
 		<h2>Menu</h2>
 		<ul>
-			<li><a href="index.html">홈</a></li>
-			<li><a href="generic.html">Ipsum veroeros</a></li>
+			<li><a href="GamersMain.jsp">홈</a></li>
+			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
+			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
 			
 		</ul>
 	</nav>

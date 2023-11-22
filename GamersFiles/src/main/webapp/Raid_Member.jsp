@@ -150,7 +150,6 @@ h1 {
 </head>
 <body>
 	<%
-	session.setAttribute("g_name", "g_name");
 	String g_name = (String) session.getAttribute("g_name");
 	%>
 	<%
