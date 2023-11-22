@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.database.GroupMapper">
 	<insert id="insertGroup" parameterType="GroupDTO">
-		insert into p_group	values(#{g_name}, #{m_id}, #{c_name}, #{g_content}, #{g_start}, #{g_end}, #{g_member}, #{m_position}, sysdate, #{g_file})
+		insert into p_group	values(#{g_name}, #{m_id}, #{c_name}, #{g_content}, #{g_start}, #{g_end}, #{g_member}, #{m_deal}, sysdate, #{g_file}, #{m_tank}, #{m_heal})
 	</insert>
 	<select id="selectGroup" parameterType="GroupDTO"
 		resultType="GroupDTO">
@@ -28,9 +28,12 @@
 	<delete id="deleteGroup" parameterType="String">
 		delete from p_group
 		where
-		m_id=#{m_id}
+		g_name=#{g_name}
 	</delete>
-	<select id="groupList" resultType="GroupDTO" parameterType="String">
-		select * from p_group where c_name=#{c_name}
+	<select id="groupList" resultType="GroupDTO">
+		select * from p_group
+	</select>
+	<select id="groupList2" resultType="GroupDTO" parameterType="String">
+		select * from p_group where g_name=#{g_name}
 	</select>
 </mapper>

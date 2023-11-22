@@ -157,9 +157,7 @@ input {
 	<nav id="menu">
 		<h2>Menu</h2>
 		<ul>
-			<li><a href="index.html">홈</a></li>
-			<li><a href="generic.html">Ipsum veroeros</a></li>
-			
+			<li><a href="GamersMain.jsp">홈</a></li>
 		</ul>
 	</nav>
 

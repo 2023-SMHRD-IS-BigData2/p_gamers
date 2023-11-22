@@ -8,10 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.project.controller.DGService;
 import com.project.controller.GCService;
 import com.project.controller.ICService;
 import com.project.controller.IGService;
 import com.project.controller.IMService;
+import com.project.controller.LogoutService;
 import com.project.controller.MCService;
 import com.project.controller.PCService;
 import com.project.controller.SMService;
@@ -52,6 +54,10 @@ public class FrontController extends HttpServlet {
 			service = new PCService();
 		} else if (result.equals("/UMService.do")) { // 회원 정보 수정
 			service = new UMService();
+		} else if (result.equals("/LogoutService.do")) { // 로그아웃
+			service = new LogoutService();
+		} else if (result.equals("/DGService.do")) { // 로그아웃
+			service = new DGService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {

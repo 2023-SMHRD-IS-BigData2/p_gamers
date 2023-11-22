@@ -88,7 +88,8 @@
 	height: 200px;
 	display: inline-block;
 }
-a#btn-modal{
+
+a#btn-modal {
 	display: flex;
 	width: 200px;
 	height: 200px;
@@ -109,7 +110,8 @@ a#btn-modal{
 	<%
 	MemberDTO logindto = (MemberDTO) session.getAttribute("login");
 	String c_name = request.getParameter("c_name");
-	List<GroupDTO> groups = new GroupDAO().groupList(c_name);
+	List<GroupDTO> groups = new GroupDAO().groupList2(c_name);
+	List<ContentDTO> contents = new ContentDAO().contentList2(c_name);
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -117,7 +119,7 @@ a#btn-modal{
 		<header id="header">
 			<div class="inner">
 				<!-- Logo -->
-				<a href="Main.jsp" class="logo"> <span class="symbol"><img
+				<a href="GamersMain.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.svg" alt="" /></span><span class="title">게이머즈</span>
 				</a>
 				<!-- Nav -->
@@ -126,7 +128,6 @@ a#btn-modal{
 						<li><a href="#menu">메뉴</a></li>
 					</ul>
 				</nav>
-
 			</div>
 		</header>
 
@@ -161,8 +162,8 @@ a#btn-modal{
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html"> 홈 </a></li>
-				<li><a href="Update.jsp?m_email=<%=logindto.getM_id()%>"> 내
-						정보 수정 </a></li>
+				<li><a href="Update.jsp?m_id=<%=logindto.getM_id()%>"> 내 정보
+						수정 </a></li>
 				<li><a href="Member.jsp"> 내 파티 </a></li>
 			</ul>
 		</nav>
@@ -173,34 +174,55 @@ a#btn-modal{
 		<div id="main">
 			<div class="inner">
 				<header>
-					<h1>레이드 페이지입니다.</h1>
-					<p>
-						파티를 확인하고 조건에 맞는 파티를 찾아 가입을 신청해보세요. <a href="IG.jsp?c_name=<%=c_name%>">
-							<button>파티생성</button>
-						</a>
-					</p>
+					<h1><%=contents.get(0).getC_name()%></h1>
+					<h3>
+						컨텐츠 :
+						<%=contents.get(0).getC_content1()%>
+						/
+						<%=contents.get(0).getC_content2()%>
+						/
+						<%=contents.get(0).getC_content3()%>
+						<%
+						if (logindto.getG_name() == null) {
+						%>
+						<a href="IG.jsp?c_name=<%=c_name%>"><button>파티생성</button> </a>
+						<%
+						}
+						%>
+					</h3>
 				</header>
 				<section class="tiles">
 					<%
-					if(groups != null){
+					if (groups != null) {
 						int cnt = 0;
-						for(int i = 0; i < groups.size(); i++){
+						for (int i = 0; i < groups.size(); i++) {
 							cnt++;
 					%>
 					<article class="style<%=cnt%>" style="width: 225px; height: 225px;">
-						<span class="image"> <img src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
+						<span class="image"> <img
+							src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
 						</span> <a id="btn-modal">
-							<h2><%=groups.get(i).getG_name() %></h2>
+							<h2><%=groups.get(i).getG_name()%></h2>
 							<div class="content">
-								<p><%=groups.get(i).getM_id() %></p>
-								<p>딜러2/4 힐러1/2 탱커2/2 </p>
+								<h3>
+									파티장 :
+									<%=groups.get(i).getM_id()%></h3>
+								<p>
+									컨텐츠 :
+									<%=groups.get(i).getG_content()%><br> 현재 인원 <br> 딜러 :
+									<%=groups.get(i).getM_deal()%>
+									<br> 탱커 :
+									<%=groups.get(i).getM_tank()%>
+									<br> 힐러 :
+									<%=groups.get(i).getM_heal()%>
+								</p>
 							</div>
 						</a>
 					</article>
 					<%
-						}
-					} 
+					}
+					}
 					%>
 				</section>
 			</div>

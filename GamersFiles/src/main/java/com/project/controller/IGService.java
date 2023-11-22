@@ -40,13 +40,15 @@ public class IGService implements Service {
 			String g_start = multi.getParameter("g_start");
 			String g_end = multi.getParameter("g_end");
 			String g_member = multi.getParameter("g_member");
-			String m_position = multi.getParameter("m_position");
+			String m_deal = multi.getParameter("m_deal");
 			String g_file = multi.getFilesystemName("g_file");
+			String m_tank = multi.getParameter("m_tank");
+			String m_heal = multi.getParameter("m_heal");
 			
 			System.out.println(g_start);
 			System.out.println(g_end);
 
-			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_position, g_file);
+			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
 			int cnt = new GroupDAO().insertGroup(gdto);
 			System.out.println("cnt : " + cnt);
 			if (cnt > 0) {

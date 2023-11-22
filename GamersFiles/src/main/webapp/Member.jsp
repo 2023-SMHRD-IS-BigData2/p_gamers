@@ -164,9 +164,6 @@ textarea{
 						<span id="memberCheck"></span>
 					<input type="password" name="m_pw" placeholder="비밀번호">
 					<input type="text" name="m_nick" placeholder="닉네임"> 
-					<input type="text" name="g_name" id="inputG" placeholder="파티명">
-					<input type="button" value="중복체크" onclick="checkG()" 	style="width: 100px; height: 50px;">
-						<span id="groupCheck"></span>
 					<input type="text" name="m_class" list="classes" id="class"
 						placeholder="직업">
 					<datalist id="classes">
@@ -221,7 +218,7 @@ textarea{
 				// 성공
 				success : function(data) {
 					if (data == 'true') {
-						$('#memberCheck').text('사용할 수 없는 ID입니다.')
+						alert('사용할 수 없는 ID입니다.')
 					} else if (data == 'false') {
 						alert('사용할 수 있는 ID입니다.')
 					}

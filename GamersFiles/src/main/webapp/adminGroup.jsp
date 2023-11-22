@@ -77,7 +77,7 @@ table#allMember th {
 						<td width="150" style="text-align: center;"><%=groups.get(i).getM_id()%></td>
 						<td width="150" style="text-align: center;"><%=groups.get(i).getG_content()%></td>
 						<td width="150" style="text-align: center;"><a
-							href="DelMemberService.do?m_id=<%=groups.get(i).getG_name()%>"><button>삭제</button></a></td>
+							href="DGService.do?g_name=<%=groups.get(i).getG_name()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
 						}

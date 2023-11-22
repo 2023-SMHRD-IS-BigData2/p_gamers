@@ -42,7 +42,15 @@
 			} else {
 			%>
 			<nav>
-				<a href="UM.jsp"> 내 정보 수정 </a> <a href="calendar.jsp"> 내 파티 </a>
+				<a href="UM.jsp"> 내 정보 수정 </a>
+				<%
+				if (login.getG_name() != null) {
+				%>
+				<a href="calendar.jsp"> 내 파티 </a>
+				<%
+				}
+				%>
+				<a href="LogoutService.do"> 로그아웃 </a>
 			</nav>
 			<%
 			}
@@ -65,9 +73,7 @@
 					<h1>안녕하세요. 게이머즈입니다.</h1>
 				</header>
 				<div class="content">
-					<p>
-						회원가입 시 더 많은 기능을 사용하실 수 있습니다.
-					</p>
+					<p>회원가입 시 더 많은 기능을 사용하실 수 있습니다.</p>
 					<ul class="actions">
 						<li><a href="#one" class="button next scrolly">컨텐츠 보기</a></li>
 					</ul>
@@ -82,9 +88,7 @@
 					</h1>
 				</header>
 				<div class="content">
-					<p>
-						레이드를 선택해 파티를 찾아보세요.
-					</p>
+					<p>레이드를 선택해 파티를 찾아보세요.</p>
 					<ul class="actions">
 						<li><a href="#one" class="button next scrolly">컨텐츠 보기</a></li>
 					</ul>
@@ -262,10 +266,5 @@
 	<script src="MainAssets/js/breakpoints.min.js"></script>
 	<script src="MainAssets/js/util.js"></script>
 	<script src="MainAssets/js/main.js"></script>
-	<script type="text/javascript">
-		function parentsUrl(url) {
-			location.href = url;
-		}
-	</script>
 </body>
 </html>

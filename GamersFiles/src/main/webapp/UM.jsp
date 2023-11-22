@@ -155,7 +155,7 @@ body {
 						readonly> <input type="password" name="m_pw"
 						placeholder="비밀번호"> <input type="text" name="m_nick"
 						placeholder="닉네임"> <input type="text" name="g_name" value="<%=login.getG_name() %>"
-						id="inputG" placeholder="파티명">
+						readonly="readonly">
 					<input type="text" name="m_class" list="classes" id="class"
 						placeholder="직업">
 					<datalist id="classes">

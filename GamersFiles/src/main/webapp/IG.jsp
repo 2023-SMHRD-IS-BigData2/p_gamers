@@ -162,8 +162,10 @@ body {
 					</datalist>
 					<input type="date" name="g_start" placeholder="시작일정">
 					<input type="date" name="g_end" placeholder="최종일정">
-					<input type="text" name="g_member" placeholder="모집 인원의 수">
-					<input type="text" name="m_position" placeholder="모집 인원의 역할">
+					<input type="text" name="g_member" placeholder="총 인원">
+					<input type="text" name="m_deal" placeholder="딜러 인원">
+					<input type="text" name="m_tank" placeholder="탱커 인원">
+					<input type="text" name="m_heal" placeholder="힐러 인원">
 					<input type="file" name="g_file" style="float: right;" placeholder="이미지 선택">
 					<input type="submit" value="생성하기">
 				</form>
