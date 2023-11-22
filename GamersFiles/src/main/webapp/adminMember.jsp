@@ -79,7 +79,7 @@ table#allMember th {
 						<td width="150" style="text-align: center;"><%=members.get(i).getG_name() %></td>
 						<td width="150" style="text-align: center;"><%=members.get(i).getM_position()%></td>
 						<td width="150" style="text-align: center;"><a
-							href="DelMemberService.do?m_id=<%=members.get(i).getM_id()%>"><button>삭제</button></a></td>
+							href="DMService.do?m_id=<%=members.get(i).getM_id()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
 						}

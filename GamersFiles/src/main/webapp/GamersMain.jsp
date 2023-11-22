@@ -23,7 +23,6 @@
 	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	if (login != null) {
 		session.setAttribute("g_name", login.getG_name());
-		
 	}
 	%>
 	<!-- Wrapper -->

@@ -17,9 +17,6 @@ public class UMService implements Service {
 		String m_pw = request.getParameter("m_pw");
 		String m_nick = request.getParameter("m_nick");
 		String g_name = request.getParameter("g_name");
-		if (g_name == null) {
-			g_name = "Null";
-		}
 		String m_class = request.getParameter("m_class");
 		String m_position = request.getParameter("m_position");
 		String m_coment = request.getParameter("m_coment");
