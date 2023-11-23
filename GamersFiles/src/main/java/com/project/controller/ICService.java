@@ -20,8 +20,10 @@ public class ICService implements Service {
 		String c_content1 = request.getParameter("c_content1");
 		String c_content2 = request.getParameter("c_content2");
 		String c_content3 = request.getParameter("c_content3");
+		String c_content4 = request.getParameter("c_content4");
+		String c_content5 = request.getParameter("c_content5");
 
-		ContentDTO cdto = new ContentDTO(c_name, c_title, c_content1, c_content2, c_content3);
+		ContentDTO cdto = new ContentDTO(c_name, c_title, c_content1, c_content2, c_content3, c_content4, c_content5);
 
 		int cnt = new ContentDAO().insertContent(cdto);
 

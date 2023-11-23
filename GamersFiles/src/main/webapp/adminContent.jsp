@@ -59,7 +59,12 @@ table#allMember th {
 				<table id="allMember">
 					<tr>
 						<th width="150" style="text-align: center;">구분</th>
-						<th width="150" style="text-align: center;">컨텐츠명</th>
+						<th width="150" style="text-align: center;">레이드명</th>
+						<th width="150" style="text-align: center;">1번 컨텐츠</th>
+						<th width="150" style="text-align: center;">2번 컨텐츠</th>
+						<th width="150" style="text-align: center;">3번 컨텐츠</th>
+						<th width="150" style="text-align: center;">4번 컨텐츠</th>
+						<th width="150" style="text-align: center;">5번 컨텐츠</th>
 						<th width="150" style="text-align: center;">비고</th>
 					</tr>
 					<%
@@ -72,6 +77,11 @@ table#allMember th {
 					<tr>
 						<td width="150" style="text-align: center;"><%=cnt%></td>
 						<td width="150" style="text-align: center;"><%=contents.get(i).getC_name()%></td>
+						<td width="150" style="text-align: center;"><%=contents.get(i).getC_content1()%></td>
+						<td width="150" style="text-align: center;"><%=contents.get(i).getC_content2()%></td>
+						<td width="150" style="text-align: center;"><%=contents.get(i).getC_content3()%></td>
+						<td width="150" style="text-align: center;"><%=contents.get(i).getC_content4()%></td>
+						<td width="150" style="text-align: center;"><%=contents.get(i).getC_content5()%></td>
 						<td width="150" style="text-align: center;"><a
 							href="DelConService.do?c_name=<%=contents.get(i).getC_name()%>"><button>삭제</button></a></td>
 					</tr>
@@ -89,7 +99,7 @@ table#allMember th {
 					}
 					%>
 					<tr>
-						<td colspan="3" width="150" style="text-align: center;"><a
+						<td colspan="8" width="150" style="text-align: center;"><a
 							href="IC.jsp"><button>생성</button></a> <a href="GamersMain.jsp"><button>
 									홈</button></a></td>
 					</tr>

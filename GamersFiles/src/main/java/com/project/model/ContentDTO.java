@@ -19,4 +19,6 @@ public class ContentDTO {
 	@Nonnull private String c_content1;
 	@Nonnull private String c_content2;
 	@Nonnull private String c_content3;
+	private String c_content4;
+	private String c_content5;
 }

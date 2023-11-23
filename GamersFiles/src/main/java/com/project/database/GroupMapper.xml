@@ -6,9 +6,9 @@
 	<insert id="insertGroup" parameterType="GroupDTO">
 		insert into p_group	values(#{g_name}, #{m_id}, #{c_name}, #{g_content}, #{g_start}, #{g_end}, #{g_member}, #{m_deal}, sysdate, #{m_tank}, #{g_file}, #{m_heal})
 	</insert>
-	<select id="selectGroup" parameterType="GroupDTO"
+	<select id="selectGroup" parameterType="String"
 		resultType="GroupDTO">
-		select * from p_group where g_num=#{g_num}
+		select * from p_group where g_name=#{g_name}
 	</select>
 	<select id="groupCheck" parameterType="String"
 		resultType="boolean">
