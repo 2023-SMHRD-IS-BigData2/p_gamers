@@ -38,4 +38,11 @@ public class MemberDTO {
 		this.m_class = m_class;
 		this.m_coment = m_coment;
 	}
+	
+	public MemberDTO(String m_id, String m_nick, String g_name) {
+		this.m_id = m_id;
+		this.m_nick = m_nick;
+		this.g_name = g_name;
+	}
+	
 }

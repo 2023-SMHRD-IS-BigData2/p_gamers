@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.project.controller.DGService;
+import com.project.controller.DMService;
 import com.project.controller.GCService;
 import com.project.controller.ICService;
 import com.project.controller.IGService;
@@ -56,8 +57,10 @@ public class FrontController extends HttpServlet {
 			service = new UMService();
 		} else if (result.equals("/LogoutService.do")) { // 로그아웃
 			service = new LogoutService();
-		} else if (result.equals("/DGService.do")) { // 로그아웃
+		} else if (result.equals("/DGService.do")) { // 관리자 파티 삭제
 			service = new DGService();
+		} else if (result.equals("/DMService.do")) { // 관리자 회원 삭제
+			service = new DMService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {

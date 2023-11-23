@@ -110,4 +110,20 @@ public class GroupDAO {
 		}
 		return cnt;
 	}
+	
+	// 데이터 조회
+		public GroupDTO selectGroupAdmin(String g_name) {
+			GroupDTO select = null;
+			try {
+				select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroupAdmin", g_name);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+
+			return select;
+
+		}
 }

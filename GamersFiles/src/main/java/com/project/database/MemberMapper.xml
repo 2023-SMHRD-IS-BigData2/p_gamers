@@ -47,6 +47,12 @@
 		m_nick=#{m_nick}
 	</update>
 	<update id="updateGroup" parameterType="MemberDTO">
-		update p_member set g_name=#{g_name} where m_id=#{m_id}
+		update p_member set g_name=#{g_name} where m_id=#{m_id} and m_nick=#{m_nick}
 	</update>
+	<update id="nullGroup" parameterType="String">
+		update p_member set g_name=null where m_id=#{m_id}
+	</update>
+	<select id="countGroup" parameterType="String" resultType="Integer">
+		select count(m_id) from p_member where g_name=#{g_name}
+	</select>
 </mapper>

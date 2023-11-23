@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -33,7 +34,8 @@ public class IGService implements Service {
 			// 파일 업로드 객체 -> MultipartRequest()
 
 			MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding, rename);
-			
+			HttpSession session = request.getSession();
+			MemberDTO login = (MemberDTO) session.getAttribute("login");
 			// 요청 데이터 받기
 			String g_name = multi.getParameter("g_name");
 			String m_id = multi.getParameter("m_id");
@@ -44,30 +46,33 @@ public class IGService implements Service {
 			String g_member = multi.getParameter("g_member");
 			String m_deal = multi.getParameter("m_deal");
 			String g_file = multi.getFilesystemName("g_file");
+			if(g_file==null) {
+				g_file = "기본이미지.png";
+			}
 			String m_tank = multi.getParameter("m_tank");
 			String m_heal = multi.getParameter("m_heal");
-			System.out.println(g_start);
-			System.out.println(g_end);
-			System.out.println(g_name);
-			System.out.println(m_id);
-			MemberDTO mdto = new MemberDTO(g_name, m_id);
+			String u_id = request.getParameter("m_id");
+			String u_nick = request.getParameter("m_nick");
+			String u_name = multi.getParameter("g_name");
+			MemberDTO mdto = new MemberDTO(u_id, u_nick, u_name);
 			int party = new MemberDAO().updateGroup(mdto);
 			if (party > 0) {
 				System.out.println("파티명 업데이트 성공");
 			} else {
 				System.out.println("파티명 업데이트 실패");
 			}
+			
 			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
 			int cnt = new GroupDAO().insertGroup(gdto);
 			System.out.println("cnt : " + cnt);
 			if (cnt > 0) {
 				System.out.println("파티 생성 성공");
+				session.setAttribute("login", mdto);
 				return "GamersMain.jsp";
 			} else {
 				System.out.println("파티 생성 실패");
 				return "GamersMain.jsp";
 			}
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

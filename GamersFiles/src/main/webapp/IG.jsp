@@ -150,7 +150,7 @@ body {
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>파티 정보</h2>
-				<form method="post" action="IGService.do?c_name=<%=c_name %>" id="login-form" enctype="multipart/form-data">
+				<form method="post" action="IGService.do?m_id=<%=login.getM_id()%>&m_nick=<%=login.getM_nick()%>" id="login-form" enctype="multipart/form-data">
 					<input type="text" name="g_name" placeholder="파티명">
 					<input type="text" name="m_id" value="<%=login.getM_id() %>" readonly>
 					<input type="text" name="c_name" value="<%=c_name %>" readonly>

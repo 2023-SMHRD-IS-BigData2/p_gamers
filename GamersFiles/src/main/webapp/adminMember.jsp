@@ -64,6 +64,7 @@ table#allMember th {
 						<th width="150" style="text-align: center;">닉네임</th>
 						<th width="150" style="text-align: center;">파티명</th>
 						<th width="150" style="text-align: center;">역할</th>
+						<th width="150" style="text-align: center;">직업</th>
 						<th width="150" style="text-align: center;">비고</th>
 					</tr>
 					<%
@@ -78,6 +79,7 @@ table#allMember th {
 						<td width="150" style="text-align: center;"><%=members.get(i).getM_nick()%></td>
 						<td width="150" style="text-align: center;"><%=members.get(i).getG_name() %></td>
 						<td width="150" style="text-align: center;"><%=members.get(i).getM_position()%></td>
+						<td width="150" style="text-align: center;"><%=members.get(i).getM_class()%></td>
 						<td width="150" style="text-align: center;"><a
 							href="DMService.do?m_id=<%=members.get(i).getM_id()%>"><button>삭제</button></a></td>
 					</tr>

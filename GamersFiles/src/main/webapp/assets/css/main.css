@@ -2232,7 +2232,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	-ms-transition: opacity 0.5s ease;
 	transition: opacity 0.5s ease;
 	content: '';
-	display: block;
+	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2351,7 +2351,7 @@ body:not(.is-touch) .tiles article:hover>.image:after {
 
 body:not(.is-touch) .tiles article:hover .content {
 	max-height: 15em;
-	opacity: 1;
+	opacity: 0;
 }
 
 body.is-preload .tiles article {
@@ -2359,7 +2359,7 @@ body.is-preload .tiles article {
 	-webkit-transform: scale(0.9);
 	-ms-transform: scale(0.9);
 	transform: scale(0.9);
-	opacity: 0;
+	opacity: 1;
 }
 
 body.is-touch .tiles article .content {

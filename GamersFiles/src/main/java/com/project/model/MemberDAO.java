@@ -84,10 +84,10 @@ public class MemberDAO {
 	}
 
 	// 데이터 삭제
-	public int deleteMember(String m_email) {
+	public int deleteMember(String m_id) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.delete("com.project.database.MemberMapper.delMember", m_email);
+			cnt = sqlSession.delete("com.project.database.MemberMapper.deleteMember", m_id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -127,6 +127,31 @@ public class MemberDAO {
 		int cnt = 0;
 		try {
 			cnt = sqlSession.update("com.project.database.MemberMapper.updateGroup", mdto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
+	public int nullGroup(String m_id) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.update("com.project.database.MemberMapper.nullGroup", m_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
+	// 데이터 조회
+	public int countGroup(String g_name) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.selectOne("com.project.database.MemberMapper.countGroup", g_name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
