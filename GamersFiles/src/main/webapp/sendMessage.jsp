@@ -1,5 +1,5 @@
 <%@page import="com.project.model.MemberDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,23 +29,22 @@ if (login != null) {
 			<form method="post" action="MessageService.do">
 				<div id="write_msg" class="fields">
 					<div>
-						<span class="col1">보내는 사람</span> <span class="col2"><%=login.getM_nick()%></span>
+						<span class="col1">보내는 사람</span> <span class="col2" ><input type="text" name="e_sender" value="<%=login.getM_nick()%>" readonly /></span>
 					</div>
 					<div class="field half">
 						<span class="col1">받는 사람</span> <span class="col2"><input
-							type="text" name="recipient" id="recipient" /></span>
+							type="text" name="e_recipient" id="recipient" /></span>
 					</div>
 					<div class="field half">
 						<span class="col1">제목</span> <span class="col2"><input
-							type="text" name="title" id="title" /></span>
+							type="text" name="e_title" id="title" /></span>
 					</div>
 					<div id="textarea" class="field">
 						<span class="col1">내용</span>
-						<span class="col2"><textarea name="content" id="content" rows="6"></textarea></span>
+						<span class="col2"><textarea name="e_content" id="content" rows="6"></textarea></span>
 					</div>
 				</div>
-				
-					<span id=submit><input type="submit" value="메세지 보내기" class="primary" /><input type="reset" value="지우기" /></span>
+					<span id=submit1><button type="button" onclick="location.href='Message.jsp'">돌아가기</button><input type="submit" value="메세지 보내기" class="primary" /></span>
 			</form>
 		</section>
 	</div>

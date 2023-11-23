@@ -12,15 +12,19 @@ public class MessageService implements Service {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("[MessageServic.do]");
 		
-		String m_sender = request.getParameter("m_sender"); // 보낸사람
-		String m_recipient = request.getParameter("m_recipient"); // 받는사람
-		String m_title = request.getParameter("m_rirle"); // 제목
-		String m_content = request.getParameter("m_content"); //내용
+		String e_sender = request.getParameter("e_sender"); // 보낸사람
+		String e_recipient = request.getParameter("e_recipient"); // 받는사람
+		String e_title = request.getParameter("e_title"); // 제목
+		String e_content = request.getParameter("e_content"); //내용
 		
-		MessageDTO vo = new MessageDTO(m_sender, m_recipient, m_title, m_content);
+		MessageDTO vo = new MessageDTO(e_sender, e_recipient, e_title, e_content);
 		
 		int row = new MessageDAO().insertMessage(vo);
-		
+		if (row > 0) {
+			System.out.println("메시지 전송성공");
+		} else {
+			System.out.println("실패");
+		}
 		return "Message.jsp";
 	}
 }

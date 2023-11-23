@@ -16,6 +16,7 @@ import com.project.controller.IGService;
 import com.project.controller.IMService;
 import com.project.controller.LogoutService;
 import com.project.controller.MCService;
+import com.project.controller.MessageService;
 import com.project.controller.PCService;
 import com.project.controller.SMService;
 import com.project.controller.UMService;
@@ -61,6 +62,8 @@ public class FrontController extends HttpServlet {
 			service = new DGService();
 		} else if (result.equals("/DMService.do")) { // 관리자 회원 삭제
 			service = new DMService();
+		} else if (result.equals("/MessageService.do")){
+			service = new MessageService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {

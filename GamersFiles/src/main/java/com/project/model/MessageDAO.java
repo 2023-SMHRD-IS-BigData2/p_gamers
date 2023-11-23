@@ -16,17 +16,16 @@ public class MessageDAO {
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
 	// 데이터 생성
-	public int insertMessage(MessageDTO edto) {
+	public int insertMessage(MessageDTO vo) {
 		int cnt = 0;
 
 		try {
-			cnt = sqlSession.insert("com.project.database.MemberMapper.insertMessage", edto);
+			cnt = sqlSession.insert("com.project.database.MemberMapper.insertMessage", vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
-
 		return cnt;
 	}
 
