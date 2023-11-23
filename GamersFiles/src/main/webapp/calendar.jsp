@@ -1,3 +1,5 @@
+<%@page import="com.project.model.GroupDAO"%>
+<%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.MemberDTO"%>
 <%@page import="com.project.model.MiniBoardDAO"%>
 <%@page import="com.project.model.MiniBoardDTO"%>
@@ -127,6 +129,9 @@ input {
 	request.setCharacterEncoding("utf-8");
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
+	String m_id = (String) session.getAttribute("m_id");
+	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
+	
 
 	List<CalendarDTO> c_list = new CalendarDAO().calendarList(g_name);
 	List<MiniBoardDTO> mb_list = new MiniBoardDAO().MBoardList(g_name); 
@@ -158,7 +163,9 @@ input {
 			<li><a href="GamersMain.jsp">홈</a></li>
 			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
 			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
-			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>			
+			<%if(m_id.equals(dto.getM_id())){ %>
+			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>	
+			<%} %>		
 		</ul>
 	</nav>
 
