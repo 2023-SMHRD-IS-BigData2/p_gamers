@@ -1,3 +1,4 @@
+<%@page import="com.project.model.MessageDTO"%>
 <%@page import="com.project.model.MessageDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.project.model.MemberDTO"%>
@@ -27,7 +28,7 @@ MemberDTO login = (MemberDTO) session.getAttribute("login");
 if (login != null) {
 	session.setAttribute("g_name", login.getG_name());
 }
-/* List<MessageDTO> messages = new MessageDAO().messageList(); */
+List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick()); 
 %>
 <div>
 	<section id="two">
@@ -43,6 +44,7 @@ if (login != null) {
 			</ul>
 			<div>
 				<ul>
+				<!-- 나에게 온 메시지 출력 -->
 					<li>
 						<span class="col1">번호</span>
 						<span class="col2">제목</span>

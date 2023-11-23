@@ -4,11 +4,16 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.database.MessageMapper">
 	<insert id="insertMessage" parameterType="MessageDTO">
+		<selectKey keyProperty="e_num" resultType="String"
+			order="BEFORE">
+			SELECT e_num_sequence.nextval FROM DUAL
+		</selectKey>
 		insert into p_message
-		values(e_num_sequence.nextval, #{e_sender}, #{e_recipient}, #{e_title}, #{e_content}, SYSDATE)
+		values(#{e_num}, #{e_sender},
+		#{e_recipient}, #{e_title}, #{e_content}, SYSDATE)
 	</insert>
-	<select id="messageList" resultType="MessageDTO">
-		select *
+	<select id="showMessage" resultType="MessageDTO">
+		select * from p_message where e_recipient=#{e_recipient}
 	</select>
 	<delete id="deleteMessage" parameterType="Integer">
 		delete from p_message

@@ -20,7 +20,7 @@ public class MessageDAO {
 		int cnt = 0;
 
 		try {
-			cnt = sqlSession.insert("com.project.database.MemberMapper.insertMessage", vo);
+			cnt = sqlSession.insert("com.project.database.MessageMapper.insertMessage", vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -30,18 +30,10 @@ public class MessageDAO {
 	}
 
 	// 데이터 조회
-	public MessageDTO selectMessage(MessageDTO edto) {
-		MessageDTO select = null;
-		try {
-			select = sqlSession.selectOne("com.project.database.MemberMapper.selectMessage", edto);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-
-		return select;
+	public List<MessageDTO> showMessage(String g_nick) {
+		List<MessageDTO> m_list = sqlSession.selectOne("com.project.database.MessageMapper.showMessage", g_nick);
+		sqlSession.close();
+		return m_list;
 
 	}
 
@@ -49,7 +41,7 @@ public class MessageDAO {
 	public boolean messageCheck(String inputE) {
 		boolean isCheck = false;
 		try {
-			isCheck = sqlSession.selectOne("com.project.database.MemberMapper.messageCheck", inputE);
+			isCheck = sqlSession.selectOne("com.project.database.MessageMapper.insertMessage", inputE);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -63,7 +55,7 @@ public class MessageDAO {
 	public int updateMessage(MessageDTO edto) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.update("com.project.database.MemberMapper.updateMessage", edto);
+			cnt = sqlSession.update("com.project.database.MessageMapper.insertMessage", edto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -76,7 +68,7 @@ public class MessageDAO {
 	public List<MessageDTO> messageList() {
 		List<MessageDTO> messages = null;
 		try {
-			messages = sqlSession.selectList("com.project.database.MemberMapper.messageList");
+			messages = sqlSession.selectList("com.project.database.MessageMapper.insertMessage");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -89,7 +81,7 @@ public class MessageDAO {
 	public int deleteMessage(int e_num) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.delete("com.project.database.MemberMapper.deleteMember", e_num);
+			cnt = sqlSession.delete("com.project.database.MessageMapper.insertMessage", e_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
