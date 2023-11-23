@@ -34,7 +34,8 @@ public class IGService implements Service {
 			// 파일 업로드 객체 -> MultipartRequest()
 
 			MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding, rename);
-			
+			HttpSession session = request.getSession();
+			MemberDTO login = (MemberDTO) session.getAttribute("login");
 			// 요청 데이터 받기
 			String g_name = multi.getParameter("g_name");
 			String m_id = multi.getParameter("m_id");
@@ -60,17 +61,18 @@ public class IGService implements Service {
 			} else {
 				System.out.println("파티명 업데이트 실패");
 			}
+			
 			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
 			int cnt = new GroupDAO().insertGroup(gdto);
 			System.out.println("cnt : " + cnt);
 			if (cnt > 0) {
 				System.out.println("파티 생성 성공");
+				session.setAttribute("login", mdto);
 				return "GamersMain.jsp";
 			} else {
 				System.out.println("파티 생성 실패");
 				return "GamersMain.jsp";
 			}
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

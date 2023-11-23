@@ -147,4 +147,17 @@ public class MemberDAO {
 		return cnt;
 	}
 
+	// 데이터 조회
+	public int countGroup(String g_name) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.selectOne("com.project.database.MemberMapper.countGroup", g_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
 }

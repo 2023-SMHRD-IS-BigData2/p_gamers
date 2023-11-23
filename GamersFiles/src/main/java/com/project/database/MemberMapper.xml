@@ -52,4 +52,7 @@
 	<update id="nullGroup" parameterType="String">
 		update p_member set g_name=null where m_id=#{m_id}
 	</update>
+	<select id="countGroup" parameterType="String" resultType="Integer">
+		select count(m_id) from p_member where g_name=#{g_name}
+	</select>
 </mapper>

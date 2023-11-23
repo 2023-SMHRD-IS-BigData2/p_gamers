@@ -64,6 +64,7 @@ table#allMember th {
 						<th width="150" style="text-align: center;">파티명</th>
 						<th width="150" style="text-align: center;">파티장</th>
 						<th width="150" style="text-align: center;">레이드</th>
+						<th width="150" style="text-align: center;">현재인원</th>
 						<th width="150" style="text-align: center;">비고</th>
 					</tr>
 					<%
@@ -76,16 +77,20 @@ table#allMember th {
 						<td width="150" style="text-align: center;"><%=groups.get(i).getG_name()%></td>
 						<td width="150" style="text-align: center;"><%=groups.get(i).getM_id()%></td>
 						<td width="150" style="text-align: center;"><%=groups.get(i).getG_content()%></td>
+						<%
+						int length = new MemberDAO().countGroup(groups.get(i).getG_name());
+						%>
+						<td width="150" style="text-align: center;"><%=length%></td>
 						<td width="150" style="text-align: center;"><a
 							href="DGService.do?g_name=<%=groups.get(i).getG_name()%>&m_id=<%=groups.get(i).getM_id()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
-						}
+					}
 					}
 					%>
 					<tr>
-						<td colspan="7" width="150" style="text-align: center;">
-						<a href="GamersMain.jsp"><button> 홈 </button></a></td>
+						<td colspan="7" width="150" style="text-align: center;"><a
+							href="GamersMain.jsp"><button>홈</button></a></td>
 					</tr>
 				</table>
 			</div>
