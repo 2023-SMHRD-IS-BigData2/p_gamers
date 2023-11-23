@@ -1,3 +1,5 @@
+<%@page import="com.project.model.ApplyDAO"%>
+<%@page import="com.project.model.ApplyDTO"%>
 <%@page import="com.project.model.GroupDAO"%>
 <%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.ContentDAO"%>
@@ -29,13 +31,10 @@
 }
 
 #input_1 {
-	height: 1em;
+	height: 3em;
+	margin:0px;
 }
 
-#input_2 {
-	padding: 2px;
-	font-size: 0.5em;
-}
 
 form {
 	margin: 0px;
@@ -72,7 +71,7 @@ h1 {
 	border-radius: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-bottom:10px;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
 }
@@ -116,9 +115,19 @@ h1 {
 
 .ud_inner_box {
 	width: 550px;
-	height: 95px;
+	height: 120px;
 	background-color: yellow;
 	margin: 15px;
+	display: flex;
+	flex-direction: row;
+}
+
+.ib_left{
+	
+}
+
+.ib_right{
+
 }
 
 .sb_down_box {
@@ -145,6 +154,7 @@ h1 {
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
+	List<ApplyDTO> a_list = new ApplyDAO().applyList(m_nick);
 	%>
 
 	<div id="groupWrapper" style="width: 100; height: 100px;">
@@ -228,9 +238,30 @@ h1 {
 		</div>
 		<div class="secondBox">
 			<div class="sb_up_box">
-				<div class="up_upper_box"></div>
+				<div class="up_upper_box">공격대 지원자 목록</div>
 				<div class="up_down_box">
-					<div class="ud_inner_box">test</div>
+					<%
+					for (ApplyDTO tmp : a_list) {
+					%>
+					<form action="Raid_Member_Insert_Service">
+						<div class="ud_inner_box">
+							<div class="ib_left">
+								<%=tmp.getSend_nick()%>
+								<br><%=tmp.getSend_pos()%>
+								<br><%=tmp.getSend_job()%>
+							</div>
+							<div class="ib_right">
+								<input type="hidden" name="send_nick" value="<%=tmp.getSend_nick()%>">
+								<input type="hidden" name="send_pos" value="<%=tmp.getSend_pos()%>">
+								<input type="hidden" name="rcv_nick" value="<%=tmp.getRcv_nick()%>">
+								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
+								<input id="input_1" type="submit" value="가입승인">
+							</div>
+						</div>
+					</form>
+					<%
+					}
+					%>
 				</div>
 
 

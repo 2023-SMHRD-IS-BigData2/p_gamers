@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 5. Mapper 생성 -> SQL 쿼리문 작성 -->
+<!-- namespace : Mapper의 id를 그룹화하는 속성 sql 태그의 id 값이 중복될 수 있기 때문에 원하는 id 값으로 
+	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
+<mapper namespace="com.project.database.ApplyMapper">
+
+	<select id="applyList" parameterType="String" resultType="ApplyDTO">
+		select * from p_apply where rcv_nick=#{rcv_nick} order by p_date 
+	</select>
+	
+</mapper>
