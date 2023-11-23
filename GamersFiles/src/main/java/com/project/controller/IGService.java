@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -37,6 +38,7 @@ public class IGService implements Service {
 			// 요청 데이터 받기
 			String g_name = multi.getParameter("g_name");
 			String m_id = multi.getParameter("m_id");
+			String m_nick = multi.getParameter("m_nick");
 			String c_name = multi.getParameter("c_name");
 			String g_content = multi.getParameter("g_content");
 			String g_start = multi.getParameter("g_start");
@@ -50,7 +52,7 @@ public class IGService implements Service {
 			System.out.println(g_end);
 			System.out.println(g_name);
 			System.out.println(m_id);
-			MemberDTO mdto = new MemberDTO(g_name, m_id);
+			MemberDTO mdto = new MemberDTO(m_id, m_nick, g_name);
 			int party = new MemberDAO().updateGroup(mdto);
 			if (party > 0) {
 				System.out.println("파티명 업데이트 성공");

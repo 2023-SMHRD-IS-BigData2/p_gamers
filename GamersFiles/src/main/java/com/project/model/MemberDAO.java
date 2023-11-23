@@ -84,10 +84,10 @@ public class MemberDAO {
 	}
 
 	// 데이터 삭제
-	public int deleteMember(String m_email) {
+	public int deleteMember(String m_id) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.delete("com.project.database.MemberMapper.delMember", m_email);
+			cnt = sqlSession.delete("com.project.database.MemberMapper.deleteMember", m_id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

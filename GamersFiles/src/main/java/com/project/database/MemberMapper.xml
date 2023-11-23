@@ -47,6 +47,6 @@
 		m_nick=#{m_nick}
 	</update>
 	<update id="updateGroup" parameterType="MemberDTO">
-		update p_member set g_name=#{g_name} where m_id=#{m_id}
+		update p_member set g_name=#{g_name} where m_id=#{m_id} and m_nick=#{m_nick}
 	</update>
 </mapper>

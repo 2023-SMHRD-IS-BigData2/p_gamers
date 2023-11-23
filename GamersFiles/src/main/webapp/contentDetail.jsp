@@ -184,10 +184,16 @@ a#btn-modal {
 						/
 						<%=contents.get(0).getC_content3()%>
 						<%
-						if (logindto.getG_name() == null) {
+						if (logindto == null) {
+						%>
+						<span><a href="Member.jsp">로그인</a> 후 이용하실 수 있습니다.</span>
+						<%
+						} else if(logindto != null) {
+							if (logindto.getG_name() == null){
 						%>
 						<a href="IG.jsp?c_name=<%=c_name%>"><button>파티생성</button> </a>
 						<%
+							}
 						}
 						%>
 					</h3>
