@@ -45,6 +45,9 @@ public class IGService implements Service {
 			String g_member = multi.getParameter("g_member");
 			String m_deal = multi.getParameter("m_deal");
 			String g_file = multi.getFilesystemName("g_file");
+			if(g_file==null) {
+				g_file = "기본이미지.png";
+			}
 			String m_tank = multi.getParameter("m_tank");
 			String m_heal = multi.getParameter("m_heal");
 			String u_id = request.getParameter("m_id");

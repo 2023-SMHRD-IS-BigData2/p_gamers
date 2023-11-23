@@ -186,7 +186,7 @@ a#btn-modal {
 						<%
 						if (logindto == null) {
 						%>
-						<span><a href="Member.jsp">로그인</a> 후 이용하실 수 있습니다.</span>
+						파티 생성 및 가입 기능은 <a href="Member.jsp"><button style="width: 120px; height: 50px; justify-content: center;">로그인</button></a> 후 이용하실 수 있습니다.
 						<%
 						} else if(logindto != null) {
 							if (logindto.getG_name() == null){
@@ -223,25 +223,15 @@ a#btn-modal {
 							src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
 						</span> <a id="btn-modal">
-							<h2><%=groups.get(i).getG_name()%></h2>
+							<h2 style="color:lightgray;"><%=groups.get(i).getG_name()%> <br>
+								<%=groups.get(i).getG_content()%>
+							</h2>
 							<div class="content">
-								<h3>
-									파티장 :
-									<%=groups.get(i).getM_id()%></h3>
-								<p>
-									컨텐츠 :
-									<%=groups.get(i).getG_content()%><br> 현재 인원 <br> 딜러 :
-									<%=dealers[i]%>
-									/
-									<%=groups.get(i).getM_deal()%>
-									<br> 탱커 :
-									<%=tankers[i]%>
-									/
-									<%=groups.get(i).getM_tank()%>
-									<br> 힐러 :
-									<%=healers[i]%>
-									/
-									<%=groups.get(i).getM_heal()%>
+								<p> 파티장 : <%=groups.get(i).getM_id()%> <br>
+									인원 <br>
+									딜러 : <%=dealers[i]%> / <%=groups.get(i).getM_deal()%> <br>
+									탱커 : <%=tankers[i]%> / 	<%=groups.get(i).getM_tank()%> <br>
+									힐러 : <%=healers[i]%> / 	<%=groups.get(i).getM_heal()%>
 								</p>
 							</div>
 						</a>

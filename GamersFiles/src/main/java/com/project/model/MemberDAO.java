@@ -135,4 +135,16 @@ public class MemberDAO {
 		return cnt;
 	}
 
+	public int nullGroup(String m_id) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.update("com.project.database.MemberMapper.nullGroup", m_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
 }
