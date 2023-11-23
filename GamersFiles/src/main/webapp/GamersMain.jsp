@@ -45,7 +45,7 @@
 			%>
 			<nav>
 				<a href="#none"
-					onclick="window.open('Message.jsp','new','scrollbars=yes,resizable=no width=500 height=600, left=1200,top=600');return false">쪽지함</a>
+					onclick="window.open('Message.jsp','new','scrollbars=yes,resizable=no width=700 height=600, left=1200,top=600');return false">쪽지함</a>
 				<a href="UM.jsp"> 내 정보 수정 </a>
 				<%
 				if (login.getG_name() != null) {
