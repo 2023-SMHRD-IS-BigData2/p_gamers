@@ -18,9 +18,15 @@
 
 table {
   border-collapse: separate; 
-  border-spacing: 10px;
+  
   margin-left: 100px;
-} 
+}
+.title{
+	background-color: #474747;
+}
+.contents{
+	background-color: #A6A6A6;
+}     
 </style>
 </head>
 <body>
@@ -70,13 +76,13 @@ table {
 <div class="table-container">
 
 <table border="1">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List3){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List3){%>
@@ -92,13 +98,13 @@ table {
 
 
 <table border="1">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List2){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List2){%>
@@ -114,14 +120,14 @@ table {
 
 
 <table border="1" id="items3">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
 	
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List){%>

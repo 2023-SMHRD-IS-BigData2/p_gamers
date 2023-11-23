@@ -82,7 +82,7 @@ public class ContentDAO {
 		}
 		return contents;
 	}
-	
+
 	public List<ContentDTO> contentList2(String c_name) {
 		List<ContentDTO> contents = null;
 		try {
@@ -107,6 +107,18 @@ public class ContentDAO {
 		}
 		return cnt;
 	}
-	
-	// 데이터 선택
+
+	// 데이터 조회
+	public ContentDTO contentSelect(String c_name) {
+		ContentDTO select = null;
+		try {
+			select = sqlSession.selectOne("com.project.database.ContentMapper.contentSelect", c_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return select;
+
+	}
 }

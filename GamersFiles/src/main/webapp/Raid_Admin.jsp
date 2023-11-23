@@ -284,10 +284,10 @@ h1 {
 
 			</div>
 			<div class="sb_down_box">
-				<div class="down_box_title">공격대 삭제를 원하시면 아래에 "공대삭제"를 정확하게
+				<div class="down_box_title">공격대 삭제를 원하시면 아래에 "공격대삭제"를 정확하게
 					입력해주세요</div>
 				<div class="down_box_form">
-					<form action="">
+					<form action="Raid_Final_Delete_Service">
 						<div class="form_text">
 							<input type="textarea" name="deleteCheck">
 							<input type="hidden" name="g_name">

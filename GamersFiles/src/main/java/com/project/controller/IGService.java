@@ -23,7 +23,7 @@ public class IGService implements Service {
 			// 파일 업로드를 위한 변수 설정
 			// 1. request 객체
 			// 2. 파일 저장 경로(String)
-			String savePath = "C:\\Users\\user\\git\\p_gamers\\GamersFiles\\src\\main\\webapp\\groupfiles";
+			String savePath = "C:\\Users\\SMHRD\\git\\p_gamers\\GamersFiles\\src\\main\\webapp\\groupfiles";
 			System.out.println(savePath);
 			// 3. 파일 최대 크기(int)
 			int maxSize = 1024 * 1024 * 10;
