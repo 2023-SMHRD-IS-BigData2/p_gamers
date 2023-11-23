@@ -34,6 +34,9 @@
 		select * from p_group
 	</select>
 	<select id="groupList2" resultType="GroupDTO" parameterType="String">
-		select * from p_group where c_name=#{c_name}
+		select * from p_group where g_name=#{g_name}
+	</select>
+		<select id="selectGroupAdmin" resultType="GroupDTO">
+		select * from p_group where g_name=#{g_name}
 	</select>
 </mapper>
