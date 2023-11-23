@@ -86,6 +86,7 @@ h1 {
 	border-radius: 10px;
 	background-color: pink;
 	border-radius: 10px;
+	
 }
 
 .sb_up_box {
@@ -94,6 +95,7 @@ h1 {
 	background-color: yellow;
 	display: flex;
 	flex-direction: column;
+	
 }
 
 .up_upper_box {
@@ -108,6 +110,7 @@ h1 {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
+	overflow: scroll;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -137,6 +140,7 @@ h1 {
 	display: block;
 	text-align: center;
 	padding-top: 50px;
+	flex-wrap: wrap;
 }
 
 .down_box_form {
