@@ -25,4 +25,8 @@
 	<select id="contentList2" resultType="ContentDTO" parameterType="String">
 		select * from p_content where c_name=#{c_name}
 	</select>
+	<select id="contentSelect" resultType="ContentDTO" parameterType="String">
+		select * from p_content
+		where c_name = #{c_name}
+	</select>
 </mapper>
