@@ -143,34 +143,66 @@ body {
 	<%
 	request.setCharacterEncoding("utf-8");
 	String c_name = request.getParameter("c_name");
-	MemberDTO login = (MemberDTO)session.getAttribute("login");
+	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	List<ContentDTO> content = new ContentDAO().contentList2(c_name);
 	%>
 	<div class="member_container">
 		<div class="main_top">
 			<div class="login-wrapper">
 				<h2>파티 정보</h2>
-				<form method="post" action="IGService.do?m_id=<%=login.getM_id()%>&m_nick=<%=login.getM_nick()%>" id="login-form" enctype="multipart/form-data">
-					<input type="text" name="g_name" placeholder="파티명">
-					<input type="text" name="m_id" value="<%=login.getM_id() %>" readonly>
-					<input type="text" name="c_name" value="<%=c_name %>" readonly>
-					<input type="text" name="g_content" list="g_contentList" placeholder="컨텐츠">
+				<form method="post"
+					action="IGService.do?m_id=<%=login.getM_id()%>&m_nick=<%=login.getM_nick()%>"
+					id="login-form" enctype="multipart/form-data">
+					<input type="text" name="g_name" placeholder="파티명"> <input
+						type="button" value="중복체크" onclick="checkG()"
+						style="width: 100px; height: 50px;"> <span id="groupCheck"></span>
+					<input type="text" name="m_id" value="<%=login.getM_id()%>"
+						readonly> <input type="text" name="c_name"
+						value="<%=c_name%>" readonly> <input type="text"
+						name="g_content" list="g_contentList" placeholder="컨텐츠">
 					<datalist id="g_contentList">
-						<option><%=content.get(0).getC_content1() %></option>
-						<option><%=content.get(0).getC_content2() %></option>
-						<option><%=content.get(0).getC_content3() %></option>
+						<option><%=content.get(0).getC_content1()%></option>
+						<option><%=content.get(0).getC_content2()%></option>
+						<option><%=content.get(0).getC_content3()%></option>
 					</datalist>
-					<input type="date" name="g_start" placeholder="시작일정">
-					<input type="date" name="g_end" placeholder="최종일정">
-					<input type="text" name="g_member" placeholder="총 인원">
-					<input type="text" name="m_deal" placeholder="딜러 인원">
-					<input type="text" name="m_tank" placeholder="탱커 인원">
-					<input type="text" name="m_heal" placeholder="힐러 인원">
-					<input type="file" name="g_file" style="float: right;" placeholder="이미지 선택">
-					<input type="submit" value="생성하기">
+					<input type="date" name="g_start" placeholder="시작일정"> <input
+						type="date" name="g_end" placeholder="최종일정"> <input
+						type="text" name="g_member" placeholder="총 인원"> <input
+						type="text" name="m_deal" placeholder="딜러 인원"> <input
+						type="text" name="m_tank" placeholder="탱커 인원"> <input
+						type="text" name="m_heal" placeholder="힐러 인원"> <input
+						type="file" name="g_file" style="float: right;"
+						placeholder="이미지 선택"> <input type="submit" value="생성하기">
 				</form>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function checkG() {
+			var inputG = $('#inputG').val();
+			$.ajax({ /* {} 표현식 : json */
+				// 요청
+				url : 'GCService.do',
+				// 데이터(json, {key:value})
+				data : {
+					'inputG' : inputG
+				},
+				// 방식
+				type : 'get',
+				// 성공
+				success : function(data) {
+					if (data == 'true') {
+						$('#groupCheck').text('파티 확인 실패')
+					} else if (data == 'false') {
+						alert('파티 확인 성공')
+					}
+				},
+				// 실패
+				error : function() {
+					alert("통신실패")
+				}
+			})
+		}
+	</script>
 </body>
 </html>

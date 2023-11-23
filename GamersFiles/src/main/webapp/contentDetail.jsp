@@ -223,7 +223,7 @@ a#btn-modal {
 							src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
 						</span> <a href="GroupDetail.jsp?g_name=<%=groups.get(i).getG_name()%>">
-							<h2 style="color:lightgray;"><%=groups.get(i).getG_name()%> <br>
+							<h2 style="color:lightgray;"> <%=groups.get(i).getG_name()%> <br>
 								<%=groups.get(i).getG_content()%>
 							</h2>
 							<div class="content">
