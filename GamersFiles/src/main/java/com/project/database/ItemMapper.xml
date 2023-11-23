@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 5. Mapper 생성 -> SQL 쿼리문 작성 -->
+<!-- namespace : Mapper의 id를 그룹화하는 속성 sql 태그의 id 값이 중복될 수 있기 때문에 원하는 id 값으로 
+	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
+<mapper namespace="com.project.database.ItemMapper">
+	<select id="ItemName" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%승천%' 
+	</select>
+	
+	<select id="ItemLevel" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%승천%'
+	</select>
+	
+	<select id="EquipLevel" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%승천%'
+	</select>
+	
+	<select id="DropLocation" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%승천%'
+	</select>
+	
+	<select id="ItemName2" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%연옥%' 
+	</select>
+	
+	<select id="ItemLevel2" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%연옥%'
+	</select>
+	
+	<select id="EquipLevel2" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%연옥%'
+	</select>
+	
+	<select id="DropLocation2" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%연옥%'
+	</select>
+	
+	<select id="ItemName3" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%변옥%' 
+	</select>
+	
+	<select id="ItemLevel3" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%변옥%'
+	</select>
+	
+	<select id="EquipLevel3" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%변옥%'
+	</select>
+	
+	<select id="DropLocation3" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%변옥%'
+	</select>
+	
+	<select id="ItemName4" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%에덴의 아침%' 
+	</select>
+	
+	<select id="ItemLevel4" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%에덴의 아침%'
+	</select>
+	
+	<select id="EquipLevel4" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%에덴의 아침%'
+	</select>
+	
+	<select id="DropLocation4" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%에덴의 아침%'
+	</select>
+	
+	<select id="ItemName5" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%에덴의 합창%' 
+	</select>
+	
+	<select id="ItemLevel5" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%에덴의 합창%'
+	</select>
+	
+	<select id="EquipLevel5" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%에덴의 합창%'
+	</select>
+	
+	<select id="DropLocation5" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%에덴의 합창%'
+	</select>
+	
+	<select id="ItemName6" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%에덴의 은총%' 
+	</select>
+	
+	<select id="ItemLevel6" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%에덴의 은총%'
+	</select>
+	
+	<select id="EquipLevel6" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%에덴의 은총%'
+	</select>
+	
+	<select id="DropLocation6" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%에덴의 은총%'
+	</select>
+	
+	<select id="ItemName7" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%오메가%' 
+	</select>
+	
+	<select id="ItemLevel7" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%오메가%'
+	</select>
+	
+	<select id="EquipLevel7" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%오메가%'
+	</select>
+	
+	<select id="DropLocation7" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%오메가%'
+	</select>
+	
+	<select id="ItemName8" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%다이아몬드%' 
+	</select>
+	
+	<select id="ItemLevel8" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%다이아몬드%'
+	</select>
+	
+	<select id="EquipLevel8" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%다이아몬드%'
+	</select>
+	
+	<select id="DropLocation8" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%다이아몬드%'
+	</select>
+	
+	<select id="ItemName9" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%겐지%' 
+	</select>
+	
+	<select id="ItemLevel9" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%겐지%'
+	</select>
+	
+	<select id="EquipLevel9" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%겐지%'
+	</select>
+	
+	<select id="DropLocation9" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%겐지%'
+	</select>
+	
+	<select id="ItemName10" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%알렉산더%' 
+	</select>
+	
+	<select id="ItemLevel10" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%알렉산더%'
+	</select>
+	
+	<select id="EquipLevel10" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%알렉산더%'
+	</select>
+	
+	<select id="DropLocation10" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%알렉산더%'
+	</select>
+	
+	<select id="ItemName11" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%미다스%' 
+	</select>
+	
+	<select id="ItemLevel11" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%미다스%'
+	</select>
+	
+	<select id="EquipLevel11" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%미다스%'
+	</select>
+	
+	<select id="DropLocation11" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%미다스%'
+	</select>
+	
+	<select id="ItemName12" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%고르디우스%' 
+	</select>
+	
+	<select id="ItemLevel12" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%고르디우스%'
+	</select>
+	
+	<select id="EquipLevel12" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%고르디우스%'
+	</select>
+	
+	<select id="DropLocation12" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%고르디우스%'
+	</select>
+	
+	<select id="ItemName13" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%바하무트%' 
+	</select>
+	
+	<select id="ItemLevel13" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%바하무트%'
+	</select>
+	
+	<select id="EquipLevel13" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%바하무트%'
+	</select>
+	
+	<select id="DropLocation13" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%바하무트%'
+	</select>
+	
+	<select id="ItemName14" resultType="ItemDTO">
+		select item_name from p_item where item_name like '%상급 알라그%' 
+	</select>
+	
+	<select id="ItemLevel14" resultType="ItemDTO">
+		select item_level from p_item where item_name like '%상급 알라그%'
+	</select>
+	
+	<select id="EquipLevel14" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '%상급 알라그%'
+	</select>
+	
+	<select id="DropLocation14" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '%상급 알라그%'
+	</select>
+	
+	<select id="ItemName15" resultType="ItemDTO">
+		select item_name from p_item where item_name like '알라그%' 
+	</select>
+	
+	<select id="ItemLevel15" resultType="ItemDTO">
+		select item_level from p_item where item_name like '알라그%'
+	</select>
+	
+	<select id="EquipLevel15" resultType="ItemDTO">
+		select equip_level from p_item where item_name like '알라그%'
+	</select>
+	
+	<select id="DropLocation15" resultType="ItemDTO">
+		select drop_location from p_item where item_name like '알라그%'
+	</select>
+	
+</mapper>
