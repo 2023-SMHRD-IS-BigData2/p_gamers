@@ -1,3 +1,5 @@
+<%@page import="com.project.model.GroupDAO"%>
+<%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.MemberDAO"%>
 <%@page import="com.project.model.MemberDTO"%>
 <%@page import="java.util.List"%>
@@ -33,8 +35,8 @@
 	font-size: 0.5em;
 }
 
-form{
-margin: 0px;
+form {
+	margin: 0px;
 }
 
 .groupMain {
@@ -46,11 +48,12 @@ margin: 0px;
 }
 
 h1 {
-	margin: 0px;
+	margin: 10px;
+	margin-left: 100px;
 }
 
 .groupInner {
-
+	
 }
 
 .firstBox {
@@ -61,7 +64,7 @@ h1 {
 	text-align: center;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
-	margin : 10px;
+	margin: 10px;
 }
 
 .member_list {
@@ -75,7 +78,7 @@ h1 {
 	padding-top: 20px;
 }
 
-.member_list_list{
+.member_list_list {
 	font-size: 24px;
 	padding-top: 20px;
 }
@@ -105,11 +108,11 @@ h1 {
 	padding: 5px;
 }
 
-.inner_box_title{
+.inner_box_title {
 	font-size: 35px;
 }
 
-.inner_box_job{
+.inner_box_job {
 	font-size: 16px;
 	margin-left: 10px;
 }
@@ -151,9 +154,9 @@ h1 {
 <body>
 	<%
 	String g_name = (String) session.getAttribute("g_name");
-	%>
-	<%
 	List<MemberDTO> m_list = new MemberDAO().raidMemberList(g_name);
+	String m_id = (String) session.getAttribute("m_id");
+	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
 	%>
 	<div id="groupWrapper" style="width: 100; height: 100px;">
 		<!-- Header -->
@@ -181,7 +184,13 @@ h1 {
 			<li><a href="GamersMain.jsp">홈</a></li>
 			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
 			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
+			<%
+			if (m_id.equals(dto.getM_id())) {
+			%>
 			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>
+			<%
+			}
+			%>
 		</ul>
 	</nav>
 
@@ -221,7 +230,8 @@ h1 {
 					back_color = "#FFD8D8";
 				}
 			%>
-			<div class="inner_box" style="border-color: <%=position_color%>; background-color: <%=back_color%>">
+			<div class="inner_box"
+				style="border-color: <%=position_color%>; background-color: <%=back_color%>">
 				<div class="inner_box_1">
 					<div class="inner_box_1_1">
 						<div class="inner_box_title">
@@ -232,10 +242,11 @@ h1 {
 						</div>
 					</div>
 					<div class="inner_box_1_2">
-						<div>상태 메세지 :
+						<div>
+							상태 메세지 :
 							<%
-							if (tmp.getM_coment() != null) {
-							%>
+						if (tmp.getM_coment() != null) {
+						%>
 							<%=tmp.getM_coment()%>
 							<%
 							}
@@ -248,8 +259,8 @@ h1 {
 					<form action="Raid_Coment_Update_Service">
 						<div class="inner_box_2_1">
 							<input id="input_1" type="textarea" rows="1" cols="50"
-								name="coment">
-							<input type="hidden" name="name" value="<%=tmp.getM_nick()%>">
+								name="coment"> <input type="hidden" name="name"
+								value="<%=tmp.getM_nick()%>">
 						</div>
 						<div class="inner_box_2_2">
 							<input id="input_2" type="submit" value="상태메세지 갱신">
