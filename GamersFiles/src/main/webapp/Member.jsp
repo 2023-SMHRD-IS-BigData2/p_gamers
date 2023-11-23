@@ -15,6 +15,7 @@
 	margin: 0;
 	border: none;
 	text-align: center;
+	background-color: gray;
 }
 
 body {
@@ -26,14 +27,13 @@ body {
 	display: inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	background-color: lightgray;
+	background-color: #f5f5dc;
 }
 
 .login-wrapper>h2 {
 	font-size: 24px;
-	color: #6A24FE;
+	color: black;
 	margin-bottom: 20px;
-	color: #6A24FE;
 }
 
 #login-form>input {
@@ -43,7 +43,7 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
-	background-color: #F8F8F8;
+	background-color: #eee6c4;
 }
 
 #login-form>input::placeholder {
@@ -53,7 +53,7 @@ body {
 #login-form>input[type="submit"] {
 	color: #fff;
 	font-size: 16px;
-	background-color: #6A24FE;
+	background-color: gray;
 	margin-top: 20px;
 }
 
@@ -83,12 +83,12 @@ body {
 	display: inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	background-color: lightgray;
+	background-color: #f5f5dc;
 }
 
 .join-wrapper>h2 {
 	font-size: 24px;
-	color: #6A24FE;
+	color: black;
 	margin-bottom: 20px;
 }
 
@@ -99,7 +99,7 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
-	background-color: #F8F8F8;
+	background-color: #eee6c4;
 }
 
 #join-form>input::placeholder {
@@ -109,7 +109,7 @@ body {
 #join-form>input[type="submit"] {
 	color: #fff;
 	font-size: 16px;
-	background-color: #6A24FE;
+	background-color: gray;
 	margin-top: 20px;
 }
 

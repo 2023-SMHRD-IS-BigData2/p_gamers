@@ -28,7 +28,6 @@ public class GroupDTO {
 	private String g_end;
 	@NonNull
 	private String g_member;
-	@NonNull
 	private String m_deal;
 	private String m_tank;
 	private String m_heal;
