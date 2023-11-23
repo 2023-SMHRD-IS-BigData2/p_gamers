@@ -8,7 +8,7 @@
 <mapper namespace="com.project.database.ApplyMapper">
 	<!-- 공대 가입 신청 받으면 신청자들 받아오는 쿼리문 -->
 	<select id="applyList" parameterType="String" resultType="ApplyDTO">
-		select * from p_apply where rcv_nick=#{rcv_nick} order by p_date 
+		select * from p_apply where rcv_id=#{rcv_id} order by p_date 
 	</select>
 	<!-- 공대 가입 수락시 해당 멤버 공격대 정보 변경 -->
 	<update id="applyUpdateMember" parameterType="ApplyRaidDTO">
@@ -20,8 +20,5 @@
 	<update id="applyDiscount" parameterType="ApplyRaidDTO">
 		update p_group set ${send_pos}=${send_pos}-1 where g_name=#{g_name}
 	</update>
-	<insert id="insertApply" parameterType="ApplyDTO">
-		insert into p_apply
-		values(#{send_id}, #{rcv_id}, #{send_pos}, #{send_class}, sysdate, #{send_nick})
-	</insert>
+	
 </mapper>
