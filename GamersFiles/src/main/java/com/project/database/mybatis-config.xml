@@ -23,6 +23,8 @@
 		<typeAlias type="com.project.model.JobDTO" alias="JobDTO" />
 		<typeAlias type="com.project.model.ComentDTO"
 			alias="ComentDTO" />
+		<typeAlias type="com.project.model.ApplyDTO"
+			alias="ApplyDTO" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -43,5 +45,6 @@
 		<mapper resource="com/project/database/CalendarMapper.xml" />
 		<mapper resource="com/project/database/MiniBoardMapper.xml" />
 		<mapper resource="com/project/database/JobMapper.xml" />
+		<mapper resource="com/project/database/ApplyMapper.xml" />
 	</mappers>
 </configuration>
