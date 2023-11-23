@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 
 public class ApplyDTO {
 	
-	private String send_nick;
-	private String rcv_nick;
+	private String send_id;
+	private String rcv_id;
 	private String send_pos;
 	private String send_job;
 	private String p_date;

@@ -13,9 +13,9 @@ import lombok.Setter;
 
 public class ApplyRaidDTO {
 	
-	private String send_nick; 
+	private String send_id; 
 	private String send_pos;   
-	private String rcv_nick; 
+	private String rcv_id; 
 	private String g_name ;
 
 	

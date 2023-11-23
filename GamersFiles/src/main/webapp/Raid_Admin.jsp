@@ -288,6 +288,7 @@ h1 {
 					<form action="">
 						<div class="form_text">
 							<input type="textarea" name="deleteCheck">
+							<input type="hidden" name="g_name">
 						</div>
 						<div class="form_submit">
 							<input type="submit" value="공격대 삭제">
