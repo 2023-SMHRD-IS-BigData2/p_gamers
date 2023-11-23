@@ -15,6 +15,12 @@
 	<select id="showMessage" resultType="MessageDTO">
 		select * from p_message where e_recipient=#{e_recipient}
 	</select>
+	
+	<select id="detailMessage" resultType="MessageDTO">
+		select * from p_message where E_num=#{E_num}
+	</select>
+	
+	
 	<delete id="deleteMessage" parameterType="Integer">
 		delete from p_message
 		where e_num=#{e_num}
@@ -23,4 +29,5 @@
 		delete from p_message where
 		e_recipient=#{e_sender}
 	</delete>
+
 </mapper>

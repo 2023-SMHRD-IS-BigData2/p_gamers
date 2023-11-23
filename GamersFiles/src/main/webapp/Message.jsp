@@ -51,13 +51,14 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 						<span class="col3">보낸사람</span>
 						<span class="col4">보낸시간</span>
 					</li>
-					
+					<%for(int i = 0; i<messages.size(); i++) {%>
 					<li>
-						<span class="col1"></span>
-						<span class="col2">제목</span>
-						<span class="col3">보낸사람</span>
-						<span class="col4">보낸시간</span>
+						<span class="col1"><%=i+1%></span>
+						<span class="col2"><a href="MessageDetail.jsp?E_num=<%=messages.get(i).getE_num()%>"><%=messages.get(i).getE_title() %></a></span>
+						<span class="col3"><%=messages.get(i).getE_recipient() %></span>
+						<span class="col4"><%=messages.get(i).getE_date()%></span>
 					</li>
+					<%} %>
 				</ul>
 			</div>
 		</div>

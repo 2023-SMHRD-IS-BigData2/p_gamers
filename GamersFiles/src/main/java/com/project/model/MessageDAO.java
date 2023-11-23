@@ -15,10 +15,10 @@ public class MessageDAO {
 	// connection, close, ... sql문 실행
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
-	// 데이터 생성
+	// 
 	public int insertMessage(MessageDTO vo) {
 		int cnt = 0;
-
+		// 메시지 등록
 		try {
 			cnt = sqlSession.insert("com.project.database.MessageMapper.insertMessage", vo);
 		} catch (Exception e) {
@@ -29,39 +29,12 @@ public class MessageDAO {
 		return cnt;
 	}
 
-	// 데이터 조회
-	public List<MessageDTO> showMessage(String g_nick) {
-		List<MessageDTO> m_list = sqlSession.selectOne("com.project.database.MessageMapper.showMessage", g_nick);
+	// 메시지 리스트
+	public List<MessageDTO> showMessage(String e_recipient) {
+		List<MessageDTO> m_list = sqlSession.selectList("com.project.database.MessageMapper.showMessage", e_recipient);
 		sqlSession.close();
 		return m_list;
 
-	}
-
-	// 데이터 중복 체크
-	public boolean messageCheck(String inputE) {
-		boolean isCheck = false;
-		try {
-			isCheck = sqlSession.selectOne("com.project.database.MessageMapper.insertMessage", inputE);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return isCheck; // true or false
-
-	}
-
-	// 데이터 수정
-	public int updateMessage(MessageDTO edto) {
-		int cnt = 0;
-		try {
-			cnt = sqlSession.update("com.project.database.MessageMapper.insertMessage", edto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return cnt;
 	}
 
 	// 데이터 리스트
@@ -76,18 +49,13 @@ public class MessageDAO {
 		}
 		return messages;
 	}
-
-	// 데이터 삭제
-	public int deleteMessage(int e_num) {
-		int cnt = 0;
-		try {
-			cnt = sqlSession.delete("com.project.database.MessageMapper.insertMessage", e_num);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return cnt;
+	// 메시지 내용확인
+	public MessageDTO detailMessage(int E_num) {
+		MessageDTO message = null;
+		message = sqlSession.selectOne("com.project.database.MessageMapper.detailMessage", E_num);		
+		return message;
 	}
+
+
 
 }
