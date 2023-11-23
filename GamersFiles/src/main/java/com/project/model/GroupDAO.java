@@ -30,19 +30,16 @@ public class GroupDAO {
 	}
 
 	// 데이터 조회
-	public GroupDTO selectGroup(GroupDTO gdto) {
+	public GroupDTO selectGroup(String g_name) {
 		GroupDTO select = null;
 		try {
-			select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroup", gdto);
-
+			select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroup", g_name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
-
 		return select;
-
 	}
 
 	// 데이터 중복 체크
@@ -110,20 +107,19 @@ public class GroupDAO {
 		}
 		return cnt;
 	}
-	
+
 	// 데이터 조회
-		public GroupDTO selectGroupAdmin(String g_name) {
-			GroupDTO select = null;
-			try {
-				select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroupAdmin", g_name);
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				sqlSession.close();
-			}
-
-			return select;
-
+	public GroupDTO selectGroupAdmin(String g_name) {
+		GroupDTO select = null;
+		try {
+			select = sqlSession.selectOne("com.project.database.GroupMapper.selectGroupAdmin", g_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
 		}
+
+		return select;
+
+	}
 }

@@ -6,9 +6,22 @@
 <!-- namespace : Mapper의 id를 그룹화하는 속성 sql 태그의 id 값이 중복될 수 있기 때문에 원하는 id 값으로 
 	잘 찾아가도록 그룹화 -> 주로 현재 Mapper 파일의 경로를 작성 -->
 <mapper namespace="com.project.database.ApplyMapper">
-
+	<!-- 공대 가입 신청 받으면 신청자들 받아오는 쿼리문 -->
 	<select id="applyList" parameterType="String" resultType="ApplyDTO">
-		select * from p_apply where rcv_nick=#{rcv_nick} order by p_date 
+		select * from p_apply where rcv_id=#{rcv_id} order by p_date 
 	</select>
-	
+	<!-- 공대 가입 수락시 해당 멤버 공격대 정보 변경 -->
+	<update id="applyUpdateMember" parameterType="ApplyRaidDTO">
+		update p_member set g_name=#{g_name} where m_nick=#{send_nick}		
+	</update>
+	<delete id="applyDelete" parameterType="ApplyRaidDTO">
+		delete from p_apply where send_nick=#{send_nick}
+	</delete>
+	<update id="applyDiscount" parameterType="ApplyRaidDTO">
+		update p_group set ${send_pos}=${send_pos}-1 where g_name=#{g_name}
+	</update>
+	<insert id="insertApply" parameterType="ApplyDTO">
+		insert into p_apply
+		values(#{send_id}, #{rcv_id}, #{send_pos}, #{send_class}, sysdate, #{send_nick})
+	</insert>
 </mapper>

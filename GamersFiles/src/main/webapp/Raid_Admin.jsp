@@ -86,6 +86,7 @@ h1 {
 	border-radius: 10px;
 	background-color: pink;
 	border-radius: 10px;
+	
 }
 
 .sb_up_box {
@@ -94,6 +95,7 @@ h1 {
 	background-color: yellow;
 	display: flex;
 	flex-direction: column;
+	
 }
 
 .up_upper_box {
@@ -108,6 +110,7 @@ h1 {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
+	overflow: scroll;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -137,6 +140,7 @@ h1 {
 	display: block;
 	text-align: center;
 	padding-top: 50px;
+	flex-wrap: wrap;
 }
 
 .down_box_form {
@@ -151,10 +155,13 @@ h1 {
 <body>
 	<%
 	session.setAttribute("g_name", "성실성");
+	session.setAttribute("m_nick", "녹시스");	
+	session.setAttribute("m_id", "test1");	
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
+	String m_id = (String) session.getAttribute("m_id");
 	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
-	List<ApplyDTO> a_list = new ApplyDAO().applyList(m_nick);
+	List<ApplyDTO> a_list = new ApplyDAO().applyList(m_id);
 	%>
 
 	<div id="groupWrapper" style="width: 100; height: 100px;">
@@ -243,22 +250,32 @@ h1 {
 					<%
 					for (ApplyDTO tmp : a_list) {
 					%>
-					<form action="Raid_Member_Insert_Service">
 						<div class="ud_inner_box">
 							<div class="ib_left">
 								<%=tmp.getSend_nick()%>
 								<br><%=tmp.getSend_pos()%>
-								<br><%=tmp.getSend_job()%>
+								<br><%=tmp.getSend_class()%>
 							</div>
 							<div class="ib_right">
-								<input type="hidden" name="send_nick" value="<%=tmp.getSend_nick()%>">
-								<input type="hidden" name="send_pos" value="<%=tmp.getSend_pos()%>">
-								<input type="hidden" name="rcv_nick" value="<%=tmp.getRcv_nick()%>">
+							<form action="Raid_Member_Insert_Service">
+								<input type="hidden" name="send_nick"
+									value="<%=tmp.getSend_nick()%>"> <input type="hidden"
+									name="send_pos" value="<%=tmp.getSend_pos()%>"> <input
+									type="hidden" name="rcv_id" value="<%=tmp.getRcv_id()%>">
 								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
 								<input id="input_1" type="submit" value="가입승인">
-							</div>
+							</form>
+							<form action="Raid_Apply_Delete_Service">
+								<input type="hidden" name="send_nick"
+									value="<%=tmp.getSend_nick()%>"> <input type="hidden"
+									name="send_pos" value="<%=tmp.getSend_pos()%>"> <input
+									type="hidden" name="rcv_id" value="<%=tmp.getRcv_id()%>">
+								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
+								<input id="input_1" type="submit" value="가입거절">
+							</form>
+							
 						</div>
-					</form>
+						</div>
 					<%
 					}
 					%>
@@ -273,6 +290,7 @@ h1 {
 					<form action="">
 						<div class="form_text">
 							<input type="textarea" name="deleteCheck">
+							<input type="hidden" name="g_name">
 						</div>
 						<div class="form_submit">
 							<input type="submit" value="공격대 삭제">

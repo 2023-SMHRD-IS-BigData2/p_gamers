@@ -13,12 +13,11 @@ public class GCService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("[이메일 중복체크]");
+		System.out.println("[파티명 중복체크]");
 		String inputG = request.getParameter("inputG");
 		System.out.println(inputG);
 		boolean isCheck = new GroupDAO().groupCheck(inputG);
 		System.out.println(isCheck);
-
 		PrintWriter out;
 		try {
 			out = response.getWriter();
