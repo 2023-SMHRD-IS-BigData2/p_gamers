@@ -7,7 +7,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 <title>게이머즈</title>
@@ -183,17 +183,18 @@ a#btn-modal {
 						<%=contents.get(0).getC_content2()%>
 						/
 						<%=contents.get(0).getC_content3()%>
-						<br>
-						<%
-						if (logindto == null) {
-						%>
+					</h3>
+					<%
+					if (logindto == null) {
+					%>
+					<h3>
 						파티 생성 및 가입 기능은 <a href="Member.jsp"><button
 								style="width: 120px; height: 50px; justify-content: center;">로그인</button></a>
 						후 이용하실 수 있습니다.
 						<%
-						} else if (logindto != null) {
-						if (logindto.getG_name() == null) {
-						%>
+					} else if (logindto != null) {
+					if (logindto.getG_name() == null) {
+					%>
 						<a href="IG.jsp?c_name=<%=c_name%>"><button>파티생성</button> </a>
 						<%
 						}

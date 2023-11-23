@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.project.controller.DGService;
 import com.project.controller.DMService;
 import com.project.controller.GCService;
+import com.project.controller.IAService;
 import com.project.controller.ICService;
 import com.project.controller.IGService;
 import com.project.controller.IMService;
@@ -61,6 +62,8 @@ public class FrontController extends HttpServlet {
 			service = new DGService();
 		} else if (result.equals("/DMService.do")) { // 관리자 회원 삭제
 			service = new DMService();
+		} else if (result.equals("/IAService.do")) { // 파티 가입 신청
+			service = new IAService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {
