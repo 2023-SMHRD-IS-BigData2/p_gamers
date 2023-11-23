@@ -88,7 +88,7 @@ table#allMember th {
 					}
 					%>
 					<tr>
-						<td colspan="7" width="150" style="text-align: center;">
+						<td colspan="8" width="150" style="text-align: center;">
 						<a href="GamersMain.jsp"><button> 홈 </button></a></td>
 					</tr>
 				</table>
