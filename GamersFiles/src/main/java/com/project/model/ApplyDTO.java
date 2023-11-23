@@ -12,9 +12,13 @@ import lombok.NoArgsConstructor;
 public class ApplyDTO {
 	
 	private String send_id;
+	private String send_nick;
 	private String rcv_id;
 	private String send_pos;
-	private String send_job;
+	private String send_class;
 	private String p_date;
 	
+	
+	
+
 }
