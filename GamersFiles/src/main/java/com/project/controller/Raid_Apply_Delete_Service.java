@@ -16,12 +16,12 @@ public class Raid_Apply_Delete_Service extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String send_nick = request.getParameter("send_nick");  
 		String send_pos = request.getParameter("send_pos");  
-		String rcv_nick = request.getParameter("rcv_nick");  
+		String rcv_id = request.getParameter("rcv_id");  
 		String g_name = request.getParameter("g_name");  
 
 		System.out.println(send_nick);
 		System.out.println(send_pos);
-		System.out.println(rcv_nick);
+		System.out.println(rcv_id);
 		System.out.println(g_name);
 		if(send_pos.equals("딜러")) {
 			send_pos = "m_deal";
@@ -32,7 +32,7 @@ public class Raid_Apply_Delete_Service extends HttpServlet {
 		}
 		System.out.println("바뀐 포지션"+send_pos);
 		
-		ApplyRaidDTO dto = new ApplyRaidDTO(send_nick, send_pos, rcv_nick, g_name);
+		ApplyRaidDTO dto = new ApplyRaidDTO(send_nick, send_pos, rcv_id, g_name);
 		
 		
 		int row2 = new ApplyDAO().applyDelete(dto);
