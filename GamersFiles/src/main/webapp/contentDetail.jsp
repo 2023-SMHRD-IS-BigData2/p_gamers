@@ -209,20 +209,20 @@ a#btn-modal {
 							cnt++;
 							List<MemberDTO> raids = new MemberDAO().raidMemberList(groups.get(i).getG_name());
 							for (int j = 0; j < raids.size(); j++) {
-						if (raids.get(j).getM_position().equals("딜러")) {
-							dealers[i]++;
-						} else if (raids.get(j).getM_position().equals("탱커")) {
-							tankers[i]++;
-						} else if (raids.get(j).getM_position().equals("힐러")) {
-							healers[i]++;
-						}
+								if (raids.get(j).getM_position().equals("딜러")) {
+									dealers[i]++;
+								} else if (raids.get(j).getM_position().equals("탱커")) {
+									tankers[i]++;
+								} else if (raids.get(j).getM_position().equals("힐러")) {
+									healers[i]++;
+								}
 							}
 					%>
 					<article class="style<%=cnt%>" style="width: 225px; height: 225px;">
 						<span class="image"> <img
 							src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
-						</span> <a id="btn-modal">
+						</span> <a href="GroupDetail.jsp?g_name=<%=groups.get(i).getG_name()%>">
 							<h2 style="color:lightgray;"><%=groups.get(i).getG_name()%> <br>
 								<%=groups.get(i).getG_content()%>
 							</h2>
