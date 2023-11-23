@@ -1,3 +1,5 @@
+<%@page import="com.project.model.GroupDAO"%>
+<%@page import="com.project.model.GroupDTO"%>
 <%@page import="com.project.model.ContentDAO"%>
 <%@page import="com.project.model.ContentDTO"%>
 <%@page import="com.project.model.MemberDAO"%>
@@ -39,6 +41,10 @@ form {
 	margin: 0px;
 }
 
+table, tr, td {
+	border: 1px solid #8C8C8C;
+}
+
 .groupMain {
 	width: 1900px;
 	height: 750px;
@@ -66,8 +72,7 @@ h1 {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
-	flex-direction:column;
-	background-color: aqua;
+	flex-direction: column;
 }
 
 .secondBox {
@@ -76,7 +81,8 @@ h1 {
 	display: inline-block;
 	border: 5px solid #8C8C8C;
 	display: flex;
-	flex-direction: column; border-radius : 10px;
+	flex-direction: column;
+	border-radius: 10px;
 	background-color: pink;
 	border-radius: 10px;
 }
@@ -98,9 +104,10 @@ h1 {
 </head>
 <body>
 	<%
-	session.setAttribute("g_name", "g_name");
+	session.setAttribute("g_name", "성실성");
 	String g_name = (String) session.getAttribute("g_name");
-	List<ContentDTO> content = new ContentDAO().contentList2("신생");
+	String m_nick = (String) session.getAttribute("m_nick");
+	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
 	%>
 
 	<div id="groupWrapper" style="width: 100; height: 100px;">
@@ -139,16 +146,48 @@ h1 {
 	</div>
 	<div class="groupMain">
 		<div class="firstBox">
-			<div>파티명</div>
-			<div>유저 아이디</div>
-			<div>목적 확팩</div>
-			<div>목적 컨텐츠(고르게 할거임)</div>
-			<div>시작일</div>
-			<div>종료일</div>
-			<div>모집 인원수</div>
-			<div>탱커수</div>
-			<div>힐러수</div>
-			<div>딜러수</div>
+			<table>
+				<tr>
+					<td>공대 이름</td>
+					<td><%=dto.getG_name()%></td>
+				</tr>
+				<tr>
+					<td>공대장</td>
+					<td><%=dto.getM_id()%></td>
+				</tr>
+				<tr>
+					<td>목표 확장팩</td>
+					<td><%=dto.getC_name()%></td>
+				</tr>
+				<tr>
+					<td>목표 레이드</td>
+					<td><%=dto.getG_content()%></td>
+				</tr>
+				<tr>
+					<td>공대 시작 날짜</td>
+					<td><%=dto.getG_start()%></td>
+				</tr>
+				<tr>
+					<td>공대 종료 날짜</td>
+					<td><%=dto.getG_end()%></td>
+				</tr>
+				<tr>
+					<td>모집 중인 인원</td>
+					<td><%=dto.getG_member()%></td>
+				</tr>
+				<tr>
+					<td>모집 중인 탱커 수</td>
+					<td><%=dto.getM_tank()%></td>
+				</tr>
+				<tr>
+					<td>모집 중인 힐러 수</td>
+					<td><%=dto.getM_heal()%></td>
+				</tr>
+				<tr>
+					<td>모집 중인 딜러 수</td>
+					<td><%=dto.getM_deal()%></td>
+				</tr>
+			</table>
 		</div>
 		<div class="secondBox">
 			<div class="sb_up_box"></div>
