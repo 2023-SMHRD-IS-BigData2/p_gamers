@@ -7,7 +7,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 <title>게이머즈</title>
@@ -183,17 +183,21 @@ a#btn-modal {
 						<%=contents.get(0).getC_content2()%>
 						/
 						<%=contents.get(0).getC_content3()%>
+					</h3>
+					<%
+					if (logindto == null) {
+					%>
+					<h3>
+						파티 생성 및 가입 기능은 <a href="Member.jsp"><button
+								style="width: 120px; height: 50px; justify-content: center;">로그인</button></a>
+						후 이용하실 수 있습니다.
 						<%
-						if (logindto == null) {
-						%>
-						파티 생성 및 가입 기능은 <a href="Member.jsp"><button style="width: 120px; height: 50px; justify-content: center;">로그인</button></a> 후 이용하실 수 있습니다.
-						<%
-						} else if(logindto != null) {
-							if (logindto.getG_name() == null){
-						%>
+					} else if (logindto != null) {
+					if (logindto.getG_name() == null) {
+					%>
 						<a href="IG.jsp?c_name=<%=c_name%>"><button>파티생성</button> </a>
 						<%
-							}
+						}
 						}
 						%>
 					</h3>
@@ -209,13 +213,13 @@ a#btn-modal {
 							cnt++;
 							List<MemberDTO> raids = new MemberDAO().raidMemberList(groups.get(i).getG_name());
 							for (int j = 0; j < raids.size(); j++) {
-								if (raids.get(j).getM_position().equals("딜러")) {
-									dealers[i]++;
-								} else if (raids.get(j).getM_position().equals("탱커")) {
-									tankers[i]++;
-								} else if (raids.get(j).getM_position().equals("힐러")) {
-									healers[i]++;
-								}
+						if (raids.get(j).getM_position().equals("딜러")) {
+							dealers[i]++;
+						} else if (raids.get(j).getM_position().equals("탱커")) {
+							tankers[i]++;
+						} else if (raids.get(j).getM_position().equals("힐러")) {
+							healers[i]++;
+						}
 							}
 					%>
 					<article class="style<%=cnt%>" style="width: 225px; height: 225px;">
@@ -223,15 +227,27 @@ a#btn-modal {
 							src="./groupfiles/<%=groups.get(i).getG_file()%>" alt=""
 							width="225px" height="225px" />
 						</span> <a href="GroupDetail.jsp?g_name=<%=groups.get(i).getG_name()%>">
-							<h2 style="color:lightgray;"> <%=groups.get(i).getG_name()%> <br>
+							<h2 style="color: lightgray;">
+								<%=groups.get(i).getG_name()%>
+								<br>
 								<%=groups.get(i).getG_content()%>
 							</h2>
 							<div class="content">
-								<p> 파티장 : <%=groups.get(i).getM_id()%> <br>
-									인원 <br>
-									딜러 : <%=dealers[i]%> / <%=groups.get(i).getM_deal()%> <br>
-									탱커 : <%=tankers[i]%> / 	<%=groups.get(i).getM_tank()%> <br>
-									힐러 : <%=healers[i]%> / 	<%=groups.get(i).getM_heal()%>
+								<p>
+									파티장 :
+									<%=groups.get(i).getM_id()%>
+									<br> 인원 <br> 딜러 :
+									<%=dealers[i]%>
+									/
+									<%=groups.get(i).getM_deal()%>
+									<br> 탱커 :
+									<%=tankers[i]%>
+									/
+									<%=groups.get(i).getM_tank()%>
+									<br> 힐러 :
+									<%=healers[i]%>
+									/
+									<%=groups.get(i).getM_heal()%>
 								</p>
 							</div>
 						</a>

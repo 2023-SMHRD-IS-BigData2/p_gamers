@@ -106,7 +106,7 @@
 				</div>
 				<div class="inner">
 					<ul class="actions">
-						<li><a href="DelAllService.do?email="
+						<li><a href="IAService.do?send_id=<%=login.getM_id()%>&rcv_id=<%=group.getM_id()%>&send_pos=<%=login.getM_position()%>&send_class=<%=login.getM_class() %>&send_nick=<%=login.getM_nick() %>"
 							class="button next scrolly"> 가입신청 </a></li>
 						<li style="align-content: flex-end;"><a
 							href="contentDetail.jsp?c_name=<%=group.getC_name()%>" class="button next scrolly">

@@ -20,5 +20,8 @@
 	<update id="applyDiscount" parameterType="ApplyRaidDTO">
 		update p_group set ${send_pos}=${send_pos}-1 where g_name=#{g_name}
 	</update>
-	
+	<insert id="insertApply" parameterType="ApplyDTO">
+		insert into p_apply
+		values(#{send_id}, #{rcv_id}, #{send_pos}, #{send_class}, sysdate, #{send_nick})
+	</insert>
 </mapper>

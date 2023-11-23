@@ -17,7 +17,4 @@ public class ApplyDTO {
 	private String send_job;
 	private String p_date;
 	
-	
-	
-
 }
