@@ -26,6 +26,9 @@
 		<typeAlias type="com.project.model.ApplyDTO"
 			alias="ApplyDTO" />
 		<typeAlias type="com.project.model.ItemDTO" alias="ItemDTO"/>
+
+			<typeAlias type="com.project.model.ApplyRaidDTO"
+			alias="ApplyRaidDTO" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
