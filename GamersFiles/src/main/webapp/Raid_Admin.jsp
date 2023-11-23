@@ -151,6 +151,7 @@ h1 {
 <body>
 	<%
 	session.setAttribute("g_name", "성실성");
+	session.setAttribute("m_nick", "녹시스");	
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
@@ -243,7 +244,6 @@ h1 {
 					<%
 					for (ApplyDTO tmp : a_list) {
 					%>
-					<form action="Raid_Member_Insert_Service">
 						<div class="ud_inner_box">
 							<div class="ib_left">
 								<%=tmp.getSend_nick()%>
@@ -251,14 +251,25 @@ h1 {
 								<br><%=tmp.getSend_job()%>
 							</div>
 							<div class="ib_right">
-								<input type="hidden" name="send_nick" value="<%=tmp.getSend_nick()%>">
-								<input type="hidden" name="send_pos" value="<%=tmp.getSend_pos()%>">
-								<input type="hidden" name="rcv_nick" value="<%=tmp.getRcv_nick()%>">
+							<form action="Raid_Member_Insert_Service">
+								<input type="hidden" name="send_nick"
+									value="<%=tmp.getSend_nick()%>"> <input type="hidden"
+									name="send_pos" value="<%=tmp.getSend_pos()%>"> <input
+									type="hidden" name="rcv_nick" value="<%=tmp.getRcv_nick()%>">
 								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
 								<input id="input_1" type="submit" value="가입승인">
-							</div>
+							</form>
+							<form action="Raid_Apply_Delete_Service">
+								<input type="hidden" name="send_nick"
+									value="<%=tmp.getSend_nick()%>"> <input type="hidden"
+									name="send_pos" value="<%=tmp.getSend_pos()%>"> <input
+									type="hidden" name="rcv_nick" value="<%=tmp.getRcv_nick()%>">
+								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
+								<input id="input_1" type="submit" value="가입거절">
+							</form>
+							
 						</div>
-					</form>
+						</div>
 					<%
 					}
 					%>
