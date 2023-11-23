@@ -18,10 +18,27 @@
 
 table {
   border-collapse: separate; 
-  border-spacing: 10px;
+  
   margin-left: 100px;
 }
-       
+.firsttable{
+	width:600px;
+	height:500px;
+}
+.secondtable{
+	width:600px;
+	height:500px;
+}
+.thirdtable{
+	width:600px;
+	height:500px;	
+}
+.title{
+	background-color: #474747;
+}
+.contents{
+	background-color: #A6A6A6;
+}        
 </style>
 </head>
 <body>
@@ -70,14 +87,15 @@ table {
 
 <h1>홍련의 해방자 아이템 리스트</h1>
 <div class="table-container">
+<div class="firsttable">
 <table border="1">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List3){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List3){%>
@@ -89,17 +107,17 @@ table {
 	
 	</tr>
 </table>
+</div>
 
-
-
+<div class="secondtable">
 <table border="1">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List2){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List2){%>
@@ -111,18 +129,18 @@ table {
 	
 	</tr>
 </table>
+</div>
 
-
-
+<div class="thirdtable">
 <table border="1" id="items3">
-	<tr>
+	<tr class="title">
 		<th>아이템 이름</th>
 		<th>아이템 레벨</th>
 		<th>착용 레벨</th>
 		<th>드랍 장소</th>
 	</tr>
 	
-	<tr>
+	<tr class="contents">
 		<td><%for(ItemDTO names : I_List){%>
 			<%= names.getItem_name() %><hr><%} %></td>
 		<td><%for(ItemDTO levels : I_lev_List){%>
@@ -134,7 +152,7 @@ table {
 		</tr>
 </table>
 </div>
-
+</div>
 
 </body>
 </html>
