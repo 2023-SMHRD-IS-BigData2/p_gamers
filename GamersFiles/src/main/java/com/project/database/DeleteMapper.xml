@@ -39,7 +39,7 @@
 		m_email=#{m_email}
 	</delete>
 	<update id="deleteGroupinfo">
-		update p_member set g_name = null where g_name=#{g_name};
+		update p_member set g_name = null where g_name=#{g_name}
 	</update>
 	
 </mapper>

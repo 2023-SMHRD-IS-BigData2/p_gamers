@@ -154,9 +154,9 @@ h1 {
 </head>
 <body>
 	<%
-	session.setAttribute("g_name", "성실성");
-	session.setAttribute("m_nick", "녹시스");	
-	session.setAttribute("m_id", "test1");	
+	//session.setAttribute("g_name", "성실성");
+	//session.setAttribute("m_nick", "녹시스");	
+	//session.setAttribute("m_id", "test1");	
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 	String m_id = (String) session.getAttribute("m_id");
@@ -290,7 +290,8 @@ h1 {
 					<form action="Raid_Final_Delete_Service">
 						<div class="form_text">
 							<input type="textarea" name="deleteCheck">
-							<input type="hidden" name="g_name">
+							<input type="hidden" name="g_name" value="<%= g_name %>">
+							
 						</div>
 						<div class="form_submit">
 							<input type="submit" value="공격대 삭제">
