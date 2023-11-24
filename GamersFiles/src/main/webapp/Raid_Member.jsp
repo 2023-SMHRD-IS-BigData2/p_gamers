@@ -196,7 +196,7 @@ h1 {
 
 	<!-- Main -->
 	<div class="groupInner">
-		<h1>공격대 정보 페이지입니다</h1>
+		<h1>공격대 정보</h1>
 	</div>
 	<div class="groupMain">
 		<div class="firstBox">
