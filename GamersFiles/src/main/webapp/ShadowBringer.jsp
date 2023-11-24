@@ -13,10 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="gamersmain.jsp" class="image avatar"><img src="images/칠흑의 반역자 로고.jpg" alt="" /></a>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
 					<h1><strong>칠흑의 반역자</strong>, 레이드 공략 페이지입니다.<br />
 					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
 					</h1>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
 				</div>
 			</header>
 

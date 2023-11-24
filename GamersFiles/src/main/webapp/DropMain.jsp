@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>신생 에오르제아</title>
+		<title>공략 페이지</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,11 +13,10 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>신생 에오르제아</strong>, 레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
-					</h1>
+					<a href="calendar.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
+					<h1>레이드 공략 페이지입니다.<br />
+					원하시는 레이드 던전을 고르시고 공략과 아이템을 확인하세요</h1>
+					<a href="calendar.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -27,9 +26,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>신생 에오르제아 레이드 던전</h2>
+							<h2>레이드 던전</h2>
 						</header>
-						<p>신생 에오르제아 레이드 던전 스토리 설명 글</p>
+						<p>원하시는 확장팩을 고르세요</p>
 						
 					</section>
 
@@ -38,27 +37,38 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.html" class="image fit thumb"><img src="images/트윈타니아.png" alt="" /></a>
-								<h3>대미궁 바하무트 : 해후편</h3>
-								<p>해후편 1~5</p>
+								<a href="RealmReborn.jsp" class="image fit thumb"><img src="images/con_logo1.png" alt="" /></a>
+								<h3>신생 에오르제아</h3>
+								<p>대미궁 바하무트</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.html" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
-								<h3>대미궁 바하무트 : 침공편</h3>
-								<p>침공편 1~4</p>
+								<a href="HeavenSword.jsp" class="image fit thumb"><img src="images/con_logo2.png" alt="" /></a>
+								<h3>창천의 이슈가르드</h3>
+								<p>기공성 알렉산더</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/바하무트 프라임.jpg" alt="" /></a>
-								<h3>대미궁 바하무트 : 진성편</h3>
-								<p>진성편 1~4</p>
+								<a href="StormBlood.jsp" class="image fit thumb"><img src="images/con_logo3.png" alt="" /></a>
+								<h3>홍련의 해방자</h3>
+								<p>차원의 틈 오메가</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_5.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>신생 에오르제아 던전별 드롭 아이템입니다.</p>
+								<a href="ShadowBringer.jsp" class="image fit thumb"><img src="images/con_logo4.png" alt="" /></a>
+								<h3>칠흑의 반역자</h3>
+								<p>희망의 낙원 에덴</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="EndWalker.jsp" class="image fit thumb"><img src="images/con_logo5.png" alt="" /></a>
+								<h3>효월의 종언</h3>
+								<p>마의 전당 판데모니움</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="##" class="image fit thumb"><img src="images/con_logo6.png" alt="" /></a>
+								<h3>절 난이도</h3>
+								<p>토벌전 및 검증전</p>
 							</article>
 							
 						</div>
+						
 						
 					</section>
 

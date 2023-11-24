@@ -13,10 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="gamersmain.jsp" class="image avatar"><img src="images/칠흑의 반역자 로고.jpg" alt="" /></a>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
 					<h1><strong>홍련의 해방자</strong>, 레이드 공략 페이지입니다.<br />
 					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
 					</h1>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -37,17 +38,17 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.html" class="image fit thumb"><img src="images/홍련 오메가 델타 4층.png" alt="" /></a>
+								<a href="eden1.html" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" /></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅)</h3>
 								<p>델타편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.html" class="image fit thumb"><img src="images/홍련 오메가 시그마 4층.png" alt="" /></a>
+								<a href="eden2.html" class="image fit thumb"><img src="images/갓프카.png" alt="" /></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅)</h3>
 								<p>시그마편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/홍련 오메가 알파 4층.png" alt="" /></a>
+								<a href="eden3.jsp" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" /></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅)</h3>
 								<p>알파편(영웅) 1~4</p>
 							</article>

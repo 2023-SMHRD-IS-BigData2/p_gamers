@@ -212,6 +212,7 @@ h1 {
 			<%
 			}
 			%>
+			<li><a href="DropMain.jsp">레이드 공략 & 아이템DB</a></li>
 		</ul>
 	</nav>
 
@@ -228,11 +229,25 @@ h1 {
 					<%
 					for (MemberDTO tmp : m_list) {
 					%>
-					<%=tmp.getM_nick()%> (<%=tmp.getM_id()%>)<br>
+					<%=tmp.getM_nick()%>
+					(<%=tmp.getM_id()%>)<br>
 					<%
 					}
 					%>
 				</div>
+				<hr>
+				<%
+				if (!m_id.equals(dto.getM_id())) {
+				%>
+				<div>
+					<form action="Raid_Member_Withdrawal_Service">
+						<input type="hidden" name="m_id" value="<%=m_id%>">
+						<input type="submit" value="공격대 탈퇴">
+					</form>
+				</div>
+				<%
+				}
+				%>
 			</div>
 		</div>
 		<div class="secondBox">

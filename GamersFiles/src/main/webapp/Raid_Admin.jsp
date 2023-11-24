@@ -243,6 +243,7 @@ h1 {
 			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
 			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
 			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>
+			<li><a href="DropMain.jsp">레이드 공략 & 아이템DB</a></li>		
 		</ul>
 	</nav>
 

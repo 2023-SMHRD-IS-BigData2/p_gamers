@@ -122,4 +122,16 @@ public class GroupDAO {
 		return select;
 
 	}
+	
+	public int groupOutMember(String m_id) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.update("com.project.database.GroupMapper.groupOutMember", m_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
 }
