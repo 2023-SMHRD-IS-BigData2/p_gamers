@@ -154,7 +154,7 @@ body {
 					<input type="text" name="m_id" value="<%=login.getM_id()%>"
 						readonly> <input type="password" name="m_pw"
 						placeholder="비밀번호"> <input type="text" name="m_nick"
-						placeholder="닉네임"> <input type="text" name="g_name" value="<%=login.getG_name() %>"
+						placeholder="닉네임"> <input type="text" value="<%=login.getG_name() %>"
 						readonly="readonly">
 					<input type="text" name="m_class" list="classes" id="class"
 						placeholder="직업">
