@@ -233,6 +233,9 @@ h1 {
 					}
 					%>
 				</div>
+				<hr>
+				<div>공대 탈퇴
+				</div>
 			</div>
 		</div>
 		<div class="secondBox">
