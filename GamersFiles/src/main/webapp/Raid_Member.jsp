@@ -228,7 +228,7 @@ h1 {
 					<%
 					for (MemberDTO tmp : m_list) {
 					%>
-					<%=tmp.getM_nick()%><br>
+					<%=tmp.getM_nick()%> (<%=tmp.getM_id()%>)<br>
 					<%
 					}
 					%>
