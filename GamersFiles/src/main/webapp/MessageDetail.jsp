@@ -5,6 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="assets/css/Message.css" />
 		<title>Forty by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,30 +22,37 @@
 				int E_num = Integer.parseInt(request.getParameter("E_num"));
 				MessageDTO message = new MessageDAO().detailMessage(E_num);
 			%>
-			
-			<div id = "board">
-				<table id="list">
-					<tr>
-						<td>제목</td>
-						<td><%=message.getE_title() %></td>
-					</tr>
-					<tr>
-						<td>보낸사람</td>
-						<td><%=message.getE_recipient() %></td>
-					</tr>
-					<tr>
-						<td colspan="2">내용</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<h3><%=message.getE_content() %></h3>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"><a href="Message.jsp"><button>뒤로가기</button></a></td>
-					</tr>
-				</table>
+		
+<section id="two">
+	<div class="inner">
+		<header class="major">
+			<h2 id="tit">쪽지 상세내용</h2>
+		</header>
+	</div>
+</section>
+				<section id="message_detail">
+					<div id="detail_titel">
+						<span class="col1">제목</span>
+						<span class="col2"><%=message.getE_title() %></span>
+						<span class="col3"><%=message.getE_date().substring(5,16) %></span>
+					</div>
+					<div>
+						<span class="col1">보낸이</span>
+						<span class="col2"><%=message.getE_recipient() %></span>
+					</div>
+					<div id="detail_content">
+						<span class="col1">내용</span>
+						<span class="col2"><%=message.getE_content() %></span>
+					</div>
+					<div id="detail_re">
+						<span class="col1"></span>
+						<span class="col2"></span>
+						<span class="col3"><a href="Message.jsp"><button>돌아가기</button></a></span>
+						<span></span>
+					</div>
 			</div>
+			</section>
+			</setion>
 			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
