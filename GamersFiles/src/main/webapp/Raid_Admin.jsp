@@ -22,10 +22,21 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="menu.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <style type="text/css">
+#groupWrapper {
+	background: #242943 !important;
+	color: white !important;
+}
+
+body {
+	background: white !important;
+	color: gray !important;
+}
+
 #header {
 	margin: 0px;
 }
@@ -86,6 +97,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 }
+
 .fb_title {
 	text-align: left;
 	width: 98%;
@@ -95,11 +107,11 @@ h1 {
 	font-size: 24px;
 	padding-left: 15px;
 }
-.fb_table{
+
+.fb_table {
 	width: 75%;
 	height: 650px;
 	margin-left: 75px;
-	
 }
 
 .secondBox {
@@ -202,51 +214,32 @@ h1 {
 }
 </style>
 </head>
-<body>
+<body class="is-preload">
 	<%
-	//테스트용 세션값
-	//session.setAttribute("g_name", "성실성");
-	//session.setAttribute("m_nick", "녹시스");
-	//session.setAttribute("m_id", "test1");
-
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 	String m_id = (String) session.getAttribute("m_id");
 	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
 	List<ApplyDTO> a_list = new ApplyDAO().applyList(m_id);
 	%>
-
 	<div id="groupWrapper" style="width: 100; height: 100px;">
 		<!-- Header -->
-		<header id="header">
-			<div class="groupInner" style="width: 200; height: 200;">
-				<!-- Logo -->
-				<!-- <a href="index.html" class="logo"> <span class="symbol"><img
-						src="images/logo.svg" alt="" /></span><span class="title">Gamers</span>
-				</a> -->
-				<!-- Nav -->
-
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-			</div>
+		<header id="header" class="alt">
+			<a href="GamersMain.jsp" class="logo"><strong>게이머즈</strong></a>
+			<nav>
+				<a href="calendar.jsp">공격대 메인 페이지</a> <a href="Raid_Member.jsp">공격대
+					구성원 정보</a>
+				<%
+				if (m_id.equals(dto.getM_id())) {
+				%>
+				<a href="Raid_Admin.jsp">공격대 관리</a>
+				<%
+				}
+				%>
+				<a href="DropMain.jsp">레이드 공략 & 아이템DB</a>
+			</nav>
 		</header>
 	</div>
-
-	<!-- Menu -->
-	<nav id="menu">
-		<h2>Menu</h2>
-		<ul>
-			<li><a href="GamersMain.jsp">홈</a></li>
-			<li><a href="calendar.jsp">공격대 메인 페이지</a></li>
-			<li><a href="Raid_Member.jsp">공격대 구성원 정보</a></li>
-			<li><a href="Raid_Admin.jsp">공격대 관리</a></li>
-			<li><a href="DropMain.jsp">레이드 공략 & 아이템DB</a></li>		
-		</ul>
-	</nav>
-
 	<!-- Main -->
 	<div class="groupInner">
 		<h1>공격대 관리</h1>
