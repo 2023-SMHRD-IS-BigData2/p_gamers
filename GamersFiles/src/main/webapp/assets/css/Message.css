@@ -3,6 +3,11 @@
 h2{font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px;}
 #tit {font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 200px;}
 
+/* a태그 글자색 변경 */
+a:link{ color : black;}
+a:visited { color: gray;}
+a {text-decoration-line: none;}
+#message_box h3 a:visited{color:black;}
 /* 쪽지 작성 영역 사이즈 및 가운데 정렬 */
 #contact {width: 600px; margin: 0 auto;}
 
@@ -60,3 +65,27 @@ ul{ list-style: none; padding-left: 0; margin-left: 0;}
 #message .col3{width: 80px;}
 #message .col4{width: 120px; text-align: center;}
 #message .col5{width: 40px;}
+
+/* message detail 시작 */
+
+/* message detail 전체영역 가로사이즈, 가운데 정렬 */
+#message_detail {width: 680px; margin: 0 auto;}
+
+/* div 경계선 긋기 */
+
+#message_detail div{border-bottom: solid 1px #dddddd; padding: 10px;}
+
+/* span사이즈 조절 */
+
+#message_detail div span{display: inline-block;}
+
+/* 각 칸마다 사이즈 조절 */
+.col1{width: 60px; font-weight: bold;}
+.col2{width: 100px; text-align: center;}
+#detail_titel .col3{width: 480px; text-align: right; font-size: 13px;}
+
+/* 내용칸 사이즈 조절 */
+#detail_content .col1 {height: 40px;}
+#detail_content .col2 {width: 600px; height: 250px; text-align: left;} 
+
+#detail_re .col3{width: 480px; text-align: right;}

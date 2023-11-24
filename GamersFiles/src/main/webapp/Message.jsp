@@ -53,8 +53,8 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 							<span class="col1">번호</span>
 							<span class="col2" id="message_title">제목</span>
 							<span class="col3">보낸이</span>
-							<span class="col4">등록일</span>
-							<span class="col5">삭제</span>
+							<span class="col4">발송시간</span>
+							<span class="col5">비고</span>
 						</li>
 						<%for(int i = 0; i<messages.size(); i++) {%>
 						<li>
