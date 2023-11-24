@@ -212,6 +212,7 @@ h1 {
 			<%
 			}
 			%>
+			<li><a href="DropMain.jsp">레이드 공략 & 아이템DB</a></li>
 		</ul>
 	</nav>
 
