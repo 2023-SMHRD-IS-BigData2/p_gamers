@@ -51,5 +51,6 @@
 		<mapper resource="com/project/database/JobMapper.xml" />
 		<mapper resource="com/project/database/ApplyMapper.xml" />
 		<mapper resource="com/project/database/ItemMapper.xml" />
+		<mapper resource="com/project/database/DeleteMapper.xml" />
 	</mappers>
 </configuration>

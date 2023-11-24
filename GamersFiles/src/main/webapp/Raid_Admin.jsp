@@ -31,10 +31,22 @@
 }
 
 #input_1 {
-	height: 3em;
-	margin:0px;
+	font-size: 12px;
+	padding: 0 1em 0 1em;
+	height: 2.5em;
+	margin: 0px;
+	text-align: center;
+	margin-top: 15px;
 }
 
+#input_2 {
+	font-size: 12px;
+	padding: 0 1em 5px 1em;
+	height: 3em;
+	margin: 0px;
+	text-align: center;
+	margin-top: 15px;
+}
 
 form {
 	margin: 0px;
@@ -63,9 +75,8 @@ h1 {
 
 .firstBox {
 	width: 650px;
-	height: 700px;
+	height: 750px;
 	display: inline-block;
-	padding: 50px;
 	text-align: center;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
@@ -74,6 +85,21 @@ h1 {
 	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
+}
+.fb_title {
+	text-align: left;
+	width: 98%;
+	height: 50px;
+	background-color: #5D5D5D;
+	color: white;
+	font-size: 24px;
+	padding-left: 15px;
+}
+.fb_table{
+	width: 75%;
+	height: 650px;
+	margin-left: 75px;
+	
 }
 
 .secondBox {
@@ -84,30 +110,27 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
-	background-color: pink;
-	border-radius: 10px;
-	
 }
 
 .sb_up_box {
 	width: 1250px;
-	height: 500px;
-	background-color: yellow;
+	height: 5000px;
 	display: flex;
 	flex-direction: column;
-	
 }
 
 .up_upper_box {
 	width: 1250px;
-	height: 100px;
-	background-color: pink;
+	height: 50px;
+	background-color: #5D5D5D;
+	color: white;
+	font-size: 24px;
+	padding-left: 15px;
 }
 
 .up_down_box {
 	width: 1250px;
-	height: 400px;
-	background-color: white;
+	height: 450px;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
@@ -117,30 +140,57 @@ h1 {
 }
 
 .ud_inner_box {
-	width: 550px;
-	height: 120px;
-	background-color: yellow;
-	margin: 15px;
+	width: 400px;
+	height: 110px;
+	background-color: #CDCDCD;
+	margin: 10px;
+	padding-left: 15px;
 	display: flex;
 	flex-direction: row;
+	border: 5px solid #939393;
+	border-radius: 5px;
+	display: flex;
 }
 
-.ib_left{
+.ib_left {
+	width: 250px;
+	height: 110px;
+	display: inline-block;
+}
+
+.ib_right {
 	
-}
-
-.ib_right{
-
 }
 
 .sb_down_box {
 	width: 1250px;
 	height: 250px;
-	background-color: green;
 	display: block;
 	text-align: center;
 	padding-top: 50px;
 	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.db_title {
+	text-align: left;
+	width: 1250px;
+	height: 50px;
+	background-color: #5D5D5D;
+	color: white;
+	font-size: 24px;
+	padding-left: 15px;
+}
+
+.db_case {
+	width: 750px;
+	height: 150px;
+	border: 3px solid #8C8C8C;
+	border-radius: 5px;
 }
 
 .down_box_form {
@@ -148,15 +198,17 @@ h1 {
 }
 
 .form_submit {
-	margin-top: 10px;
+	
 }
 </style>
 </head>
 <body>
 	<%
-	session.setAttribute("g_name", "성실성");
-	session.setAttribute("m_nick", "녹시스");	
-	session.setAttribute("m_id", "test1");	
+	//테스트용 세션값
+	//session.setAttribute("g_name", "성실성");
+	//session.setAttribute("m_nick", "녹시스");
+	//session.setAttribute("m_id", "test1");
+
 	String g_name = (String) session.getAttribute("g_name");
 	String m_nick = (String) session.getAttribute("m_nick");
 	String m_id = (String) session.getAttribute("m_id");
@@ -196,52 +248,55 @@ h1 {
 
 	<!-- Main -->
 	<div class="groupInner">
-		<h1>공격대 관리 페이지입니다</h1>
+		<h1>공격대 관리</h1>
 	</div>
 	<div class="groupMain">
 		<div class="firstBox">
-			<table>
-				<tr>
-					<td><b>공대 이름</b></td>
-					<td><%=dto.getG_name()%></td>
-				</tr>
-				<tr>
-					<td><b>공대장</b></td>
-					<td><%=m_nick%></td>
-				</tr>
-				<tr>
-					<td><b>목표 확장팩</b></td>
-					<td><%=dto.getC_name()%></td>
-				</tr>
-				<tr>
-					<td><b>목표 레이드</b></td>
-					<td><%=dto.getG_content()%></td>
-				</tr>
-				<tr>
-					<td><b>공대 시작 날짜</b></td>
-					<td><%=dto.getG_start()%></td>
-				</tr>
-				<tr>
-					<td><b>공대 종료 날짜</b></td>
-					<td><%=dto.getG_end()%></td>
-				</tr>
-				<tr>
-					<td><b>모집 중인 인원</b></td>
-					<td><%=dto.getG_member()%></td>
-				</tr>
-				<tr>
-					<td><b>모집 중인 탱커 수</b></td>
-					<td><%=dto.getM_tank()%></td>
-				</tr>
-				<tr>
-					<td><b>모집 중인 힐러 수</b></td>
-					<td><%=dto.getM_heal()%></td>
-				</tr>
-				<tr>
-					<td><b>모집 중인 딜러 수</b></td>
-					<td><%=dto.getM_deal()%></td>
-				</tr>
-			</table>
+			<div class="fb_title">공격대 정보</div>
+			<div class="fb_table">
+				<table>
+					<tr>
+						<td><b>공격대 이름</b></td>
+						<td><%=dto.getG_name()%></td>
+					</tr>
+					<tr>
+						<td><b>공격대장</b></td>
+						<td><%=m_nick%></td>
+					</tr>
+					<tr>
+						<td><b>목표 확장팩</b></td>
+						<td><%=dto.getC_name()%></td>
+					</tr>
+					<tr>
+						<td><b>목표 레이드</b></td>
+						<td><%=dto.getG_content()%></td>
+					</tr>
+					<tr>
+						<td><b>공격대 시작 날짜</b></td>
+						<td><%=dto.getG_start()%></td>
+					</tr>
+					<tr>
+						<td><b>공격대 종료 날짜</b></td>
+						<td><%=dto.getG_end()%></td>
+					</tr>
+					<tr>
+						<td><b>모집 중인 인원</b></td>
+						<td><%=dto.getG_member()%></td>
+					</tr>
+					<tr>
+						<td><b>모집 중인 탱커 수</b></td>
+						<td><%=dto.getM_tank()%></td>
+					</tr>
+					<tr>
+						<td><b>모집 중인 힐러 수</b></td>
+						<td><%=dto.getM_heal()%></td>
+					</tr>
+					<tr>
+						<td><b>모집 중인 딜러 수</b></td>
+						<td><%=dto.getM_deal()%></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 		<div class="secondBox">
 			<div class="sb_up_box">
@@ -250,13 +305,13 @@ h1 {
 					<%
 					for (ApplyDTO tmp : a_list) {
 					%>
-						<div class="ud_inner_box">
-							<div class="ib_left">
-								<%=tmp.getSend_nick()%>
-								<br><%=tmp.getSend_pos()%>
-								<br><%=tmp.getSend_class()%>
-							</div>
-							<div class="ib_right">
+					<div class="ud_inner_box">
+						<div class="ib_left">
+							<%=tmp.getSend_nick()%>
+							<br><%=tmp.getSend_pos()%>
+							<br><%=tmp.getSend_class()%>
+						</div>
+						<div class="ib_right">
 							<form action="Raid_Member_Insert_Service">
 								<input type="hidden" name="send_nick"
 									value="<%=tmp.getSend_nick()%>"> <input type="hidden"
@@ -273,9 +328,9 @@ h1 {
 								<input type="hidden" name="g_name" value="<%=dto.getG_name()%>">
 								<input id="input_1" type="submit" value="가입거절">
 							</form>
-							
+
 						</div>
-						</div>
+					</div>
 					<%
 					}
 					%>
@@ -284,18 +339,22 @@ h1 {
 
 			</div>
 			<div class="sb_down_box">
-				<div class="down_box_title">공격대 삭제를 원하시면 아래에 "공격대삭제"를 정확하게
-					입력해주세요</div>
-				<div class="down_box_form">
-					<form action="Raid_Final_Delete_Service">
-						<div class="form_text">
-							<input type="textarea" name="deleteCheck">
-							<input type="hidden" name="g_name">
-						</div>
-						<div class="form_submit">
-							<input type="submit" value="공격대 삭제">
-						</div>
-					</form>
+				<div class="db_title">공격대 삭제</div>
+				<div class="db_case">
+					<div class="down_box_title">공격대 삭제를 원하시면 아래에 "공격대삭제"를 정확하게
+						입력해주세요</div>
+					<div class="down_box_form">
+						<form action="Raid_Final_Delete_Service">
+							<div class="form_text">
+								<input type="textarea" name="deleteCheck"> <input
+									type="hidden" name="g_name" value="<%=g_name%>">
+
+							</div>
+							<div class="form_submit">
+								<input id="input_2" type="submit" value="공격대 삭제">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

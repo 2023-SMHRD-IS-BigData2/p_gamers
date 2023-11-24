@@ -174,7 +174,7 @@ input {
 	<div id="groupMain">
 		<div class="groupInner">
 			<div class="main_title">
-				<h1><%=g_name%>공격대 홈페이지
+				<h1><%=g_name%> 공격대 홈페이지
 				</h1>
 			</div>
 		</div>
