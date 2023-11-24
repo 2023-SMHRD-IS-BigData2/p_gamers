@@ -13,7 +13,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="GamersMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
+					<a href="calendar.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
 					<h1><strong>신생 에오르제아</strong>, 레이드 공략 페이지입니다.<br />
 					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
 					</h1>
