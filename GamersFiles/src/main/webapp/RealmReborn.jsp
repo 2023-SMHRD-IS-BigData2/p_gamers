@@ -13,7 +13,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="calendar.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
 					<h1><strong>신생 에오르제아</strong>, 레이드 공략 페이지입니다.<br />
 					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
 					</h1>
@@ -37,17 +37,17 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.html" class="image fit thumb"><img src="images/신생 바하무트 해후 5층.png" alt="" /></a>
+								<a href="eden1.html" class="image fit thumb"><img src="images/트윈타니아.png" alt="" /></a>
 								<h3>대미궁 바하무트 : 해후편</h3>
 								<p>해후편 1~5</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.html" class="image fit thumb"><img src="images/신생 바하무트 침공 4층.png" alt="" /></a>
+								<a href="eden2.html" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
 								<h3>대미궁 바하무트 : 침공편</h3>
 								<p>침공편 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/신생 바하무트 진성 4층.png" alt="" /></a>
+								<a href="eden3.jsp" class="image fit thumb"><img src="images/바하무트 프라임.jpg" alt="" /></a>
 								<h3>대미궁 바하무트 : 진성편</h3>
 								<p>진성편 1~4</p>
 							</article>
