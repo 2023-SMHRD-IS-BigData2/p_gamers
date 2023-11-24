@@ -39,5 +39,8 @@
 		<select id="selectGroupAdmin" resultType="GroupDTO">
 		select * from p_group where g_name=#{g_name}
 	</select>
+	<update id="groupOutMember">
+		update p_member set g_name = null where m_id=#{m_id}
+	</update>
 
 </mapper>
