@@ -163,6 +163,7 @@ a#btn-modal {
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html"> 홈 </a></li>
+				<li><a href="#none" onclick="window.open('Message.jsp','new','scrollbars=yes,resizable=no width=700 height=600, left=1200,top=600');return false">쪽지함</a></li>
 				<li><a href="Update.jsp?m_id=<%=logindto.getM_id()%>"> 내 정보
 						수정 </a></li>
 				<li><a href="Member.jsp"> 내 파티 </a></li>
