@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 및 회원가입 페이지</title>
+<link rel="stylesheet" href="MainAssets/css/main.css" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style type="text/css">
 * {
@@ -15,7 +16,6 @@
 	margin: 0;
 	border: none;
 	text-align: center;
-	background-color: gray;
 }
 
 body {
@@ -24,10 +24,13 @@ body {
 }
 
 .login-wrapper {
-	display: inline-block;
+	margin: 20px; display : inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	background-color: #f5f5dc;
+	color: black;
+	border: solid;
+	border-color: lightgray;
+	display: inline-block;
 }
 
 .login-wrapper>h2 {
@@ -43,15 +46,16 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
-	background-color: #eee6c4;
+	font-size: 14px !important;
 }
 
 #login-form>input::placeholder {
-	color: gray;
+	color: gray !important;
+	font-size: 14px !important;
 }
 
 #login-form>input[type="submit"] {
-	color: #fff;
+	color: black;
 	font-size: 16px;
 	background-color: gray;
 	margin-top: 20px;
@@ -83,7 +87,9 @@ body {
 	display: inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	background-color: #f5f5dc;
+	color: black;
+	border: solid;
+	border-color: lightgray;
 }
 
 .join-wrapper>h2 {
@@ -99,15 +105,16 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
-	background-color: #eee6c4;
+	font-size: 14px !important;
 }
 
 #join-form>input::placeholder {
-	color: gray;
+	color: gray !important;
+	font-size: 14px !important;
 }
 
 #join-form>input[type="submit"] {
-	color: #fff;
+	color: black;
 	font-size: 16px;
 	background-color: gray;
 	margin-top: 20px;
@@ -134,7 +141,8 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-textarea{
+
+textarea {
 	resize: none;
 }
 </style>
@@ -144,44 +152,49 @@ textarea{
 	request.setCharacterEncoding("UTF-8");
 	List<JobDTO> jobs = new JobDAO().jobList();
 	%>
-	<div class="member_container">
+	<div class="member">
 		<div class="main_top">
 			<div class="login-wrapper" style="width: 400px;">
-				<h2>로그인</h2>
-				<form method="post" action="SMService.do" id="login-form">
-					<input type="text" name="m_id" placeholder="아이디"> <input
-						type="password" name="m_pw" placeholder="비밀번호"> <input
-						type="submit" value="로그인">
-				</form>
+				<fieldset>
+					<h2>로그인</h2>
+					<form method="post" action="SMService.do" id="login-form">
+						<input type="text" name="m_id" placeholder="아이디"> <input
+							type="password" name="m_pw" placeholder="비밀번호"> <input
+							type="submit" value="로그인">
+					</form>
+				</fieldset>
 			</div>
 		</div>
-		<div class="member_bottom">
+		<div class="main_bottom">
 			<div class="join-wrapper" style="width: 400px;">
-				<h2>회원가입</h2>
-				<form method="post" action="IMService.do" id="join-form">
-					<input type="text" name="m_id" id="inputI" placeholder="아이디">
-					<input type="button" value="중복체크" onclick="checkI()" style="width: 100px; height: 50px;">
-						<span id="memberCheck"></span>
-					<input type="password" name="m_pw" placeholder="비밀번호">
-					<input type="text" name="m_nick" placeholder="닉네임"> 
-					<input type="text" name="m_class" list="classes" id="class"
-						placeholder="직업">
-					<datalist id="classes">
-						<%
-						if (jobs != null) {
-							for (int i = 0; i < jobs.size(); i++) {
-						%>
-						<option value="<%=jobs.get(i).getM_class()%>"><%=jobs.get(i).getM_class()%></option>
-						<%
-						}
-						}
-						%>
-					</datalist>
-					<input type="text" name="m_position" readonly value=""
-						id="m_position">
-					<textarea name="m_coment" style="width: 320px; height: 48px;" placeholder="간단한 자기 소개"></textarea>
-					<input type="submit" value="회원가입">
-				</form>
+				<fieldset>
+					<h2>회원가입</h2>
+					<form method="post" action="IMService.do" id="join-form">
+						<input type="text" name="m_id" id="inputI" placeholder="아이디">
+						<input type="button" value="중복체크" onclick="checkI()"
+							style="width: 100px; height: 50px;"> <span
+							id="memberCheck"></span> <input type="password" name="m_pw"
+							placeholder="비밀번호"> <input type="text" name="m_nick"
+							placeholder="닉네임"> <input type="text" name="m_class"
+							list="classes" id="class" placeholder="직업">
+						<datalist id="classes">
+							<%
+							if (jobs != null) {
+								for (int i = 0; i < jobs.size(); i++) {
+							%>
+							<option value="<%=jobs.get(i).getM_class()%>"><%=jobs.get(i).getM_class()%></option>
+							<%
+							}
+							}
+							%>
+						</datalist>
+						<input type="text" name="m_position" readonly value=""
+							id="m_position" placeholder="역할">
+						<textarea name="m_coment" style="width: 320px; height: 100px;"
+							placeholder="간단한 자기 소개"></textarea>
+						<input type="submit" value="회원가입">
+					</form>
+				</fieldset>
 			</div>
 		</div>
 	</div>
