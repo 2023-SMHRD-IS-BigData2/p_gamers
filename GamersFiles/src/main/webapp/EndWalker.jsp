@@ -16,6 +16,7 @@
 					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
 					<h1><strong>효월의 종언</strong>페이지입니다.<br />
 					원하시는 레이드 던전을 고르시고 공략을 확인하세요</h1>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
 				</div>
 			</header>
 
