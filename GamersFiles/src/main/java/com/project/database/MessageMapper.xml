@@ -21,11 +21,11 @@
 	</select>
 	
 	
-	<delete id="deleteMessage" parameterType="Integer">
+	<delete id="allDelelteMessage" parameterType="String">
 		delete from p_message
-		where e_num=#{e_num}
+		where e_recipient=#{M_id}
 	</delete>
-	<delete id="deleteAll" parameterType="String">
+	<delete id="deleteMessage" parameterType="String">
 		delete from p_message where
 		e_recipient=#{e_sender}
 	</delete>

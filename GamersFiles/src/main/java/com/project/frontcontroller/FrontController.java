@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.project.controller.DGService;
 import com.project.controller.DMService;
+import com.project.controller.DelMessageService;
 import com.project.controller.GCService;
 import com.project.controller.IAService;
 import com.project.controller.ICService;
@@ -69,7 +70,10 @@ public class FrontController extends HttpServlet {
 
 		} else if (result.equals("/IAService.do")) { // 파티 가입 신청
 			service = new IAService();
+		} else if (result.equals("/DelMessageService.do")) {
+			service = new DelMessageService();
 		}
+		
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);

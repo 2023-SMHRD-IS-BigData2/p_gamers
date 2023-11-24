@@ -15,7 +15,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body>
-			<!-- Q19. 게시글 세부내용 조회 기능 -->	
+			<!-- 메시지 확인 -->	
 			<%
 				// 메시지 식별할수 있는 번호
 				int E_num = Integer.parseInt(request.getParameter("E_num"));

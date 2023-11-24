@@ -84,6 +84,12 @@ public class DeleteDAO {
 		}
 		return cnt;
 	}
+	public int allDelelteMessage(String M_id) {
+		int cnt = sqlSession.delete("com.project.database.MessageMapper.allDelelteMessage", M_id);
+		sqlSession.close();
+		System.out.println("들어옴?");
+		return cnt;
+	}
 
 
 }
