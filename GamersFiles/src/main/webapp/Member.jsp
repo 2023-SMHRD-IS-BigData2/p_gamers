@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>로그인 및 회원가입 페이지</title>
 <link rel="stylesheet" href="MainAssets/css/main.css" />
+<link rel="stylesheet" href="menu.css" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style type="text/css">
 * {
@@ -150,11 +151,18 @@ textarea {
 }
 </style>
 </head>
-<body>
+<body class="is-preload">
 	<%
 	request.setCharacterEncoding("UTF-8");
 	List<JobDTO> jobs = new JobDAO().jobList();
 	%>
+	<div id="wrapper">
+		<header id="header" class="alt">
+			<a href="GamersMain.jsp" class="logo"><strong>게이머즈</strong></a>
+			<nav>
+			</nav>
+		</header>
+	</div>
 	<div class="member">
 		<div class="main_top">
 			<div class="login-wrapper" style="width: 400px;">
@@ -201,6 +209,13 @@ textarea {
 			</div>
 		</div>
 	</div>
+	<script src="MainAssets/js/jquery.min.js"></script>
+	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
+	<script src="MainAssets/js/jquery.scrollex.min.js"></script>
+	<script src="MainAssets/js/browser.min.js"></script>
+	<script src="MainAssets/js/breakpoints.min.js"></script>
+	<script src="MainAssets/js/util.js"></script>
+	<script src="MainAssets/js/main.js"></script>
 	<script>
 		$(document).on('change', '#class', function() {
 			var val = $(this).val();
