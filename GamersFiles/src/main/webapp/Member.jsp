@@ -27,10 +27,11 @@ body {
 	margin: 20px; display : inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	color: black;
+	color: white;
 	border: solid;
 	border-color: lightgray;
 	display: inline-block;
+	font-size: 16px;
 }
 
 .login-wrapper>h2 {
@@ -87,9 +88,10 @@ body {
 	display: inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	color: black;
+	color: white;
 	border: solid;
 	border-color: lightgray;
+	font-size: 16px;
 }
 
 .join-wrapper>h2 {
@@ -105,6 +107,7 @@ body {
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
+	color : white;
 	font-size: 14px !important;
 }
 
