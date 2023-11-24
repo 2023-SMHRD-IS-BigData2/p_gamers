@@ -37,9 +37,6 @@ body {
 	color: gray !important;
 }
 
-#header {
-	margin: 0px;
-}
 
 #input_1 {
 	font-size: 12px;
@@ -66,10 +63,13 @@ form {
 table, tr, td {
 	border: 1px solid #8C8C8C;
 }
+td{
+height: 10px;	
+}
 
 .groupMain {
 	width: 1900px;
-	height: 740px;
+	height: 800px;
 	margin-bottom: 10px;
 	flex-direction: row;
 	display: flex;
@@ -86,7 +86,7 @@ h1 {
 
 .firstBox {
 	width: 650px;
-	height: 750px;
+	height: 800px;
 	display: inline-block;
 	text-align: center;
 	border: 5px solid #8C8C8C;
@@ -100,7 +100,7 @@ h1 {
 
 .fb_title {
 	text-align: left;
-	width: 98%;
+	width: 100%;
 	height: 50px;
 	background-color: #5D5D5D;
 	color: white;
@@ -116,7 +116,7 @@ h1 {
 
 .secondBox {
 	width: 1250px;
-	height: 750px;
+	height: 800px;
 	display: inline-block;
 	border: 5px solid #8C8C8C;
 	display: flex;
