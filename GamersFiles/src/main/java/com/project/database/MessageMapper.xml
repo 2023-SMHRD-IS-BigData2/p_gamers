@@ -10,7 +10,7 @@
 		</selectKey>
 		insert into p_message
 		values(#{e_num}, #{e_sender},
-		#{e_recipient}, #{e_title}, #{e_content}, SYSDATE)
+		#{e_recipient}, #{e_title}, #{e_content}, sysdate)
 	</insert>
 	<select id="showMessage" resultType="MessageDTO">
 		select * from p_message where e_recipient=#{e_recipient}

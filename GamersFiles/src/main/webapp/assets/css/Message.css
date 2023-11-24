@@ -38,6 +38,9 @@ h2{font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px
 /* 제목 */
 #message_box h3{margin-top: 30px; padding: 10px; border-bottom: solid 2px #516e7f; font-size: 20px;}
 
+/* ul태그 점 업애기 */
+ul{ list-style: none; padding-left: 0; margin-left: 0;}
+
 /* 쪽지함 리스트 항목 아래경계선 */
 #message li{padding: 10px; border-bottom: solid 1px #dddddd;}
 
@@ -49,7 +52,8 @@ h2{font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px
 
 /* 각 칸마다 사이즈 조절 */
 #message .col1{width: 80px;}
-#messabe .col2{width: 300px; text-align: left;}
-#messabe .col3{width: 120px;}
-#messabe .col4{width: 120px;}
-#messabe .col5{width: 50px;}
+#message .col2{width: 250px; text-align: left;}
+#message #message_title{text-align: center;}
+#message .col3{width: 80px;}
+
+

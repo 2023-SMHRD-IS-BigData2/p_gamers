@@ -48,9 +48,9 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 					<ul id="message">
 						<li>
 							<span class="col1">번호</span>
-							<span class="col2">제목</span>
-							<span class="col3">보낸사람</span>
-							<span class="col4">보낸시간</span>
+							<span class="col2" id="message_title">제목</span>
+							<span class="col3">보낸이</span>
+							<span class="col4">등록일</span>
 							<span class="col5">삭제</span>
 						</li>
 						<%for(int i = 0; i<messages.size(); i++) {%>
@@ -68,5 +68,7 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 		</div>
 	</section>
 </div>
+<style>
 
+</style>
 </html>
