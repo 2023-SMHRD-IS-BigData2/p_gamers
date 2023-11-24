@@ -85,24 +85,40 @@ h1 {
 
 .secondBox {
 	width: 1400px;
-	height: 750px;
-	display: inline-block;
-	padding: 10px;
+	height: 840px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border: 5px solid #8C8C8C;
+	border-radius: 10px;
 }
 
-/* .thirdBox {
-	background-color: green;
-	width: 700px;
-	height: 750px;
-	display: inline-block;
-	padding: 10px;
-} */
+.sb_up_box {
+	width: 1400px;
+	height: 50px;
+	background-color: #5D5D5D;
+	color: white;
+	font-size: 24px;
+	padding-left: 15px;
+}
+
+.sb_down_box {
+	width: 1400px;
+	height: 790px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
 .inner_box {
 	width: 611px;
 	height: 155px;
 	border: 5px solid;
 	border-radius: 20px;
-	margin: 15px;
+	margin-top: 10px;
 	margin-left: 40px;
 	display: inline-block;
 	padding: 5px;
@@ -153,6 +169,11 @@ h1 {
 </head>
 <body>
 	<%
+	//테스트용 세션값
+	//session.setAttribute("g_name", "성실성");
+	//session.setAttribute("m_nick", "녹시스");
+	//session.setAttribute("m_id", "test1");
+
 	String g_name = (String) session.getAttribute("g_name");
 	List<MemberDTO> m_list = new MemberDAO().raidMemberList(g_name);
 	String m_id = (String) session.getAttribute("m_id");
@@ -207,70 +228,76 @@ h1 {
 					<%
 					for (MemberDTO tmp : m_list) {
 					%>
-					<%=tmp.getM_nick()%><br>
+					<%=tmp.getM_nick()%> (<%=tmp.getM_id()%>)<br>
 					<%
 					}
 					%>
 				</div>
+				<hr>
+				<div>공대 탈퇴
+				</div>
 			</div>
 		</div>
 		<div class="secondBox">
-			<%
-			String position_color = null;
-			String back_color = null;
-			for (MemberDTO tmp : m_list) {
-				if (tmp.getM_position().equals("탱커")) {
-					position_color = "#3894FF";
-					back_color = "#D4F4FA";
-				} else if (tmp.getM_position().equals("힐러")) {
-					position_color = "#06CC80";
-					back_color = "#E0FFDB";
-				} else if (tmp.getM_position().equals("딜러")) {
-					position_color = "#FF5C76";
-					back_color = "#FFD8D8";
-				}
-			%>
-			<div class="inner_box"
-				style="border-color: <%=position_color%>; background-color: <%=back_color%>">
-				<div class="inner_box_1">
-					<div class="inner_box_1_1">
-						<div class="inner_box_title">
-							<b><%=tmp.getM_nick()%></b>
+			<div class="sb_up_box">공격대원 상태 메세지</div>
+			<div class="sb_down_box">
+				<%
+				String position_color = null;
+				String back_color = null;
+				for (MemberDTO tmp : m_list) {
+					if (tmp.getM_position().equals("탱커")) {
+						position_color = "#3894FF";
+						back_color = "#D4F4FA";
+					} else if (tmp.getM_position().equals("힐러")) {
+						position_color = "#06CC80";
+						back_color = "#E0FFDB";
+					} else if (tmp.getM_position().equals("딜러")) {
+						position_color = "#FF5C76";
+						back_color = "#FFD8D8";
+					}
+				%>
+				<div class="inner_box"
+					style="border-color: <%=position_color%>; background-color: <%=back_color%>">
+					<div class="inner_box_1">
+						<div class="inner_box_1_1">
+							<div class="inner_box_title">
+								<b><%=tmp.getM_nick()%></b>
+							</div>
+							<div class="inner_box_job">
+								<%=tmp.getM_class()%>
+							</div>
 						</div>
-						<div class="inner_box_job">
-							<%=tmp.getM_class()%>
-						</div>
-					</div>
-					<div class="inner_box_1_2">
-						<div>
-							상태 메세지 :
-							<%
-						if (tmp.getM_coment() != null) {
-						%>
-							<%=tmp.getM_coment()%>
-							<%
-							}
+						<div class="inner_box_1_2">
+							<div>
+								상태 메세지 :
+								<%
+							if (tmp.getM_coment() != null) {
 							%>
-						</div>
+								<%=tmp.getM_coment()%>
+								<%
+								}
+								%>
+							</div>
 
+						</div>
+					</div>
+					<div class="inner_box_2">
+						<form action="Raid_Coment_Update_Service">
+							<div class="inner_box_2_1">
+								<input id="input_1" type="textarea" rows="1" cols="50"
+									name="coment"> <input type="hidden" name="name"
+									value="<%=tmp.getM_nick()%>">
+							</div>
+							<div class="inner_box_2_2">
+								<input id="input_2" type="submit" value="상태메세지 갱신">
+							</div>
+						</form>
 					</div>
 				</div>
-				<div class="inner_box_2">
-					<form action="Raid_Coment_Update_Service">
-						<div class="inner_box_2_1">
-							<input id="input_1" type="textarea" rows="1" cols="50"
-								name="coment"> <input type="hidden" name="name"
-								value="<%=tmp.getM_nick()%>">
-						</div>
-						<div class="inner_box_2_2">
-							<input id="input_2" type="submit" value="상태메세지 갱신">
-						</div>
-					</form>
-				</div>
+				<%
+				}
+				%>
 			</div>
-			<%
-			}
-			%>
 		</div>
 	</div>
 

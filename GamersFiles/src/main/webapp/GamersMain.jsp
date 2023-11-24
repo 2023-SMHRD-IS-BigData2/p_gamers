@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="java.io.Console"%>
 <%@page import="java.util.List"%>
 <%@page import="com.project.model.ContentDTO"%>
 <%@page import="com.project.model.ContentDAO"%>
@@ -38,8 +40,8 @@
 			%>
 			<nav>
 				<a href="adminMember.jsp"> 회원 조회 </a> <a href="adminGroup.jsp">
-					파티 조회 </a> <a href="adminContent.jsp"> 레이드 조회 </a>
-					<a href="LogoutService.do"> 로그아웃 </a>
+					파티 조회 </a> <a href="adminContent.jsp"> 레이드 조회 </a> <a
+					href="LogoutService.do"> 로그아웃 </a>
 			</nav>
 			<%
 			} else {

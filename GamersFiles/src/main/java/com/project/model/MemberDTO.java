@@ -27,13 +27,12 @@ public class MemberDTO {
 	private String m_coment;
 	private String m_date;
 
-	public MemberDTO(@NonNull String m_id, @NonNull String m_pw, String m_nick, String g_name, String m_position,
+	public MemberDTO(@NonNull String m_id, @NonNull String m_pw, String m_nick, String m_position,
 			String m_class, String m_coment) {
 		super();
 		this.m_id = m_id;
 		this.m_pw = m_pw;
 		this.m_nick = m_nick;
-		this.g_name = g_name;
 		this.m_position = m_position;
 		this.m_class = m_class;
 		this.m_coment = m_coment;
@@ -43,6 +42,17 @@ public class MemberDTO {
 		this.m_id = m_id;
 		this.m_nick = m_nick;
 		this.g_name = g_name;
+	}
+
+	public MemberDTO(String m_id, String m_pw, String m_nick, String g_name, String m_position, String m_class,
+			String m_coment) {
+		this.m_id = m_id;
+		this.m_pw = m_pw;
+		this.m_nick = m_nick;
+		this.g_name = g_name;
+		this.m_position = m_position;
+		this.m_class = m_class;
+		this.m_coment = m_coment;
 	}
 	
 }
