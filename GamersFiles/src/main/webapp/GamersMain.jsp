@@ -133,111 +133,29 @@
 				}
 				%>
 			</section>
-			<!-- Two -->
-			<section id="two">
-				<div class="inner">
-					<header class="major">
-						<h2>받은 메세지함</h2>
-					</header>
-					<p></p>
-					<ul class="actions">
-						<li>님에게 온 메세지</li>
-						<li><a href="DelAllService.do?email="
-							class="button next scrolly">전체삭제하기</a></li>
-					</ul>
-					<table style="text-align: center;">
-						<tr>
-							<td>번호</td>
-							<td>보낸사람</td>
-							<td>내용</td>
-							<td>시간</td>
-						</tr>
-					</table>
-				</div>
-			</section>
 		</div>
-		<!-- Contact -->
-		<section id="contact">
+		<!-- Footer -->
+		<footer id="footer">
 			<div class="inner">
-				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="title">제목</label> <input type="text" name="title"
-									id="title" />
-							</div>
-							<div class="field half">
-								<label for="recipient">받는 사람</label> <input type="text"
-									name="recipient" id="recipient" />
-							</div>
-							<div class="field">
-								<label for="content">내용</label>
-								<textarea name="content" id="content" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="메세지 보내기" class="primary" /></li>
-							<li><input type="reset" value="초기화" /></li>
-						</ul>
-					</form>
-				</section>
-				<%
-				if (login == null) {
-				%>
-				<section class="split">
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-envelope"></span>
-							<h3>내 ID</h3>
-							<span>로그인이 필요합니다.</span>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-phone"></span>
-							<h3>내 닉네임</h3>
-							<span>로그인이 필요합니다.</span>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-home"></span>
-							<h3>내 파티명</h3>
-							<span>로그인이 필요합니다.</span>
-						</div>
-					</section>
-				</section>
-				<%
-				} else {
-				%>
-				<section class="split">
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-envelope"></span>
-							<h3>내 ID</h3>
-							<a href="#"><%=login.getM_id()%></a>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-phone"></span>
-							<h3>내 닉네임</h3>
-							<span><%=login.getM_nick()%></span>
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-home"></span>
-							<h3>내 파티명</h3>
-							<a href="calendar.jsp"><%=login.getG_name()%> </a>
-						</div>
-					</section>
-				</section>
-				<%
-				}
-				%>
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span
+							class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span
+							class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span
+							class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span
+							class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span
+							class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
-		</section>
+		</footer>
+
 	</div>
 
 	<!-- Scripts -->
