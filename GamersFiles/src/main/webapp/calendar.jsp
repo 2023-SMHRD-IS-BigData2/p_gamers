@@ -274,5 +274,12 @@ input {
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="MainAssets/js/jquery.min.js"></script>
+	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
+	<script src="MainAssets/js/jquery.scrollex.min.js"></script>
+	<script src="MainAssets/js/browser.min.js"></script>
+	<script src="MainAssets/js/breakpoints.min.js"></script>
+	<script src="MainAssets/js/util.js"></script>
+	<script src="MainAssets/js/main.js"></script>
 </body>
 </html>
