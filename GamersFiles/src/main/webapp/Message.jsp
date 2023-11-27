@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets/css/Message.css?after" />
+<link rel="stylesheet" href="MainAssets/css/Message.css?after" />
 <script>
 	function Message() {
 		window
@@ -63,7 +63,7 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 							<span class="col2"><a href="MessageDetail.jsp?E_num=<%=messages.get(i).getE_num()%>"><%=messages.get(i).getE_title() %></a></span>
 							<span class="col3"><%=messages.get(i).getE_sender() %></span>
 							<span class="col4"><%=messages.get(i).getE_date().substring(5, 16)%></span>
-							<span class="col5"><a href="DelMessageService.do?e_num=<%=messages.get(i).getE_num()%>">삭제</a> </span>
+							<span id="del" class="col5"><a href="DelMessageService.do?e_num=<%=messages.get(i).getE_num()%>">🗑</a> </span>
 						</li>
 						<%} %>
 					</ul>
