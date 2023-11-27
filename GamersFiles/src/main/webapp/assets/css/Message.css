@@ -1,6 +1,6 @@
 /* 쪽지함  */
 #two{display: inline-block; justify-content: center;}
-h2{font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px;}
+h2{font-weight: 690; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px;}
 #tit {font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 200px;}
 
 /* a태그 글자색 변경 */
@@ -38,31 +38,28 @@ a {text-decoration-line: none;}
 #submit1 {margin: 20px 0 10px 358px; cursor: pointer;}
 
 /* 쪽지함 전체 영역 가로사이즈와 가운데 정렬 */
-#message_box{width: 680px; margin: 0 auto;}
+#message_box{width: 660px; margin: 0 auto;}
 
 /* 제목 */
-#message_box h3{margin-top: 30px; padding: 10px; border-bottom: solid 2px #516e7f; font-size: 20px;}
+#message_box h3{margin-top: 30px; padding: 10px; border-bottom: solid 2px #516e7f; font-size: 25px;}
 
-#message_box h3 span{display: inline-block; width: 110px; font-size: 15px; text-align: right;}
+#message_box h3 span{display: inline-block; width: 110px; font-size: 16px; text-align: right; font-weight: bold;}
 
-#message_box h3 span.col1{width: 326px}
+#message_box h3 span.col1{width: 240px}
 /* ul태그 점 업애기 */
 ul{ list-style: none; padding-left: 0; margin-left: 0;}
 
 /* 쪽지함 리스트 항목 아래경계선 */
-#message li{padding: 10px; border-bottom: solid 1px #dddddd;}
-
-/* 제목줄 글씨 굵게 */
-#message li:nth-child(1){font-weight: bold;}
+#message li{padding: 5px; border-bottom: solid 1px #dddddd;}
 
 /* span 사이즈  */
 #message span {display: inline-block; text-align: center;}
 
 /* 각 칸마다 사이즈 조절 */
-#message .col1{width: 80px;}
-#message .col2{width: 300px; text-align: left;}
+#message .col1{width: 60px;}
+#message .col2{width: 320px; text-align: left;}
 #message #message_title{text-align: center;}
-#message .col3{width: 80px;}
+#message .col3{width: 80px; font-weight: bold;}
 #message .col4{width: 120px; text-align: center;}
 #message .col5{width: 40px;}
 

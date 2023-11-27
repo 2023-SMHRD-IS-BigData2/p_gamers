@@ -13,7 +13,7 @@
 		#{e_recipient}, #{e_title}, #{e_content}, sysdate)
 	</insert>
 	<select id="showMessage" resultType="MessageDTO">
-		select * from p_message where e_recipient=#{e_recipient}
+		select * from p_message where e_recipient=#{e_recipient} order by e_num desc
 	</select>
 	
 	<select id="detailMessage" resultType="MessageDTO">
