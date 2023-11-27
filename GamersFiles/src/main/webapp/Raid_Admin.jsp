@@ -111,6 +111,8 @@ h1 {
 	width: 75%;
 	height: 650px;
 	margin-left: 75px;
+	margin-top: 25px;
+	font-size: 18px;
 }
 
 .secondBox {
