@@ -132,6 +132,10 @@ body {
 
 input {
 	font-size: 18px;
+	color: #8C8C8C;
+}
+textarea{
+	color: #8C8C8C;
 }
 </style>
 </head>
