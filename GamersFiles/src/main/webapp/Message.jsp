@@ -23,6 +23,7 @@
 
 <title>Insert title here</title>
 </head>
+<body>
 <%
 MemberDTO login = (MemberDTO) session.getAttribute("login");
 if (login != null) {
@@ -67,11 +68,11 @@ List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick());
 						<%} %>
 					</ul>
 					</div>
+					
 			</div>
 		</div>
 	</section>
 </div>
-<style>
 
-</style>
+</body>
 </html>
