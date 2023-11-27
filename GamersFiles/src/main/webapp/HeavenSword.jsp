@@ -6,7 +6,7 @@
 		<title>창천의 이슈가르드</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main_2.css" />
+		<link rel="stylesheet" href="MainAssets/css/main_2.css" />
 	</head>
 	<body class="is-preload">
 
