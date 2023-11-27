@@ -37,7 +37,6 @@ body {
 	color: gray !important;
 }
 
-
 #input_1 {
 	font-size: 12px;
 	padding: 0 1em 0 1em;
