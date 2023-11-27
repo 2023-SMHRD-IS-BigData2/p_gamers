@@ -41,7 +41,7 @@
 			<nav>
 				<a href="adminMember.jsp"> 회원 조회 </a> <a href="adminGroup.jsp">
 					파티 조회 </a> <a href="adminContent.jsp"> 레이드 조회 </a> <a
-					href="LogoutService.do"> 로그아웃 </a> 
+					href="LogoutService.do"> 로그아웃 </a>
 			</nav>
 			<%
 			} else {
