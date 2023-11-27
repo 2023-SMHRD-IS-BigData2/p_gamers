@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>신생 에오르제아</title>
+		<title>대미궁 바하무트 : 진성편</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,11 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>신생 에오르제아</strong>, 레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					
+					<h1><strong>대미궁 바하무트 : 진성편</strong><br />
+					<br />
 					</h1>
+					<a href="RealmReborn.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -27,9 +27,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>신생 에오르제아 레이드 던전</h2>
+							<h2>대미궁 바하무트 : 진성편</h2>
 						</header>
-						<p>신생 에오르제아 레이드 던전 스토리 설명 글</p>
+						<p>에오르제아 지하공간에서 재생되고 있는 야만신 '바하무트'를 소멸시키기 위해 마지막 구속함에 들어선 일행. 에오르제아를 구원하고자 했던 현자 루이수아의 유지를 받들기 위해 빛의 전사와 알피노, 알리제 남매는 최후의 전투에 임한다.</p>
 						
 					</section>
 
@@ -38,25 +38,26 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="vaha1.jsp" class="image fit thumb"><img src="images/vaha/쌍두룡.jpg" alt="" /></a>
-								<h3>대미궁 바하무트 : 해후편</h3>
-								<p>해후편 1~5</p>
+								<a href="https://www.youtube.com/watch?v=VUpR8k0MGpI" class="image fit thumb"><img src="images/vaha/임두구드.jpg" alt="" /></a>
+								<h3>대미궁 바하무트 : 진성편 1층</h3>
+								<p>진성편 1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="vaha2.jsp" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
-								<h3>대미궁 바하무트 : 침공편</h3>
-								<p>침공편 1~4</p>
+								<a href="https://www.youtube.com/watch?v=dcHDR6UQwQw" class="image fit thumb"><img src="images/vaha/칼리야.jpg" alt="" /></a>
+								<h3>대미궁 바하무트 : 진성편 2층</h3>
+								<p>진성편 2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="vaha3.jsp" class="image fit thumb"><img src="images/바하무트 프라임.jpg" alt="" /></a>
-								<h3>대미궁 바하무트 : 진성편</h3>
-								<p>진성편 1~4</p>
+								<a href="https://www.youtube.com/watch?v=hp26PSdB4Xk" class="image fit thumb"><img src="images/vaha/피닉스.jpg" alt="" /></a>
+								<h3>대미궁 바하무트 : 진성편 3층</h3>
+								<p>진성편 3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_5.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>신생 에오르제아 던전별 드롭 아이템입니다.</p>
+								<a href="https://www.youtube.com/watch?v=JTcWs6XkHUA" class="image fit thumb"><img src="images/vaha/바하무트 프라임.jpg" alt="" /></a>
+								<h3>대미궁 바하무트 : 진성편 4층</h3>
+								<p>진성편 4층의 공략입니다.</p>
 							</article>
+							
 							
 						</div>
 						
