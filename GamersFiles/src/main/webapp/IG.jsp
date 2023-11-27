@@ -200,6 +200,7 @@
 					} else if (data == 'false') {
 						alert('파티명 사용 가능');
 						$("#check").prop("type", "submit");
+						$("#check").prop("id", "");
 					}
 				},
 				// 실패
