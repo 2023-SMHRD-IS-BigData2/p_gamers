@@ -22,6 +22,9 @@ public class IMService implements Service {
 		String m_class = request.getParameter("m_class");
 		String m_position = request.getParameter("m_position");
 		String m_coment = request.getParameter("m_coment");
+		if (m_coment == null) {
+			m_coment = " ";
+		}
 		
 		MemberDTO mdto = new MemberDTO(m_id, m_pw, m_nick, g_name, m_position, m_class, m_coment);
 

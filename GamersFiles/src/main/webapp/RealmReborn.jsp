@@ -38,17 +38,17 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.html" class="image fit thumb"><img src="images/트윈타니아.png" alt="" /></a>
+								<a href="vaha1.jsp" class="image fit thumb"><img src="images/vaha/쌍두룡.jpg" alt="" /></a>
 								<h3>대미궁 바하무트 : 해후편</h3>
 								<p>해후편 1~5</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.html" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
+								<a href="vaha2.jsp" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
 								<h3>대미궁 바하무트 : 침공편</h3>
 								<p>침공편 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/바하무트 프라임.jpg" alt="" /></a>
+								<a href="vaha3.jsp" class="image fit thumb"><img src="images/바하무트 프라임.jpg" alt="" /></a>
 								<h3>대미궁 바하무트 : 진성편</h3>
 								<p>진성편 1~4</p>
 							</article>

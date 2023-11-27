@@ -8,7 +8,8 @@
 <mapper namespace="com.project.database.MemberMapper">
 	<insert id="insertMember" parameterType="MemberDTO">
 		insert into p_member
-		values(#{m_id}, #{m_pw}, #{m_nick}, null, #{m_position}, sysdate, #{m_class}, #{m_coment})
+		values(#{m_id}, #{m_pw}, #{m_nick}, null, #{m_position}, sysdate,
+		#{m_class}, #{m_coment})
 	</insert>
 	<select id="selectMember" parameterType="MemberDTO"
 		resultType="MemberDTO">
@@ -25,14 +26,16 @@
 	</select>
 	<update id="updateMember" parameterType="MemberDTO">
 		update p_member set
-		m_pw=#{m_pw}, m_nick=#{m_nick}, m_class=#{m_class}, m_position=#{m_position}, m_coment=#{m_coment} where
+		m_pw=#{m_pw}, m_nick=#{m_nick}, m_class=#{m_class},
+		m_position=#{m_position}, m_coment=#{m_coment} where
 		m_id=#{m_id}
 	</update>
 	<select id="memberList" resultType="MemberDTO">
 		select * from p_member where
 		not(m_id='admin')
 	</select>
-	<select id="raidMemberList" parameterType="String" resultType="MemberDTO">
+	<select id="raidMemberList" parameterType="String"
+		resultType="MemberDTO">
 		select * from p_member
 		where g_name = #{g_name}
 	</select>
@@ -47,14 +50,15 @@
 		m_nick=#{m_nick}
 	</update>
 	<update id="updateGroup" parameterType="MemberDTO">
-		update p_member set g_name=#{g_name} where m_id=#{m_id} and m_nick=#{m_nick}
+		update p_member set
+		g_name=#{g_name} where m_id=#{m_id} and m_nick=#{m_nick}
 	</update>
 	<update id="nullGroup" parameterType="String">
-		update p_member set g_name=null where m_id=#{m_id}
+		update p_member set
+		g_name=null where m_id=#{m_id}
 	</update>
-	<select id="countGroup" parameterType="String" resultType="Integer">
+	<select id="countGroup" parameterType="String"
+		resultType="Integer">
 		select count(m_id) from p_member where g_name=#{g_name}
 	</select>
-
-	
 </mapper>

@@ -51,28 +51,34 @@ public class IGService implements Service {
 			}
 			String m_tank = multi.getParameter("m_tank");
 			String m_heal = multi.getParameter("m_heal");
+			
+			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
+			
+			int cnt = new GroupDAO().insertGroup(gdto);
+			
+			if (cnt > 0) {
+				System.out.println("파티 생성 성공");
+			} else {
+				System.out.println("파티 생성 실패");
+			}
+			
 			String u_id = request.getParameter("m_id");
 			String u_nick = request.getParameter("m_nick");
 			String u_name = multi.getParameter("g_name");
+			
 			MemberDTO mdto = new MemberDTO(u_id, u_nick, u_name);
+			
 			int party = new MemberDAO().updateGroup(mdto);
+			
 			if (party > 0) {
 				System.out.println("파티명 업데이트 성공");
-			} else {
-				System.out.println("파티명 업데이트 실패");
-			}
-			
-			GroupDTO gdto = new GroupDTO(g_name, m_id, c_name, g_content, g_start, g_end, g_member, m_deal, g_file, m_tank, m_heal);
-			int cnt = new GroupDAO().insertGroup(gdto);
-			System.out.println("cnt : " + cnt);
-			if (cnt > 0) {
-				System.out.println("파티 생성 성공");
 				session.setAttribute("login", mdto);
 				return "GamersMain.jsp";
 			} else {
-				System.out.println("파티 생성 실패");
+				System.out.println("파티명 업데이트 실패");
 				return "GamersMain.jsp";
 			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -198,7 +198,7 @@ textarea {
 							id="m_position" placeholder="역할">
 						<textarea name="m_coment" style="width: 320px; height: 100px;"
 							placeholder="간단한 자기 소개"></textarea>
-						<input type="submit" value="회원가입">
+						<input id="check" type="button" value="회원가입">
 					</form>
 				</fieldset>
 			</div>
@@ -245,8 +245,13 @@ textarea {
 				success : function(data) {
 					if (data == 'true') {
 						alert('사용할 수 없는 ID입니다.')
+						$("#check").click(function(){
+							alert('ID 중복');
+						});
 					} else if (data == 'false') {
 						alert('사용할 수 있는 ID입니다.')
+						$("#check").prop("type", "submit");
+						$("#check").prop("id", "");
 					}
 				},
 				// 실패
