@@ -20,7 +20,7 @@
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="ContentAssets/css/board.css" />
 <link rel="stylesheet" href="menu.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -273,11 +273,11 @@ textarea{
 		</div>
 	</div>
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="ContentAssets/js/ContentJquery.min.js"></script>
+	<script src="ContentAssets/js/ContentBrowser.min.js"></script>
+	<script src="ContentAssets/js/ContentBreakpoints.min.js"></script>
+	<script src="ContentAssets/js/ContentUtil.js"></script>
+	<script src="ContentAssets/js/ContentMain.js"></script>
 	<script src="MainAssets/js/jquery.min.js"></script>
 	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
 	<script src="MainAssets/js/jquery.scrollex.min.js"></script>

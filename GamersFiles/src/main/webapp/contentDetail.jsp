@@ -84,9 +84,10 @@
 					<%
 					if (login == null) {
 					%>
+					<ul> <li>
 					<h3>
-						파티 생성 및 가입 기능은 <a href="Member.jsp"><button
-								">로그인</button></a>
+
+						파티 생성 및 가입 기능은 <a href="Member.jsp" class="button next scrolly"> 로그인 </a>
 						후 이용하실 수 있습니다.
 						<%
 					} else if (login != null) {
@@ -97,7 +98,8 @@
 						}
 						}
 						%>
-					</h3>
+					</h3></li>
+					</ul>
 				</header>
 				<section class="tiles">
 					<%
