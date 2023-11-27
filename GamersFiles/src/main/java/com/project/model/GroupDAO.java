@@ -123,10 +123,10 @@ public class GroupDAO {
 
 	}
 	
-	public int groupOutMember(String m_id) {
+	public int groupOutMember(MemberDTO login) {
 		int cnt = 0;
 		try {
-			cnt = sqlSession.update("com.project.database.GroupMapper.groupOutMember", m_id);
+			cnt = sqlSession.update("com.project.database.GroupMapper.groupOutMember", login);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -183,6 +183,7 @@ h1 {
 	String g_name = (String) session.getAttribute("g_name");
 	List<MemberDTO> m_list = new MemberDAO().raidMemberList(g_name);
 	String m_id = (String) session.getAttribute("m_id");
+	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	GroupDTO dto = new GroupDAO().selectGroupAdmin(g_name);
 	%>
 	<div id="groupWrapper" style="width: 100; height: 100px;">
@@ -250,7 +251,8 @@ h1 {
 				%>
 				<div>
 					<form action="Raid_Member_Withdrawal_Service">
-						<input type="hidden" name="m_id" value="<%=m_id%>">  
+						<input type="hidden" name="m_id" value="<%=login.getM_id()%>">
+						<input type="hidden" name="m_pw" value="<%=login.getM_pw()%>">
 						<input type="submit" value="공격대 탈퇴">
 					</form>
 				</div>

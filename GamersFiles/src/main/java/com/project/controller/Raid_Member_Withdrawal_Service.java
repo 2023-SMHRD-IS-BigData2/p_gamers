@@ -18,19 +18,24 @@ public class Raid_Member_Withdrawal_Service extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String m_id = request.getParameter("m_id");
-
-		int row = new GroupDAO().groupOutMember(m_id);
-
+		String m_pw = request.getParameter("m_pw");
+		MemberDTO ug = new MemberDTO(m_id, m_pw);
+		int row = new GroupDAO().groupOutMember(ug);
+		String url;
 		if (row > 0) {
 			System.out.println("공격대 탈퇴 성공");
+			MemberDTO mdto = new MemberDTO(m_id, m_pw);
+			MemberDTO login = new MemberDAO().selectMember(mdto);
 			HttpSession session = request.getSession();
-			MemberDTO login = (MemberDTO) session.getAttribute("login");
+			session.setAttribute("login", login);
 			System.out.println(login);
+			url = "GamersMain.jsp";
 		} else {
 			System.out.println("공격대 탈퇴 실패");
+			url = "GamersMain.jsp";
 		}
-		response.sendRedirect("GamersMain.jsp");
-
+		response.sendRedirect(url);
+		
 	}
 
 }
