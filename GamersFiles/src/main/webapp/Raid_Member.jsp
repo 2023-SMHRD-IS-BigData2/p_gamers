@@ -50,6 +50,15 @@ form {
 	margin: 0px;
 }
 
+input {
+	color: #8C8C8C !important;
+}
+
+textarea {
+	color: #8C8C8C !important;
+	font-size:
+}
+
 .groupMain {
 	width: 1900px;
 	height: 750px;
@@ -163,16 +172,23 @@ h1 {
 	display: inline;
 }
 
+.inner_box_2 {
+	width: 450px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+}
+
 .inner_box_2_1 {
 	width: 450px;
-	height: 25%;
+	height: 75px;
 	display: inline;
 	margin-left: 10px;
 }
 
 .inner_box_2_2 {
 	width: 150px;
-	height: 25%;
+	height: 50px;
 	display: inline;
 	margin-left: 10px;
 }
@@ -237,9 +253,13 @@ h1 {
 					%>
 					<%=tmp.getM_nick()%>
 					(<%=tmp.getM_id()%>)
-					<%if (tmp.getM_id().equals(dto.getM_id())){ %>
+					<%
+					if (tmp.getM_id().equals(dto.getM_id())) {
+					%>
 					<b>☆</b>
-					<%} %>
+					<%
+					}
+					%>
 					<br>
 					<%
 					}
@@ -304,7 +324,9 @@ h1 {
 
 						</div>
 					</div>
-					<%if (m_id.equals(tmp.getM_id())){ %>
+					<%
+					if (m_id.equals(tmp.getM_id())) {
+					%>
 					<div class="inner_box_2">
 						<form action="Raid_Coment_Update_Service">
 							<div class="inner_box_2_1">
@@ -313,11 +335,34 @@ h1 {
 									value="<%=tmp.getM_nick()%>">
 							</div>
 							<div class="inner_box_2_2">
+
 								<input id="input_2" type="submit" value="상태메세지 갱신">
+
 							</div>
 						</form>
 					</div>
-					<%} %>
+
+					<%
+					} else {
+					%>
+					<div class="inner_box_2" style="visibility: hidden">
+						<form action="Raid_Coment_Update_Service">
+							<div class="inner_box_2_1">
+								<input id="input_1" type="textarea" rows="1" cols="50"
+									name="coment"> <input type="hidden" name="name"
+									value="<%=tmp.getM_nick()%>">
+							</div>
+							<div class="inner_box_2_2">
+
+								<input id="input_2" type="button" value="갱신불가">
+
+							</div>
+						</form>
+					</div>
+					<%
+					}
+					%>
+
 				</div>
 				<%
 				}
