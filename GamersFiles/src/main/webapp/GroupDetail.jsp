@@ -126,18 +126,19 @@
 				<div class="inner">
 					<ul class="actions">
 					<%
-					if (login != null) {
+					if (login != null && login.getG_name() == null) {
 					%>
 						<li><a
 							href="IAService.do?send_id=<%=login.getM_id()%>&rcv_id=<%=group.getM_id()%>&send_pos=<%=login.getM_position()%>&send_class=<%=login.getM_class()%>&send_nick=<%=login.getM_nick()%>"
 							class="button next scrolly"> 가입신청 </a></li>
 					<%
-					} else {
+					} else if (login == null) {
 					%>
 						<li><a
 							href="Member.jsp"
 							class="button next scrolly"> 로그인 </a></li>
 					<%
+					} else {
 					}
 					%>
 						<li style="align-content: flex-end;"><a
