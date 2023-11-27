@@ -180,6 +180,7 @@
 	<script type="text/javascript">
 		function checkG() {
 			var inputG = $('#inputG').val();
+			console.log(inputG);
 			$.ajax({ /* {} 표현식 : json */
 				// 요청
 				url : 'GCService.do',
