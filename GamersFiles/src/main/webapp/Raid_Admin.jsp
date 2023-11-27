@@ -55,6 +55,15 @@ body {
 	margin-top: 15px;
 }
 
+input {
+	color: #8C8C8C !important;
+}
+
+textarea {
+	color: #8C8C8C !important;
+
+}
+
 form {
 	margin: 0px;
 }
