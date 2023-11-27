@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>홍련의 해방자</title>
+		<title>차원의 틈 오메가 : 시그마편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,11 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>홍련의 해방자</strong>, 레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
+					
+					<h1><strong>차원의 틈 오메가 : 시그마편(영웅)</strong><br />
+					<br />
 					</h1>
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					<a href="StormBlood.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -27,9 +27,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>홍련의 해방자 레이드 던전</h2>
+							<h2>차원의 틈 오메가 : 시그마편(영웅)</h2>
 						</header>
-						<p>홍련의 해방자 레이드 던전 스토리 설명 글</p>
+						<p>피험세계 '시그마'에서 마지막으로 싸우게 될 상대는, 놀랍게도 한 명의 광대라고 한다. 이름은 '케프카'. 기록에 따르면 그는 일찍이 세계를 파괴하여 신의 자리에 올랐다고 한다. 하지만 네로는 당차게 미소지었다. 레벨 측정기의 프로그램을 조작해서 정보를 지원해주겠다고 한다. 미덥기도 하고 못 미덥기도 한 네로의 지원에 의지하여 모험가 일행은 결전의 땅으로 향한다</p>
 						
 					</section>
 
@@ -38,32 +38,42 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega1.jsp" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" /></a>
-								<h3>차원의 틈 오메가 : 델타편(영웅)</h3>
-								<p>델타편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=LsbhG7LaGME" class="image fit thumb"><img src="images/omega/마열차.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 시그마편(영웅) 1층</h3>
+								<p>시그마편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega2.jsp" class="image fit thumb"><img src="images/갓프카.png" alt="" /></a>
-								<h3>차원의 틈 오메가 : 시그마편(영웅)</h3>
-								<p>시그마편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=35wbUKm-68Q" class="image fit thumb"><img src="images/omega/차다르누크.png" alt="" /></a>
+								<h3>차원의 틈 오메가 : 시그마편(영웅) 2층</h3>
+								<p>시그마편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega3.jsp" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" /></a>
-								<h3>차원의 틈 오메가 : 알파편(영웅)</h3>
-								<p>알파편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=Y-ig7no2qiM" class="image fit thumb"><img src="images/omega/가디언.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 시그마편(영웅) 3층</h3>
+								<p>시그마편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_3.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>홍련의 해방자 던전별 드롭 아이템입니다.</p>
+								<a href="https://www.youtube.com/watch?v=X2kKvRNQZH0" class="image fit thumb"><img src="images/omega/케프카.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 시그마편(영웅) 4층 전반</h3>
+								<p>시그마편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
-							
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=EvFQmu_Nbtw" class="image fit thumb"><img src="images/갓프카.png" alt="" /></a>
+								<h3>차원의 틈 오메가 : 시그마편(영웅) 4층 후반</h3>
+								<p>시그마편(영웅)4층 후반부의 공략입니다.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
+							</article>
 						</div>
 						
 					</section>
 
 				<!-- Three -->
 					
+
 				<!-- Four -->
 				<!--
 					<section id="four">
