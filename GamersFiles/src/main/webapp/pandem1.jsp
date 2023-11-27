@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>효월의 종언</title>
+		<title>마의 전당 판데모니움 : 변옥편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,10 +13,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>효월의 종언</strong>페이지입니다.<br />
-					원하시는 레이드 던전을 고르시고 공략을 확인하세요</h1>
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>마의 전당 판데모니움 : 변옥편(영웅)</strong>
+					 </h1>
 				</div>
 			</header>
 
@@ -26,9 +25,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>효월의 종언 레이드 던전</h2>
+							<h2>마의 전당 판데모니움 : 변옥편(영웅)</h2>
 						</header>
-						<p>효월의 종언 레이드 관련 스토리 작성된다는 뜻</p>
+						<p>판데모니움의 결계를 공격한 흑막이 드디어 모험가 일행 앞에 모습을 드러냈다. 그의 이름은 헤스페로스. 변옥을 이끄는 간수장이다. 창조 생물과 융합하여 반신 '헤미테오스'로 변화한 그는, 장관인 라하브레아를 숭배하고 그 아들인 에리크토니오스를 증오함을 털어놓는다. 이번 사건은 그런 감정들이 폭주했기에 벌어진 일일까. 진의를 확인하기 위해, 변옥 심층에서 기다리는 헤스페로스를 쓰러뜨려라!</p>
 						
 					</section>
 
@@ -37,29 +36,37 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem1.jsp" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 변옥편(영웅)</h3>
-								<p>변옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=JjM8JwnUYPg" class="image fit thumb"><img src="images/pandem/에리크토니오스.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 변옥편(영웅) 1층</h3>
+								<p>변옥편(영웅)1층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem2.jsp" class="image fit thumb"><img src="images/드라군.jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 연옥편(영웅)</h3>
-								<p>연옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=dUCF01EuehA" class="image fit thumb"><img src="images/pandem/히포캄포스.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 변옥편(영웅) 2층</h3>
+								<p>변옥편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem3.jsp" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 천옥편(영웅)</h3>
-								<p>천옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=Zu0qREXfEeg" class="image fit thumb"><img src="images/pandem/페넥스.webp" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 변옥편(영웅) 3층</h3>
+								<p>변옥편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>효월의 종언 던전별 드롭 아이템 정리표입니다.</p>
+								<a href="https://www.youtube.com/watch?v=4XfxOtXxNys" class="image fit thumb"><img src="images/pandem/헤스페로스.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 변옥편(영웅) 4층 전반</h3>
+								<p>변옥편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
-							
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=5_JAQ9OdFgE" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 변옥편(영웅) 4층 후반</h3>
+								<p>변옥편(영웅)4층 후반부의 공략입니다.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>차후 더 좋은 모습으로 업데이트 하겠습니다</p>
+							</article>
 						</div>
 						
-						</ul>
 					</section>
 
 				<!-- Three -->
@@ -409,4 +416,3 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 	</body>
-</html>

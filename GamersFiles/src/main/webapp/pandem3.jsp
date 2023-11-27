@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>효월의 종언</title>
+		<title>마의 전당 판데모니움 : 천옥편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,10 +13,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>효월의 종언</strong>페이지입니다.<br />
-					원하시는 레이드 던전을 고르시고 공략을 확인하세요</h1>
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>마의 전당 판데모니움 : 천옥편(영웅)</strong>
+					 </h1>
 				</div>
 			</header>
 
@@ -26,9 +25,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>효월의 종언 레이드 던전</h2>
+							<h2>마의 전당 판데모니움 : 천옥편(영웅)</h2>
 						</header>
-						<p>효월의 종언 레이드 관련 스토리 작성된다는 뜻</p>
+						<p>판데모니움의 장관 '아테나'. 그녀는, 인간을 초월한 존재, 즉 '신'에 도달하기 위해, 감옥 내의 창조 생물 뿐만 아니라, 자신의 가족들마저 이용하여, 추악한 실험을 반복해왔다. 그 집념은, 만 이천년의 시간을 넘어 현대에 부활하고 나서도 사라지기는 커녕 더더욱 불타오를 뿐. 자신의 욕망을 채우기 위해, 주위의 모든 것을 희생시키는 행동은 더 이상 용납할 수 없다. 별바다에 나타난 대감옥의 가장 안쪽에서, 모든 것의 원흉인 아테나를 토벌하라!</p>
 						
 					</section>
 
@@ -37,29 +36,37 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem1.jsp" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 변옥편(영웅)</h3>
-								<p>변옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=CFBrbWzXEww" class="image fit thumb"><img src="images/pandem/코퀴토스.png" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 천옥편(영웅) 1층</h3>
+								<p>천옥편(영웅)1층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem2.jsp" class="image fit thumb"><img src="images/드라군.jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 연옥편(영웅)</h3>
-								<p>연옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=cmxDsk3FEto" class="image fit thumb"><img src="images/pandem/판데모니움.png" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 천옥편(영웅) 2층</h3>
+								<p>천옥편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem3.jsp" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" /></a>
-								<h3>마의 전당 판데모니움 : 천옥편(영웅)</h3>
-								<p>천옥편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=So7aSaZGnmU&feature=youtu.be" class="image fit thumb"><img src="images/pandem/테미스.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 천옥편(영웅) 3층</h3>
+								<p>천옥편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>효월의 종언 던전별 드롭 아이템 정리표입니다.</p>
+								<a href="https://www.youtube.com/watch?v=I1FAjObLnHw" class="image fit thumb"><img src="images/pandem/아테나.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 천옥편(영웅) 4층 전반</h3>
+								<p>천옥편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
-							
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=iP19PDUorHQ&feature=youtu.be" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" /></a>
+								<h3>마의 전당 판데모니움 : 천옥편(영웅) 4층 후반</h3>
+								<p>천옥편(영웅)4층 후반부의 공략입니다.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>차후 더 좋은 모습으로 업데이트 하겠습니다</p>
+							</article>
 						</div>
 						
-						</ul>
 					</section>
 
 				<!-- Three -->
