@@ -19,14 +19,13 @@ public class Raid_Member_Withdrawal_Service extends HttpServlet {
 			throws ServletException, IOException {
 		String m_id = request.getParameter("m_id");
 
-
-
 		int row = new GroupDAO().groupOutMember(m_id);
 
 		if (row > 0) {
 			System.out.println("공격대 탈퇴 성공");
 			HttpSession session = request.getSession();
-			session.invalidate();
+			MemberDTO login = (MemberDTO) session.getAttribute("login");
+			System.out.println(login);
 		} else {
 			System.out.println("공격대 탈퇴 실패");
 		}

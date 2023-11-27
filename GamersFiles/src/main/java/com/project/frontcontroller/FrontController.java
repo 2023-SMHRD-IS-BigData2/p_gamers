@@ -64,7 +64,6 @@ public class FrontController extends HttpServlet {
 			service = new DGService();
 		} else if (result.equals("/DMService.do")) { // 관리자 회원 삭제
 			service = new DMService();
-
 		} else if (result.equals("/MessageService.do")) {
 			service = new MessageService();
 

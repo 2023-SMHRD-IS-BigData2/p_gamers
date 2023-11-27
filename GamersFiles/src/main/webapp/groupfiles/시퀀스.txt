@@ -1,0 +1,15 @@
+create SEQUENCE content_num increment by 1 START WITH 1;
+create SEQUENCE group_num increment by 1 START WITH 1;
+create SEQUENCE insert_num increment by 1 START WITH 1;
+create SEQUENCE delete_num increment by 1 START WITH 1;
+create SEQUENCE calendar_num increment by 1 START WITH 1;
+create SEQUENCE chat_num increment by 1 START WITH 1;
+create SEQUENCE message_num increment by 1 START WITH 1;
+
+시퀀스 생성
+
+https://seonzeroticket.notion.site/c2b3090e6fe7463e84ea7ec1b7422574
+
+https://seonzeroticket.notion.site/JS-cc0c5b4fcb1d46d28e070490369d96d9
+
+해당 사이트는 저희개발원 영표쌤이 정리한 프로젝트에 도움되는 사이트모음입니다~!
