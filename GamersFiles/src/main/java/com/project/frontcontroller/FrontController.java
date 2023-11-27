@@ -71,8 +71,7 @@ public class FrontController extends HttpServlet {
 			service = new IAService();
 		} else if (result.equals("/DelMessageService.do")) {
 			service = new DelMessageService();
-		}
-		
+		} 
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);
