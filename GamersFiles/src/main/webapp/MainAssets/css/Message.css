@@ -1,0 +1,97 @@
+/* 쪽지함  */
+#two{display: inline-block; justify-content: center;}
+h2{font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 250px;}
+#tit {font-weight: 700; font-size: 2.75em; color: #585858;margin: 0px 0px 0px 200px;}
+
+/* a태그 설정 */
+a:link{ color: black; text-decoration: none;}
+a:visited{ color: gray;}
+a:hover { color: blue; text-decoration: underline;}
+#message_box h3 a:visited{color: black;}
+/* 쪽지 작성 영역 사이즈 및 가운데 정렬 */
+#contact {width: 600px; margin: 0 auto;}
+
+/* 인풋 영역 좌우 패딩 */
+#contact .fields{padding: 0px 20px 15px 20px;}
+
+/* span요소의 사이즈 조절  */
+#write_msg span{ display: inline-block;}
+
+/* 라벨영역 가로사이즈 */
+#write_msg .col1{width: 100px;}
+
+/* 경계선 긋기 */
+#write_msg div{border-bottom: solid 1px #dddddd; padding: 12px;}
+
+/* input요소의 사이즈 */
+#write_msg input{width: 400px; height: 25px;}
+
+/* textarea 사이즈 */
+#write_msg textarea {width: 400px; height: 200px;}
+
+/* textarea의 라벨글씨가 아래쪽에 배치되기에 이를 수정하기 위해 absolute position 사용 */
+#write_msg #textarea{position: relative; height: 210px;}
+#write_msg #textarea .col1{position: absolute; top: 15px}
+#write_msg #textarea .col2{position: absolute;left: 117px;}  
+
+/* submit 버튼 */
+#submit1 {margin: 20px 0 10px 358px; cursor: pointer;}
+
+/* 쪽지함 전체 영역 가로사이즈와 가운데 정렬 */
+#message_box{width: 660px; margin: 0 auto;}
+
+/* 제목 */
+#message_box h3{margin-top: 30px; padding: px; border-bottom: solid 2px #516e7f; font-size: 25px;}
+
+#message_box h3 span{display: inline-block; width: 110px; font-size: 15px; text-align: right;}
+
+#message_box h3 span.col1{width: 250px}
+/* ul태그 점 업애기 */
+ul{ list-style: none; padding-left: 0; margin-left: 0;}
+
+#message {display: inline-block; height: 380px;}
+
+/* 쪽지함 리스트 항목 아래경계선 */
+#message .tit{padding: 3px; border-bottom: solid 1px #dddddd;}
+
+#message .cuntent{padding: 3px; border-bottom: solid 1px #dddddd;}
+
+/* 제목줄 글씨 굵게 */
+#message span:nth-child(1){font-weight: bold;}
+
+/* span 사이즈  */
+#message span {display: inline-block; text-align: center;}
+
+/* 각 칸마다 사이즈 조절 */
+#message .col1{width: 60px; font-weight: bold;}
+#message .col2{width: 300px; text-align: left;}
+#message #message_title{text-align: center;}
+#message .col3{width: 80px; font-weight: bold;}
+#message .col4{width: 120px; text-align: center;}
+#message .col5{width: 40px;}
+#message .col5 a:link{color: black;}
+#message .col5 a:visited{color: black;}
+#message .col5 a:hover{color: black; text-decoration: none; font-weight: bold;}
+#message #del{font-size: 20px}
+
+/* message_deatil  */
+#message_detail {width: 660px; margin: 0 auto;}
+#message_detail div{padding: 5px; border: solid 1px #dddddd;}
+#message_detail div span{display: inline-block;}
+#message_detail div .col1{width: 60px; border-right: solid 2px #dddddd; border-bottom: solid 2px #dddddd; font-weight: bold;}
+#message_detail div .col2{width: 450px;}
+#message_detail div .col3{width: 80px; text-align: center; font-weight: bold;border-right: solid 2px #dddddd; border-bottom: solid 2px #dddddd;}
+#message_detail #detail_ti .col3{font-size: 13px; text-align: left; font-weight: normal; border: none;}
+#message_detail #detail_con .col2 {height: 350px;}
+#message_detail #detail_con .col1{border: none;}
+#message_detail #detail_re {height: 25px;}
+#message_detail #detail_re .col1{border: none;}
+#message_detail #detail_re .col3{border-color: black;background-color: #dddddd;}
+#message_detail #detail_re .col3 a:link {color: black; text-decoration: none;}
+#message_detail #detail_re .col3 a:visited { color: black; text-decoration: none;}
+#message_detail #detail_re .col3:hover{text-decoration: none; color: black; border: none;}
+
+/* 페이지네이션  */
+#message_box #pagination {width: 660px; text-align: center;}
+#message_box #pagination a:visited {color: black;}
+#message_box #pagination a:hover {color: blue; text-decoration: none;}

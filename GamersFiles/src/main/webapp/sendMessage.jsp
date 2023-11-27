@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets/css/Message.css" />
+<link rel="stylesheet" href="MainAssets/css/Message.css?after" />
 <title>Insert title here</title>
 </head>
 <%
@@ -29,7 +29,7 @@ if (login != null) {
 			<form method="post" action="MessageService.do">
 				<div id="write_msg" class="fields">
 					<div>
-						<span class="col1">보내는 사람</span> <span class="col2" ><input type="text" name="e_sender" value="<%=login.getM_nick()%>" readonly /></span>
+						<span class="col1">보내는 사람</span> <span class="col2" ><%=login.getM_nick()%></span>
 					</div>
 					<div class="field half">
 						<span class="col1">받는 사람</span> <span class="col2"><input
@@ -44,7 +44,7 @@ if (login != null) {
 						<span class="col2"><textarea name="e_content" id="content" rows="6"></textarea></span>
 					</div>
 				</div>
-					<span id=submit1><button type="button" onclick="location.href='Message.jsp'">돌아가기</button><input type="submit" value="메세지 보내기" class="primary" /></span>
+					<span id=submit1><button type="button" onclick="location.href='Message.jsp'">돌아가기</button><input type="submit" value="쪽지 보내기" class="primary" /></span>
 			</form>
 		</section>
 	</div>

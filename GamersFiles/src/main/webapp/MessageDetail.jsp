@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="assets/css/Message.css" />
+<link rel="stylesheet" href="MainAssets/css/Message.css?after" />
 		<title>Forty by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,20 +34,25 @@
 					<div id="detail_titel">
 						<span class="col1">제목</span>
 						<span class="col2"><%=message.getE_title() %></span>
-						<span class="col3"><%=message.getE_date().substring(5,16) %></span>
+						<span class="col3">보낸일시</span>
 					</div>
-					<div>
+					<div id="detail_ti">
 						<span class="col1">보낸이</span>
 						<span class="col2"><%=message.getE_recipient() %></span>
+						<span class="col3"><%=message.getE_date().substring(5,16) %></span>
 					</div>
 					<div id="detail_content">
 						<span class="col1">내용</span>
+						
+					</div>
+					<div id="detail_con">
+						<span class="col1"></span>
 						<span class="col2"><%=message.getE_content() %></span>
 					</div>
 					<div id="detail_re">
 						<span class="col1"></span>
 						<span class="col2"></span>
-						<span class="col3"><a href="Message.jsp"><button>돌아가기</button></a></span>
+						<span class="col3"><a href="Message.jsp">돌아가기</a></span>
 						<span></span>
 					</div>
 			</div>
