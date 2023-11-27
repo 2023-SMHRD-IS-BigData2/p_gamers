@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>공략 페이지</title>
+		<title>차원의 틈 오메가 : 알파편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,10 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="calendar.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1>레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 고르시고 공략과 아이템을 확인하세요</h1>
-					<a href="calendar.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					
+					<h1><strong>차원의 틈 오메가 : 알파편(영웅)</strong><br />
+					<br />
+					</h1>
+					<a href="StormBlood.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -26,9 +27,10 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>레이드 던전</h2>
+							<h2>차원의 틈 오메가 : 알파편(영웅)</h2>
 						</header>
-						<p>원하시는 확장팩을 고르세요</p>
+						<p>나는 오메가이며, 알파입니다......
+						약한 인간의 특징을 구현하여, 진정한 강함을 추구하겠습니다.</p>
 						
 					</section>
 
@@ -37,38 +39,36 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="RealmReborn.jsp" class="image fit thumb"><img src="images/con_logo1.png" alt="" /></a>
-								<h3>신생 에오르제아</h3>
-								<p>대미궁 바하무트</p>
+								<a href="https://www.youtube.com/watch?v=4qnwgSiq2Cg" class="image fit thumb"><img src="images/omega/카오스.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 알파편(영웅) 1층</h3>
+								<p>알파편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="HeavenSword.jsp" class="image fit thumb"><img src="images/con_logo2.png" alt="" /></a>
-								<h3>창천의 이슈가르드</h3>
-								<p>기공성 알렉산더</p>
+								<a href="https://www.youtube.com/watch?v=1iRkvW7vlQc" class="image fit thumb"><img src="images/omega/미드가르즈오름.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 알파편(영웅) 2층</h3>
+								<p>알파편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="StormBlood.jsp" class="image fit thumb"><img src="images/con_logo3.png" alt="" /></a>
-								<h3>홍련의 해방자</h3>
-								<p>차원의 틈 오메가</p>
+								<a href="https://www.youtube.com/watch?v=DQCS1KE50go" class="image fit thumb"><img src="images/omega/오메가.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 알파편(영웅) 3층</h3>
+								<p>알파편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ShadowBringer.jsp" class="image fit thumb"><img src="images/con_logo4.png" alt="" /></a>
-								<h3>칠흑의 반역자</h3>
-								<p>희망의 낙원 에덴</p>
+								<a href="https://www.youtube.com/watch?v=lrQaaYLT1-E" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 알파편(영웅) 4층 전반</h3>
+								<p>알파편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="EndWalker.jsp" class="image fit thumb"><img src="images/con_logo5.png" alt="" /></a>
-								<h3>효월의 종언</h3>
-								<p>마의 전당 판데모니움</p>
+								<a href="https://www.youtube.com/watch?v=ULZ14EOOq_k" class="image fit thumb"><img src="images/omega/오메가파이널.jpg" alt="" /></a>
+								<h3>차원의 틈 오메가 : 알파편(영웅) 4층 후반</h3>
+								<p>알파편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/con_logo6.png" alt="" /></a>
-								<h3>절 난이도</h3>
-								<p>차후 업데이트 예정입니다.</p>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>
-							
 						</div>
-						
 						
 					</section>
 
