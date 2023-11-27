@@ -302,6 +302,7 @@ h1 {
 
 						</div>
 					</div>
+					<%if (m_id.equals(tmp.getM_id())){ %>
 					<div class="inner_box_2">
 						<form action="Raid_Coment_Update_Service">
 							<div class="inner_box_2_1">
@@ -314,6 +315,7 @@ h1 {
 							</div>
 						</form>
 					</div>
+					<%} %>
 				</div>
 				<%
 				}
