@@ -273,19 +273,19 @@ h1 {
 						<td><%=dto.getG_end()%></td>
 					</tr>
 					<tr>
-						<td><b>모집 중인 인원</b></td>
+						<td><b>목표 총 인원</b></td>
 						<td><%=dto.getG_member()%></td>
 					</tr>
 					<tr>
-						<td><b>모집 중인 탱커 수</b></td>
+						<td><b>목표 탱커 수</b></td>
 						<td><%=dto.getM_tank()%></td>
 					</tr>
 					<tr>
-						<td><b>모집 중인 힐러 수</b></td>
+						<td><b>목표 힐러 수</b></td>
 						<td><%=dto.getM_heal()%></td>
 					</tr>
 					<tr>
-						<td><b>모집 중인 딜러 수</b></td>
+						<td><b>목표 딜러 수</b></td>
 						<td><%=dto.getM_deal()%></td>
 					</tr>
 				</table>
