@@ -125,14 +125,26 @@
 				</div>
 				<div class="inner">
 					<ul class="actions">
+					<%
+					if (login != null) {
+					%>
 						<li><a
 							href="IAService.do?send_id=<%=login.getM_id()%>&rcv_id=<%=group.getM_id()%>&send_pos=<%=login.getM_position()%>&send_class=<%=login.getM_class()%>&send_nick=<%=login.getM_nick()%>"
 							class="button next scrolly"> 가입신청 </a></li>
+					<%
+					} else {
+					%>
+						<li><a
+							href="Member.jsp"
+							class="button next scrolly"> 로그인 </a></li>
+					<%
+					}
+					%>
 						<li style="align-content: flex-end;"><a
 							href="contentDetail.jsp?c_name=<%=group.getC_name()%>"
 							class="button next scrolly"> 뒤로가기 </a></li>
 					</ul>
-					<h2> 파티 현황 </h2>
+					<h2>파티 현황</h2>
 					<table style="text-align: center;">
 						<tr>
 							<th style="text-align: center;">비고</th>
@@ -157,7 +169,7 @@
 						%>
 					</table>
 				</div>
-						
+
 			</section>
 			<%
 			}

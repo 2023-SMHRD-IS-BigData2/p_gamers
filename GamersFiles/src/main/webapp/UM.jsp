@@ -9,6 +9,8 @@
 <head>
 <meta charset="UTF-8">
 <title>정보 수정 페이지</title>
+<link rel="stylesheet" href="MainAssets/css/main.css" />
+<link rel="stylesheet" href="menu.css" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style type="text/css">
 * {
@@ -18,56 +20,54 @@
 	text-align: center;
 }
 
-body {
-	font-size: 14px;
-	font-family: 'Roboto', sans-serif;
-}
-
-.login-wrapper {
-	display: inline-block;
-	width: 400px;
-	height: 350px;
+.update-wrapper {
+	margin: 20px; display : inline-block;
 	padding: 40px;
 	box-sizing: border-box;
-	width: 400px;
+	color: white;
+	border: solid;
+	border-color: lightgray;
+	display: inline-block;
+	font-size: 16px;
 }
 
-.login-wrapper>h2 {
+.update-wrapper>h2 {
 	font-size: 24px;
-	color: #6A24FE;
+	color: black;
 	margin-bottom: 20px;
 }
 
-#login-form>input {
+#update-form>input {
 	width: 100%;
 	height: 48px;
 	padding: 0 10px;
 	box-sizing: border-box;
 	margin-bottom: 16px;
 	border-radius: 6px;
-	background-color: #F8F8F8;
+	font-size: 14px !important;
 }
 
-#login-form>input::placeholder {
-	color: #D2D2D2;
+#update-form>input::placeholder {
+	color: gray !important;
+	font-size: 14px !important;
 }
 
-#login-form>input[type="submit"] {
-	color: #fff;
+#update-form>input[type="submit"] {
+	color: black;
 	font-size: 16px;
-	background-color: #6A24FE;
+	background-color: gray;
 	margin-top: 20px;
 }
 
-#login-form>input[type="checkbox"] {
+#update-form>input[type="checkbox"] {
 	display: none;
 }
 
-#login-form>label {
+#update-form>label {
 	color: #999999;
 }
 
-#login-form input[type="checkbox"]+label {
+#update-form input[type="checkbox"]+label {
 	cursor: pointer;
 	padding-left: 26px;
 	background-image: url("checkbox.png");
@@ -75,82 +75,35 @@ body {
 	background-size: contain;
 }
 
-#login-form input[type="checkbox"]:checked+label {
+#update-form input[type="checkbox"]:checked+label {
 	background-image: url("checkbox-active.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
-.join-wrapper {
-	display: inline-block;
-	width: 400px;
-	height: 350px;
-	padding: 40px;
-	box-sizing: border-box;
-	width: 400px;
-}
-
-.join-wrapper>h2 {
-	font-size: 24px;
-	color: #6A24FE;
-	margin-bottom: 20px;
-}
-
-#join-form>input {
-	width: 100%;
-	height: 48px;
-	padding: 0 10px;
-	box-sizing: border-box;
-	margin-bottom: 16px;
-	border-radius: 6px;
-	background-color: #F8F8F8;
-}
-
-#join-form>input::placeholder {
-	color: #D2D2D2;
-}
-
-#join-form>input[type="submit"] {
-	color: #fff;
-	font-size: 16px;
-	background-color: #6A24FE;
-	margin-top: 20px;
-}
-
-#join-form>input[type="checkbox"] {
-	display: none;
-}
-
-#join-form>label {
-	color: #999999;
-}
-
-#join-form input[type="checkbox"]+label {
-	cursor: pointer;
-	padding-left: 26px;
-	background-image: url("checkbox.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-#join-form input[type="checkbox"]:checked+label {
-	background-image: url("checkbox-active.png");
-	background-repeat: no-repeat;
-	background-size: contain;
+textarea {
+	resize: none;
 }
 </style>
 </head>
-<body>
+<body class="is-preload">
 	<%
 	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	request.setCharacterEncoding("UTF-8");
 	List<JobDTO> jobs = new JobDAO().jobList();
 	%>
+	<div id="wrapper">
+		<header id="header" class="alt">
+			<a href="GamersMain.jsp" class="logo"><strong>게이머즈</strong></a>
+			<nav>
+			</nav>
+		</header>
+	</div>
 	<div class="member_container">
 		<div class="main_top">
-			<div class="login-wrapper">
+			<div class="update-wrapper">
 				<h2>내 정보 수정</h2>
-				<form method="post" action="UMService.do" id="login-form">
+				<form method="post" action="UMService.do" id="update-form">
 					<input type="text" name="m_id" value="<%=login.getM_id()%>"
 						readonly> <input type="password" name="m_pw"
 						placeholder="비밀번호"> <input type="text" name="m_nick"
@@ -171,13 +124,20 @@ body {
 					</datalist>
 					<input type="text" name="m_position" readonly value=""
 						id="m_position">
-					<textarea name="m_coment" style="width: 320px; height: 48px;"
+					<textarea name="m_coment" style="width: 320px; height: 100px;"
 						placeholder="간단한 자기 소개"></textarea>
-					<input type="submit" value="회원가입">
+					<input type="submit" value="정보 수정 완료">
 				</form>
 			</div>
 		</div>
 	</div>
+	<script src="MainAssets/js/jquery.min.js"></script>
+	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
+	<script src="MainAssets/js/jquery.scrollex.min.js"></script>
+	<script src="MainAssets/js/browser.min.js"></script>
+	<script src="MainAssets/js/breakpoints.min.js"></script>
+	<script src="MainAssets/js/util.js"></script>
+	<script src="MainAssets/js/main.js"></script>
 	<script type="text/javascript">
 		$(document).on('change', '#class', function() {
 			var val = $(this).val();

@@ -19,11 +19,6 @@
 	text-align: center;
 }
 
-body {
-	font-size: 14px;
-	font-family: 'Roboto', sans-serif;
-}
-
 .login-wrapper {
 	margin: 20px; display : inline-block;
 	padding: 40px;

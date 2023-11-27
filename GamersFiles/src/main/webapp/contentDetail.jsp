@@ -93,7 +93,7 @@ div.content {
 					%>
 					<h3>
 						파티 생성 및 가입 기능은 <a href="Member.jsp"><button
-								style="width: 120px; height: 50px; justify-content: center;">로그인</button></a>
+								style="width: 200px; height: 50px; justify-content: center;">로그인</button></a>
 						후 이용하실 수 있습니다.
 						<%
 					} else if (login != null) {
