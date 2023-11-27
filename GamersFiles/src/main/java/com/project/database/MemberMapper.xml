@@ -54,7 +54,7 @@
 	</update>
 	<select id="countGroup" parameterType="String" resultType="Integer">
 		select count(m_id) from p_member where g_name=#{g_name}
-	</select>
+
 
 	
 </mapper>

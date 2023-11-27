@@ -250,8 +250,8 @@ h1 {
 				%>
 				<div>
 					<form action="Raid_Member_Withdrawal_Service">
-						<input type="hidden" name="m_id" value="<%=m_id%>"> <input
-							type="submit" value="공격대 탈퇴">
+						<input type="hidden" name="m_id" value="<%=m_id%>">  
+						<input type="submit" value="공격대 탈퇴">
 					</form>
 				</div>
 				<%

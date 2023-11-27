@@ -159,5 +159,7 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	
+
 
 }
