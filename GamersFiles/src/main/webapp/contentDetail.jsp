@@ -77,7 +77,7 @@ div.content {
 		</header>
 		<!-- Main -->
 		<div id="main">
-			<div class="inner">
+			<div class="inner" style="width: 100%;">
 				<div class="title">
 					<h1><%=contents.get(0).getC_name()%></h1>
 					<h3>
