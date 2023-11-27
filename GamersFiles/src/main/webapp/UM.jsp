@@ -107,7 +107,18 @@ textarea {
 					<input type="text" name="m_id" value="<%=login.getM_id()%>"
 						readonly> <input type="password" name="m_pw"
 						placeholder="비밀번호"> <input type="text" name="m_nick"
-						placeholder="닉네임"> <input type="text" value="<%=login.getG_name() %>"
+						placeholder="닉네임"> <input type="text" 
+						<%
+						if (login.getG_name()!=null){
+						%>
+						value="<%=login.getG_name() %>"
+						<%
+						} else {
+						%>
+						value="가입된 파티가 없습니다."
+						<%
+						}
+						%>
 						readonly="readonly">
 					<input type="text" name="m_class" list="classes" id="class"
 						placeholder="직업">

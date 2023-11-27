@@ -165,7 +165,7 @@
 				<input type="text" name="m_tank" placeholder="탱커 인원"> 
 				<input type="text" name="m_heal" placeholder="힐러 인원">
 				<input type="file" name="g_file" style="float: right;" placeholder="이미지 선택">
-				<input type="submit" value="생성하기">
+				<input id="check" type="button" value="생성하기">
 				</form>
 			</div>
 		</div>
@@ -193,9 +193,13 @@
 				// 성공
 				success : function(data) {
 					if (data == 'true') {
-						alert('파티명 사용 불가')
+						alert('파티명 사용 불가');
+						$("#check").click(function(){
+							alert('파티명 중복');
+						});
 					} else if (data == 'false') {
-						alert('파티명 사용 가능')
+						alert('파티명 사용 가능');
+						$("#check").prop("type", "submit");
 					}
 				},
 				// 실패
