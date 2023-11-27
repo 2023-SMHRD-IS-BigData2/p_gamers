@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>칠흑의 반역자</title>
+		<title>희망의 낙원 에덴 : 각성편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,11 +13,10 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>칠흑의 반역자</strong>, 레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
+					
+					<h1><strong>희망의 낙원 에덴 : 각성편(영웅)</strong><br />
 					</h1>
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					<a href="ShadowBringer.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -27,35 +26,37 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>칠흑의 반역자 레이드 던전</h2>
+							<h2>희망의 낙원 에덴 : 각성편(영웅)</h2>
 						</header>
-						<p>칠흑의 반역자 레이드 던전 스토리 설명 글</p>
-						
+						<p>상상력을 발휘해 소환한 리바이어선을 쓰러뜨리고 거점으로 돌아온 일행이 목격한 것은, 무의 대지에 생겨난 '호수'였다. 에덴의 힘으로 물속성을 활성화한 것을 실감한 '어둠의 전사' 일행은 계속해서 땅속성을 되찾기로 한다. 다음 목적지는 과거 세계 최고봉이었던 '아틀라스 산'. 그 정상에서 바위신 '타이탄'을 떠올리며 술식을 전개하고, 격렬한 전투를 별여 땅속성의 힘을 활성화시켜라!</p>
+						<ul class="actions">
+							
+						</ul>
 					</section>
 
 				<!-- Two -->
 					<section id="two">
-						<h2>던전 목록</h2>
+						<h2>목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.jsp" class="image fit thumb"><img src="images/헬창.jpg" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 각성편(영웅)</h3>
-								<p>각성편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=CqCOl-Bs8zE" class="image fit thumb"><img src="images/eden/에덴프라임.jpg" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 각성편(영웅)1층</h3>
+								<p>각성편(영웅)1층의 공략입니다</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.jsp" class="image fit thumb"><img src="images/시바바.jpg" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 공명편(영웅)</h3>
-								<p>공명편(영웅) 1~4</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=-eL9TQSLIdE" class="image fit thumb"><img src="images/eden/보이드 워커.jpg" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 각성편(영웅)2층</h3>
+								<p>각성편(영웅)2층의 공략입니다.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/에덴의 약속.png" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 재생편(영웅)</h3>
-								<p>재생편(영웅) 1~4</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=yik5oqvVP1I" class="image fit thumb"><img src="images/eden/레비아탄.jpg" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 각성편(영웅)3층</h3>
+								<p>각성편(영웅)3층의 공략입니다.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_2.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>칠흑의 반역자 던전별 드롭 아이템입니다.</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/eden/헬창.jpg" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 각성편(영웅)4층</h3>
+								<p>각성편(영웅)4층의 공략입니다.</p>
 							</article>
 							
 						</div>

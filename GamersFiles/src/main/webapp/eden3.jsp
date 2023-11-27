@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>칠흑의 반역자</title>
+		<title>희망의 낙원 에덴 : 재생편(영웅)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_2.css" />
@@ -13,11 +13,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="DropMain.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1><strong>칠흑의 반역자</strong>, 레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 골라 공략을 확인하세요<br />
+					
+					<h1><strong>희망의 낙원 에덴 : 재생편(영웅)</strong><br />
+					<br />
 					</h1>
-					<a href="DropMain.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					<a href="ShadowBringer.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -27,9 +27,9 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>칠흑의 반역자 레이드 던전</h2>
+							<h2>희망의 낙원 에덴 : 재생편(영웅)</h2>
 						</header>
-						<p>칠흑의 반역자 레이드 던전 스토리 설명 글</p>
+						<p>친구를 위해, 자신이 상상하는 최강의 존재를 물리치고 성장한 린. 그녀의 강한 마음을 목격하고 또다시 갈라지게 될까 두려워한 두 아씨엔은, 속성을 다루는 에덴의 힘을 이용하여 시간이 흐르지도 멈추지도 않는 영원한 이상향을 만들고 그곳에 틀어박히려 한다. 이대로는 세계의 환경 에테르가 모조리 사라지고 만다. 친구와 함께 만든 추억, 나누었던 약속까지도...... 세계를 재생시키기 위한 마지막 싸움이 드디어 시작된다.</p>
 						
 					</section>
 
@@ -38,26 +38,35 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.jsp" class="image fit thumb"><img src="images/헬창.jpg" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 각성편(영웅)</h3>
-								<p>각성편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=qzMLkSXCtfo" class="image fit thumb"><img src="images/eden/어둠의 구름.png" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 재생편(영웅) 1층</h3>
+								<p>재생편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.jsp" class="image fit thumb"><img src="images/시바바.jpg" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 공명편(영웅)</h3>
-								<p>공명편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=cN_UCvTnJXg" class="image fit thumb"><img src="images/eden/그림자의 왕.png" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 재생편(영웅) 2층</h3>
+								<p>재생편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/에덴의 약속.png" alt="" /></a>
-								<h3>희망의 낙원 에덴 : 재생편(영웅)</h3>
-								<p>재생편(영웅) 1~4</p>
+								<a href="https://www.youtube.com/watch?v=thFweT3mOtM" class="image fit thumb"><img src="images/eden/페이트 브레이커.png" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 재생편(영웅) 3층</h3>
+								<p>재생편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_2.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
-								<h3>던전별 드롭 아이템</h3>
-								<p>칠흑의 반역자 던전별 드롭 아이템입니다.</p>
+								<a href="https://www.youtube.com/watch?v=GJvtEvm89i0" class="image fit thumb"><img src="images/eden/에덴의 약속.png" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 재생편(영웅) 4층 전반</h3>
+								<p>재생편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
-							
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=ud64hH9URrM" class="image fit thumb"><img src="images/eden/어둠무녀.jpg" alt="" /></a>
+								<h3>희망의 낙원 에덴 : 재생편(영웅) 4층 후반</h3>
+								<p>재생편(영웅)4층 후반부의 공략입니다.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work">
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
+							</article>
 						</div>
 						
 					</section>

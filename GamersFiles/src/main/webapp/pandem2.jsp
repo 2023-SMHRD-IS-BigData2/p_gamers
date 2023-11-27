@@ -13,8 +13,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					
 					<h1><strong>마의 전당 판데모니움 : 연옥편(영웅)</strong>
+					<a href="EndWalker.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 					 </h1>
 				</div>
 			</header>
