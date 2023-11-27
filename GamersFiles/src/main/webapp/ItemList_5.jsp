@@ -21,12 +21,17 @@
 body {
 	font-size: 14px;
 	font-family: 'Roboto', sans-serif;
+	background-image: url('images/배경던전.jpg');
+  	background-size: cover; 
+ 	background-position: center; 
+  	background-repeat: no-repeat; 
 }
 
 .table-tltle {
 	display: inline-block;
 	padding: 40px;
 	box-sizing: border-box;
+	color: #D5D5D5;
 }
 
 .table-tltle>h2 {
@@ -70,7 +75,8 @@ table {
         td {
         	border: 1px solid #8C8C8C; 
             text-align: center;
-            padding: 8px;        	        	
+            padding: 8px; 
+            color: #A6A6A6       	        	
         }
 </style>
 </head>

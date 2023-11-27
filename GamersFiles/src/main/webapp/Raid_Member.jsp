@@ -235,7 +235,11 @@ h1 {
 					for (MemberDTO tmp : m_list) {
 					%>
 					<%=tmp.getM_nick()%>
-					(<%=tmp.getM_id()%>)<br>
+					(<%=tmp.getM_id()%>)
+					<%if (tmp.getM_id().equals(dto.getM_id())){ %>
+					<b>☆</b>
+					<%} %>
+					<br>
 					<%
 					}
 					%>
