@@ -15,7 +15,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="ContentAssets/css/ContentMain.css" />
-<link rel="stylesheet" href="menu.css"/>
+<link rel="stylesheet" href="menu.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
@@ -73,33 +73,30 @@
 			<div class="inner">
 				<header>
 					<h1><%=contents.get(0).getC_name()%></h1>
-					<h3>
+					<p>
 						컨텐츠 :
 						<%=contents.get(0).getC_content1()%>
 						/
 						<%=contents.get(0).getC_content2()%>
 						/
 						<%=contents.get(0).getC_content3()%>
-					</h3>
+					</p>
 					<%
 					if (login == null) {
 					%>
-					<ul> <li>
 					<h3>
-
-						파티 생성 및 가입 기능은 <a href="Member.jsp" class="button next scrolly"> 로그인 </a>
-						후 이용하실 수 있습니다.
-						<%
+						파티 생성 및 가입 기능은
+						<a href="Member.jsp"><button>로그인</button> </a> 후 이용하실 수 있습니다.
+					</h3>
+					<%
 					} else if (login != null) {
 					if (login.getG_name() == null) {
 					%>
-						<a href="IG.jsp?c_name=<%=c_name%>"><button>파티생성</button> </a>
-						<%
-						}
-						}
-						%>
-					</h3></li>
-					</ul>
+					<a href="IG.jsp?c_name=<%=c_name%>"> <button>파티생성 </button></a>
+					<%
+					}
+					}
+					%>
 				</header>
 				<section class="tiles">
 					<%
@@ -125,11 +122,11 @@
 						<span class="image"> <img
 							src="./groupfiles/<%=groups.get(i).getG_file()%>" />
 						</span> <a href="GroupDetail.jsp?g_name=<%=groups.get(i).getG_name()%>">
-							<h2><%=groups.get(i).getG_name()%><br>
-								<%=groups.get(i).getG_content()%>
-							</h2>
+							<h2><%=groups.get(i).getG_name()%></h2>
+							<h3><%=groups.get(i).getG_content()%></h3>
 							<div class="content">
-								<p>	파티장 :
+								<p>
+									파티장 :
 									<%=groups.get(i).getM_id()%>
 									<br> 인원 <br> 딜러 :
 									<%=dealers[i]%>
