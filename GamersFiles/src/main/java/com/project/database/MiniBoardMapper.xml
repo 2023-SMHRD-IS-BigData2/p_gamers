@@ -14,6 +14,9 @@
 		resultType="MiniBoardDTO">
 		select * from p_board where g_name=#{g_name} order by p_num desc
 	</select>
+	<delete id="DeleteMBoard">
+		delete from p_board where g_name=#{g_name}
+	</delete>
 
 
 </mapper>

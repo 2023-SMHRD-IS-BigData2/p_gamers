@@ -99,5 +99,17 @@ public class CalendarDAO {
 		}
 		return cnt;
 	}
+	
+	public int deleteAllCalendar(String g_name) {
+		int cnt = 0;
+		try {
+			cnt = sqlSession.delete("com.project.database.CalendarMapper.deleteAllCalendar", g_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
 
 }

@@ -217,6 +217,11 @@ h1 {
 
 .down_box_form {
 	margin-top: 10px;
+	
+}
+
+.down_box_title{
+	font-size: 24px;
 }
 
 .form_submit {
@@ -345,8 +350,8 @@ h1 {
 			<div class="sb_down_box">
 				<div class="db_title">공격대 삭제</div>
 				<div class="db_case">
-					<div class="down_box_title">공격대 삭제를 원하시면 아래에 "공격대삭제"를 정확하게
-						입력해주세요</div>
+					<div class="down_box_title">"공격대삭제"를 정확하게
+						입력해주세요. 실행시 로그아웃 됩니다.</div>
 					<div class="down_box_form">
 						<form action="Raid_Final_Delete_Service">
 							<div class="form_text">

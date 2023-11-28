@@ -16,5 +16,8 @@
 	<delete id="deleteCalendar">
 		delete from p_calendar where a_num=#{a_num}
 	</delete>
+	<delete id="deleteAllCalendar">
+		delete from p_calendar where g_name=#{g_name}
+	</delete>
 	
 </mapper>

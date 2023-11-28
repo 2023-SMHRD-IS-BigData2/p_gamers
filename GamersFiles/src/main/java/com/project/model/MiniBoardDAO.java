@@ -42,4 +42,18 @@ public class MiniBoardDAO {
 		}
 		return mboard;
 	}
+
+	public int DeleteMBoard(String g_name) {
+		int cnt = 0;
+
+		try {
+			cnt = sqlSession.delete("com.project.database.MiniBoardMapper.DeleteMBoard", g_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+
+		return cnt;
+	}
 }
