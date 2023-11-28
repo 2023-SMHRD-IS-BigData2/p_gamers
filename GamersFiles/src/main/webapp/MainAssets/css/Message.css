@@ -98,8 +98,31 @@ a:hover {
 
 /* submit 버튼 */
 #submit1 {
-	margin: 20px 0 10px 358px;
+	display:inline-block;
+	margin: 0 0 0 358px;
 	cursor: pointer;
+}
+#submit1 button{
+	width:90px;
+	border-top: 1px;
+	border-left: 1px;
+	background-color: #dddddd;
+}
+#submit1 input{
+	width :90px;
+	border-top: 1px;
+	border-left: 1px;
+	background-color: #dddddd;
+}
+#submit1 button:hover{
+	font-weight:bolder;
+	border:none;
+	background-color: #dddddd;
+}
+#submit1 input:hover{
+	font-weight:bolder;
+	border:none;
+	background-color: #dddddd;
 }
 
 /* 쪽지함 전체 영역 가로사이즈와 가운데 정렬 */
@@ -111,20 +134,55 @@ a:hover {
 /* 제목 */
 #message_box h3 {
 	margin-top: 30px;
-	padding: px;
+	padding: 2px;
 	border-bottom: solid 2px #516e7f;
 	font-size: 25px;
 }
 
+/* 쪽지보내기 , 전체삭제  */
 #message_box h3 span {
 	display: inline-block;
 	width: 110px;
 	font-size: 15px;
 	text-align: right;
+	/* border-bottom: solid 1px #dddddd; */
 }
 
 #message_box h3 span.col1 {
 	width: 250px
+}
+#message_box h3 span.col1 a:link{
+	background-color: #dddddd;
+	border-bottom: solid 2px black;
+	border-right: solid 2px black;
+}
+#message_box h3 span.col2 a:link{
+	background-color: #dddddd;
+	border-bottom: solid 2px black;
+	border-right: solid 2px black;
+}
+#message_box h3 span.col1 a:visited{
+	background-color: #dddddd;
+	border: none;
+	text-decoration: none;
+}
+#message_box h3 span.col2 a:visited{
+	background-color: #dddddd;
+	border: none;
+	text-decoration: none;
+	color: black;
+}
+#message_box h3 span.col1 a:hover{
+	background-color: #dddddd;
+	border: none;
+	text-decoration: none;
+	color: black;
+}
+#message_box h3 span.col2 a:hover{
+	background-color: #dddddd;
+	border: none;
+	text-decoration: none;
+	color: black;
 }
 /* ul태그 점 업애기 */
 ul {
