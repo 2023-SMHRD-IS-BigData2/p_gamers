@@ -208,8 +208,8 @@ textarea {
 				<fieldset>
 					<h2>회원탈퇴</h2>
 					<form method="post" action="UDMService.do" id="delete-form">
-					<% String m_id = (String)session.getAttribute("m_id"); %>
-						<input type="hidden" name="m_id" value=<%=m_id %>>
+						<input type="hidden" name="m_id" value=<%=login.getM_id()%>>
+						<input type="hidden" name="g_name" value=<%=login.getG_name()%>>
 						 <input type="submit" value="회원탈퇴">
 					</form>
 				</fieldset>
