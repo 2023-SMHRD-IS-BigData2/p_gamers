@@ -31,7 +31,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup,
 
 body {
 	line-height: 1;
-	background-color : lightgray;
+	background-color: lightgray;
 }
 
 ol, ul {
@@ -2314,9 +2314,8 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	border-top: 0 !important;
 }
 
-.tiles>.image{
+.tiles>.image {
 	display: inline-block;
-	
 }
 
 .tiles+* {
@@ -2354,7 +2353,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 }
 
 .tiles article .image {
-	display:inline-block;
+	display: inline-block;
 }
 
 .tiles article header {
@@ -2638,7 +2637,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	background-color: #2a2f4a;
+	background-color: #2a2f4a !important;
 	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 	cursor: default;
 	font-weight: 600;
@@ -2783,7 +2782,6 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	-webkit-animation: none;
 	-ms-animation: none;
 	animation: none;
-	background-color: transparent;
 	box-shadow: none;
 	position: absolute;
 }

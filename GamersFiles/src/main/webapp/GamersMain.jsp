@@ -142,10 +142,11 @@
 				<ul class="icons">
 					<li><a href="#" class="icon brands alt fa-twitter"><span
 							class="label">Twitter</span></a></li>
-					<li><a href="https://www.instagram.com/cksghwjd" class="icon brands alt fa-instagram"><span
-							class="label">Instagram</span></a></li>
-					<li><a href="https://github.com/2023-SMHRD-IS-BigData2/p_gamers" class="icon brands alt fa-github"><span
-							class="label">GitHub</span></a></li>
+					<li><a href="https://www.instagram.com/cksghwjd"
+						class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a
+						href="https://github.com/2023-SMHRD-IS-BigData2/p_gamers"
+						class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; 프로젝트</li>
@@ -153,9 +154,7 @@
 				</ul>
 			</div>
 		</footer>
-
 	</div>
-
 	<!-- Scripts -->
 	<script src="MainAssets/js/jquery.min.js"></script>
 	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
