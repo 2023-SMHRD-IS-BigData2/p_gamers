@@ -48,6 +48,7 @@
 				<a href="#none"
 					onclick="window.open('Message.jsp','new','scrollbars=yes,resizable=no width=700 height=600, left=1200,top=600');return false">쪽지함</a>
 				<a href="UM.jsp"> 내 정보 수정 </a>
+				
 				<%
 				if (login.getG_name() != null) {
 				%>
@@ -55,6 +56,48 @@
 				<%
 				}
 				%>
+				<%
+				if (contents.get(0).getC_name().equals("신생 에오르제아")){
+				%>
+				<a href="RealmReborn.jsp">레이드 공략</a>
+				<%
+				}
+				%>
+				<%
+				if (contents.get(0).getC_name().equals("창천의 이슈가르드")){
+				%>
+				<a href="HeavenSword.jsp">레이드 공략</a>
+				<%
+				}
+				%>
+				<%
+				if (contents.get(0).getC_name().equals("홍련의 해방자")){
+				%>
+				<a href="StormBlood.jsp">레이드 공략</a>
+				<%
+				}
+				%>
+				<%
+				if (contents.get(0).getC_name().equals("칠흑의 반역자")){
+				%>
+				<a href="ShadowBringer.jsp">레이드 공략</a>
+				<%
+				}
+				%>
+				<%
+				if (contents.get(0).getC_name().equals("효월의 종언")){
+				%>
+				<a href="EndWalker.jsp">레이드 공략</a>
+				<%
+				}
+				%>
+				<%
+				if (contents.get(0).getC_name().equals("절 난이도")){
+				%>
+				<a href="Ulti.jsp">레이드 공략</a>
+				<%
+				}
+				%>					
 				<a href="LogoutService.do"> 로그아웃 </a>
 			</nav>
 			<%
