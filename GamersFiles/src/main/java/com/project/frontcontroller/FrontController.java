@@ -21,6 +21,7 @@ import com.project.controller.MCService;
 import com.project.controller.MessageService;
 import com.project.controller.PCService;
 import com.project.controller.SMService;
+import com.project.controller.UDMService;
 import com.project.controller.UMService;
 
 @WebServlet("*.do")
@@ -71,7 +72,9 @@ public class FrontController extends HttpServlet {
 			service = new IAService();
 		} else if (result.equals("/DelMessageService.do")) {
 			service = new DelMessageService();
-		} 
+		} else if (result.equals("/UDMService.do")) {
+			service = new UDMService();
+		}
 		url = service.execute(request, response);
 		if (url != null) {
 			response.sendRedirect(url);

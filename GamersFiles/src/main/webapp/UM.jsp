@@ -84,6 +84,66 @@
 textarea {
 	resize: none;
 }
+.delete-wrapper {
+	margin: 20px; display : inline-block;
+	padding: 40px;
+	box-sizing: border-box;
+	color: white;
+	border: solid;
+	border-color: lightgray;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.delete-wrapper>h2 {
+	font-size: 24px;
+	color: black;
+	margin-bottom: 20px;
+}
+
+#delete-form>input {
+	width: 100%;
+	height: 48px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+	border-radius: 6px;
+	font-size: 14px !important;
+}
+
+#delete-form>input::placeholder {
+	color: gray !important;
+	font-size: 14px !important;
+}
+
+#delete-form>input[type="submit"] {
+	color: black;
+	font-size: 16px;
+	background-color: gray;
+	margin-top: 20px;
+}
+
+#delete-form>input[type="checkbox"] {
+	display: none;
+}
+
+#delete-form>label {
+	color: #999999;
+}
+
+#delete-form input[type="checkbox"]+label {
+	cursor: pointer;
+	padding-left: 26px;
+	background-image: url("checkbox.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#delete-form input[type="checkbox"]:checked+label {
+	background-image: url("checkbox-active.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 </style>
 </head>
 <body class="is-preload">
@@ -142,6 +202,19 @@ textarea {
 			</div>
 		</div>
 	</div>
+	
+		
+			<div class="delete-wrapper" style="width: 400px;">
+				<fieldset>
+					<h2>회원탈퇴</h2>
+					<form method="post" action="UDMService.do" id="delete-form">
+					<% String m_id = (String)session.getAttribute("m_id"); %>
+						<input type="hidden" name="m_id" value=<%=m_id %>>
+						 <input type="submit" value="회원탈퇴">
+					</form>
+				</fieldset>
+			</div>
+		
 	<script src="MainAssets/js/jquery.min.js"></script>
 	<script src="MainAssets/js/jquery.scrolly.min.js"></script>
 	<script src="MainAssets/js/jquery.scrollex.min.js"></script>
