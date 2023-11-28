@@ -34,6 +34,8 @@ a:hover { color: blue; text-decoration: underline;}
 #write_msg #textarea .col1{position: absolute; top: 15px}
 #write_msg #textarea .col2{position: absolute;left: 117px;}  
 
+#write_msg #sender {border-width: 0; outline: none; }
+
 /* submit 버튼 */
 #submit1 {margin: 20px 0 10px 358px; cursor: pointer;}
 
