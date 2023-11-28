@@ -29,7 +29,7 @@ if (login != null) {
 			<form method="post" action="MessageService.do">
 				<div id="write_msg" class="fields">
 					<div>
-						<span class="col1">보내는 사람</span> <input id="sender" class="col2" name="e_sender"value="<%=login.getM_nick()%>" readonly="readonly">
+						<span class="col1">보내는사람</span> <input id="sender" class="col2" name="e_sender"value="<%=login.getM_id()%>" readonly="readonly">
 					</div>
 					<div class="field half">
 						<span class="col1">받는 사람</span> <span class="col2"><input

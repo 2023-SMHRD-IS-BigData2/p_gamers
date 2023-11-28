@@ -30,7 +30,7 @@ MemberDTO login = (MemberDTO) session.getAttribute("login");
 if (login != null) {
 	session.setAttribute("g_name", login.getG_name());
 }
-List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_nick()); 
+List<MessageDTO> messages = new MessageDAO().showMessage(login.getM_id()); 
 
 /* 페이지당 10개의 쪽지 출력 */
 int messagesPerPage = 10; 
@@ -68,7 +68,7 @@ List<MessageDTO> messagesOnPage = messages.subList(startIndex, endIndex);
 			<div id="message_box">
 				<h3><%=login.getM_nick()%>님이 받은 쪽지				
 				
-				<span class="col1"><a href="sendMessage.jsp">쪽지보내기</a></span><span class="col2"><a href="DelMessageService.do?M_id=<%=login.getM_nick()%>" class="button next scrolly">전체삭제하기</a></span>
+				<span class="col1"><a href="sendMessage.jsp">쪽지보내기</a></span><span class="col2"><a href="DelMessageService.do?M_id=<%=login.getM_id()%>" class="button next scrolly">전체삭제하기</a></span>
 				</h3>
 					<!-- 쪽지 리스트가 출력되는 영역(게시판 모양) -->
 					<div>
