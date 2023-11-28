@@ -352,7 +352,6 @@ h1 {
 							<div class="form_text">
 								<input type="textarea" name="deleteCheck"> <input
 									type="hidden" name="g_name" value="<%=g_name%>">
-
 							</div>
 							<div class="form_submit">
 								<input id="input_2" type="submit" value="공격대 삭제">
@@ -363,10 +362,6 @@ h1 {
 			</div>
 		</div>
 	</div>
-
-
-
-
 	<!-- Scripts -->
 	<script src="ContentAssets/js/ContentJquery.min.js"></script>
 	<script src="ContentAssets/js/ContentBrowser.min.js"></script>
