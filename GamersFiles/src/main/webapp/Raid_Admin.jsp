@@ -61,7 +61,6 @@ input {
 
 textarea {
 	color: #8C8C8C !important;
-
 }
 
 form {
@@ -71,8 +70,9 @@ form {
 table, tr, td {
 	border: 1px solid #8C8C8C;
 }
-td{
-height: 10px;	
+
+td {
+	height: 10px;
 }
 
 .groupMain {
@@ -136,13 +136,12 @@ h1 {
 
 .sb_up_box {
 	width: 1250px;
-	height: 5000px;
 	display: flex;
 	flex-direction: column;
 }
 
-.up_upper_box {
-	width: 1250px;
+.up_upper1_box {
+	width: 1240px;
 	height: 50px;
 	background-color: #5D5D5D;
 	color: white;
@@ -150,9 +149,29 @@ h1 {
 	padding-left: 15px;
 }
 
-.up_down_box {
-	width: 1250px;
-	height: 450px;
+.up_down1_box {
+	width: 1240px;
+	height: 230px;
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.up_upper2_box {
+	width: 1240px;
+	height: 50px;
+	background-color: #5D5D5D;
+	color: white;
+	font-size: 24px;
+	padding-left: 15px;
+}
+
+.up_down2_box {
+	width: 1240px;
+	height: 230px;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
@@ -181,6 +200,17 @@ h1 {
 }
 
 .ib_right {
+	
+}
+
+.ib_left2 {
+	font-size: 16px; width : 250px;
+	height: 100px;
+	display: inline-block;
+	width: 250px;
+}
+
+.ib_right2 {
 	
 }
 
@@ -217,10 +247,9 @@ h1 {
 
 .down_box_form {
 	margin-top: 10px;
-	
 }
 
-.down_box_title{
+.down_box_title {
 	font-size: 24px;
 }
 
@@ -309,8 +338,8 @@ h1 {
 		</div>
 		<div class="secondBox">
 			<div class="sb_up_box">
-				<div class="up_upper_box">공격대 지원자 목록</div>
-				<div class="up_down_box">
+				<div class="up_upper1_box">공격대 지원자 목록</div>
+				<div class="up_down1_box">
 					<%
 					for (ApplyDTO tmp : a_list) {
 					%>
@@ -344,14 +373,41 @@ h1 {
 					}
 					%>
 				</div>
-
-
+				<div class="up_upper2_box">공격대원 목록</div>
+				<div class="up_down2_box">
+					<%
+					List<MemberDTO> members = new MemberDAO().raidMemberList(g_name);
+					for (int i = 0; i < members.size(); i++) {
+						if (!m_nick.equals(members.get(i).getM_nick())){
+					%>
+					<div class="ud_inner_box">
+						<div class="ib_left2">
+							닉네임 :
+							<%=members.get(i).getM_nick()%>
+							<br> 포지션 :
+							<%=members.get(i).getM_position()%>
+							<br> 직업 :
+							<%=members.get(i).getM_class()%>
+						</div>
+						<div class="ib_right2">
+							<form action="RMDService.do">
+								<input type="hidden" name="m_id"
+									value="<%=members.get(i).getM_id()%>">
+								<input id="input_1" type="submit" value="파티 추방">
+							</form>
+						</div>
+					</div>
+					<%
+						}
+					}
+					%>
+				</div>
 			</div>
-			<div class="sb_down_box">
+			<div class="sb_down_box1">
 				<div class="db_title">공격대 삭제</div>
 				<div class="db_case">
-					<div class="down_box_title">"공격대삭제"를 정확하게
-						입력해주세요. 실행시 로그아웃 됩니다.</div>
+					<div class="down_box_title">"공격대삭제"를 정확하게 입력해주세요. 실행시 로그아웃
+						됩니다.</div>
 					<div class="down_box_form">
 						<form action="Raid_Final_Delete_Service">
 							<div class="form_text">
@@ -373,6 +429,5 @@ h1 {
 	<script src="ContentAssets/js/ContentBreakpoints.min.js"></script>
 	<script src="ContentAssets/js/ContentUtil.js"></script>
 	<script src="ContentAssets/js/ContentMain.js"></script>
-
 </body>
 </html>

@@ -20,6 +20,7 @@ import com.project.controller.LogoutService;
 import com.project.controller.MCService;
 import com.project.controller.MessageService;
 import com.project.controller.PCService;
+import com.project.controller.RMDService;
 import com.project.controller.SMService;
 import com.project.controller.UMService;
 
@@ -66,11 +67,12 @@ public class FrontController extends HttpServlet {
 			service = new DMService();
 		} else if (result.equals("/MessageService.do")) {
 			service = new MessageService();
-
 		} else if (result.equals("/IAService.do")) { // 파티 가입 신청
 			service = new IAService();
 		} else if (result.equals("/DelMessageService.do")) {
 			service = new DelMessageService();
+		} else if (result.equals("/RMDService.do")) {
+			service = new RMDService();
 		} 
 		url = service.execute(request, response);
 		if (url != null) {
