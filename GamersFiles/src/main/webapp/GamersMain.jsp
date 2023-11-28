@@ -15,7 +15,7 @@
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="MainAssets/css/main.css"/>
+<link rel="stylesheet" href="MainAssets/css/main.css" />
 <noscript>
 	<link rel="stylesheet" href="MainAssets/css/noscript.css" />
 </noscript>
@@ -142,18 +142,14 @@
 				<ul class="icons">
 					<li><a href="#" class="icon brands alt fa-twitter"><span
 							class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands alt fa-facebook-f"><span
-							class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands alt fa-instagram"><span
+					<li><a href="https://www.instagram.com/cksghwjd" class="icon brands alt fa-instagram"><span
 							class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span
+					<li><a href="https://github.com/2023-SMHRD-IS-BigData2/p_gamers" class="icon brands alt fa-github"><span
 							class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon brands alt fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Untitled</li>
-					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					<li>&copy; 프로젝트</li>
+					<li>팀명 : <a href="#">게이머즈</a></li>
 				</ul>
 			</div>
 		</footer>
