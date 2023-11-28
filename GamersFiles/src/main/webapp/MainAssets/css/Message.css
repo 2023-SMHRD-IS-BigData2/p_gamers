@@ -107,20 +107,20 @@ a:hover {
 	border-top: 1px;
 	border-left: 1px;
 	background-color: #dddddd;
+	font-weight: bold;
 }
 #submit1 input{
 	width :90px;
 	border-top: 1px;
 	border-left: 1px;
 	background-color: #dddddd;
+	font-weight: bold;
 }
 #submit1 button:hover{
-	font-weight:bolder;
 	border:none;
 	background-color: #dddddd;
 }
 #submit1 input:hover{
-	font-weight:bolder;
 	border:none;
 	background-color: #dddddd;
 }
