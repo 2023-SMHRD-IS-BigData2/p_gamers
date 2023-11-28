@@ -117,6 +117,7 @@ body {
 }
 
 .mb_insert {
+	width: 300px;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
 	margin-top: 10px;
@@ -125,6 +126,7 @@ body {
 }
 
 .mb_content {
+	width: 300px;
 	border: 5px solid #8C8C8C;
 	border-radius: 10px;
 	margin-top: 10px;
@@ -136,6 +138,7 @@ input {
 }
 textarea{
 	color: #8C8C8C;
+	resize: none;
 }
 </style>
 </head>
@@ -244,12 +247,12 @@ textarea{
 			</div>
 			<div class="mb_insert">
 				<form action="MiniBoard_Insert_Service" align="center">
-					<table width="300px">
+					<table width="400">
 						<tr>
 							<td>내용 입력</td>
 						</tr>
 						<tr>
-							<td><textarea name="p_content" rows="20" cols="30"></textarea>
+							<td><input type="text" name="p_content">
 							</td>
 						</tr>
 						<tr>
