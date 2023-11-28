@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>공략 페이지</title>
+		<title>절 난이도 토벌전</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="MainAssets/css/main_2.css" />
@@ -13,10 +13,10 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="calendar.jsp" class="image avatar"><img src="images/조이패드.jpg" alt="" /></a>
-					<h1>레이드 공략 페이지입니다.<br />
-					원하시는 레이드 던전을 고르시고 공략과 아이템을 확인하세요</h1>
-					<a href="calendar.jsp" class="image avatar"><img src="images/홈버튼.png" alt="" /></a>
+					
+					<h1><strong>절 난이도 토벌전</strong><br />
+					</h1>
+					<a href="DropMain.jsp" class="image avatar"><img src="images/뒤로가기.png" alt="" /></a>
 				</div>
 			</header>
 
@@ -26,49 +26,40 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>레이드 던전</h2>
+							<h2>절 난이도 토벌전</h2>
 						</header>
-						<p>원하시는 확장팩을 고르세요</p>
-						
+						<p>용사들이여 절대적인 강자를 상대해 보상을 쟁취하라</p>
+						<ul class="actions">
+							
+						</ul>
 					</section>
 
 				<!-- Two -->
 					<section id="two">
-						<h2>던전 목록</h2>
+						<h2>목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="RealmReborn.jsp" class="image fit thumb"><img src="images/con_logo1.png" alt="" /></a>
-								<h3>신생 에오르제아</h3>
-								<p>대미궁 바하무트</p>
+								<a href="https://www.youtube.com/watch?v=rLiZ6Drv1fs&list=PLILq-5vsSR2pVHZiuRDzBIhfTDF4YphKE" class="image fit thumb"><img src="images/ulti/절 알렉.jpg" alt="" /></a>
+								<h3>절 알렉산더 토벌전</h3>
+								<p>절 알렉산더 토벌전의 공략입니다</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="HeavenSword.jsp" class="image fit thumb"><img src="images/con_logo2.png" alt="" /></a>
-								<h3>창천의 이슈가르드</h3>
-								<p>기공성 알렉산더</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=qlwfsaa3f8U&list=PLILq-5vsSR2oAcirjPZjHrKRdRO4gIao6" class="image fit thumb"><img src="images/ulti/절테마.jpg" alt="" /></a>
+								<h3>절 알테마 웨폰 토벌전</h3>
+								<p>절 알테마 웨폰의 공략입니다.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="StormBlood.jsp" class="image fit thumb"><img src="images/con_logo3.png" alt="" /></a>
-								<h3>홍련의 해방자</h3>
-								<p>차원의 틈 오메가</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=lOh_pBUR8xQ&list=PLILq-5vsSR2rdK1wWc0QvJNJ7bJhsbfA7" class="image fit thumb"><img src="images/ulti/절바하.webp" alt="" /></a>
+								<h3>절 바하무트 토벌전</h3>
+								<p>절 바하무트 토벌전의 공략입니다</p>
 							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="ShadowBringer.jsp" class="image fit thumb"><img src="images/con_logo4.png" alt="" /></a>
-								<h3>칠흑의 반역자</h3>
-								<p>희망의 낙원 에덴</p>
-							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="EndWalker.jsp" class="image fit thumb"><img src="images/con_logo5.png" alt="" /></a>
-								<h3>효월의 종언</h3>
-								<p>마의 전당 판데모니움</p>
-							</article>
-							<article class="col-6 col-12-xsmall work">
-								<a href="Ulti.jsp" class="image fit thumb"><img src="images/con_logo6.png" alt="" /></a>
-								<h3>절 난이도</h3>
-								<p>토벌전 및 검증전</p>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<h3>추후 업데이트 예정</h3>
+								<p>컨텐츠 추가 시 업데이트 예정</p>
 							</article>
 							
 						</div>
-						
 						
 					</section>
 
