@@ -37,32 +37,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=CFBrbWzXEww" class="image fit thumb"><img src="images/pandem/코퀴토스.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=CFBrbWzXEww" class="image fit thumb"><img src="images/pandem/코퀴토스.png" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅) 1층</h3>
 								<p>천옥편(영웅)1층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=cmxDsk3FEto" class="image fit thumb"><img src="images/pandem/판데모니움.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=cmxDsk3FEto" class="image fit thumb"><img src="images/pandem/판데모니움.png" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅) 2층</h3>
 								<p>천옥편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=So7aSaZGnmU&feature=youtu.be" class="image fit thumb"><img src="images/pandem/테미스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=So7aSaZGnmU&feature=youtu.be" class="image fit thumb"><img src="images/pandem/테미스.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅) 3층</h3>
 								<p>천옥편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=I1FAjObLnHw" class="image fit thumb"><img src="images/pandem/아테나.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=I1FAjObLnHw" class="image fit thumb"><img src="images/pandem/아테나.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅) 4층 전반</h3>
 								<p>천옥편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=iP19PDUorHQ&feature=youtu.be" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=iP19PDUorHQ&feature=youtu.be" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅) 4층 후반</h3>
 								<p>천옥편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>차후 더 좋은 모습으로 업데이트 하겠습니다</p>
 							</article>

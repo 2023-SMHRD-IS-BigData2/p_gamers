@@ -37,22 +37,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem1.jsp" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" /></a>
+								<a href="pandem1.jsp" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅)</h3>
 								<p>변옥편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem2.jsp" class="image fit thumb"><img src="images/드라군.jpg" alt="" /></a>
+								<a href="pandem2.jsp" class="image fit thumb"><img src="images/드라군.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 연옥편(영웅)</h3>
 								<p>연옥편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="pandem3.jsp" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" /></a>
+								<a href="pandem3.jsp" class="image fit thumb"><img src="images/팔라스 아테나.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 천옥편(영웅)</h3>
 								<p>천옥편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="ItemList.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>던전별 드롭 아이템</h3>
 								<p>효월의 종언 던전별 드롭 아이템 정리표입니다.</p>
 							</article>

@@ -39,32 +39,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=4qnwgSiq2Cg" class="image fit thumb"><img src="images/omega/카오스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=4qnwgSiq2Cg" class="image fit thumb"><img src="images/omega/카오스.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅) 1층</h3>
 								<p>알파편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=1iRkvW7vlQc" class="image fit thumb"><img src="images/omega/미드가르즈오름.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=1iRkvW7vlQc" class="image fit thumb"><img src="images/omega/미드가르즈오름.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅) 2층</h3>
 								<p>알파편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=DQCS1KE50go" class="image fit thumb"><img src="images/omega/오메가.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=DQCS1KE50go" class="image fit thumb"><img src="images/omega/오메가.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅) 3층</h3>
 								<p>알파편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=lrQaaYLT1-E" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=lrQaaYLT1-E" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅) 4층 전반</h3>
 								<p>알파편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=ULZ14EOOq_k" class="image fit thumb"><img src="images/omega/오메가파이널.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=ULZ14EOOq_k" class="image fit thumb"><img src="images/omega/오메가파이널.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅) 4층 후반</h3>
 								<p>알파편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

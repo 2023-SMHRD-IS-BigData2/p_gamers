@@ -38,22 +38,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="alex1.jsp" class="image fit thumb"><img src="images/파선생님.jpg" alt="" /></a>
+								<a href="alex1.jsp" class="image fit thumb"><img src="images/파선생님.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 기동편(영웅)</h3>
 								<p>기동편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="alex2.jsp" class="image fit thumb"><img src="images/흉포맨.jpg" alt="" /></a>
+								<a href="alex2.jsp" class="image fit thumb"><img src="images/흉포맨.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 율동편(영웅)</h3>
 								<p>율동편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="alex3.jsp" class="image fit thumb"><img src="images/알렉산더프라임.png" alt="" /></a>
+								<a href="alex3.jsp" class="image fit thumb"><img src="images/알렉산더프라임.png" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 천동편(영웅)</h3>
 								<p>천동편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_4.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="ItemList_4.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>던전별 드롭 아이템</h3>
 								<p>창천의 이슈가르드 던전별 드롭 아이템입니다.</p>
 							</article>

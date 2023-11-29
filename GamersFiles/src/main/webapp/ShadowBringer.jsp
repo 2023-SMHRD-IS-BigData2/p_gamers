@@ -38,22 +38,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden1.jsp" class="image fit thumb"><img src="images/헬창.jpg" alt="" /></a>
+								<a href="eden1.jsp" class="image fit thumb"><img src="images/헬창.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 각성편(영웅)</h3>
 								<p>각성편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden2.jsp" class="image fit thumb"><img src="images/시바바.jpg" alt="" /></a>
+								<a href="eden2.jsp" class="image fit thumb"><img src="images/시바바.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)</h3>
 								<p>공명편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="eden3.jsp" class="image fit thumb"><img src="images/에덴의 약속.png" alt="" /></a>
+								<a href="eden3.jsp" class="image fit thumb"><img src="images/에덴의 약속.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅)</h3>
 								<p>재생편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_2.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="ItemList_2.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>던전별 드롭 아이템</h3>
 								<p>칠흑의 반역자 던전별 드롭 아이템입니다.</p>
 							</article>

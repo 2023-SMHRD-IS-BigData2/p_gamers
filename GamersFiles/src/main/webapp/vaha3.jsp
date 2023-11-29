@@ -38,22 +38,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=VUpR8k0MGpI" class="image fit thumb"><img src="images/vaha/임두구드.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=VUpR8k0MGpI" class="image fit thumb"><img src="images/vaha/임두구드.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 진성편 1층</h3>
 								<p>진성편 1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=dcHDR6UQwQw" class="image fit thumb"><img src="images/vaha/칼리야.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=dcHDR6UQwQw" class="image fit thumb"><img src="images/vaha/칼리야.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 진성편 2층</h3>
 								<p>진성편 2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=hp26PSdB4Xk" class="image fit thumb"><img src="images/vaha/피닉스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=hp26PSdB4Xk" class="image fit thumb"><img src="images/vaha/피닉스.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 진성편 3층</h3>
 								<p>진성편 3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=JTcWs6XkHUA" class="image fit thumb"><img src="images/vaha/바하무트 프라임.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=JTcWs6XkHUA" class="image fit thumb"><img src="images/vaha/바하무트 프라임.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 진성편 4층</h3>
 								<p>진성편 4층의 공략입니다.</p>
 							</article>

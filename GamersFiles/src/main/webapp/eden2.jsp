@@ -38,32 +38,32 @@
 						<h2>Recent Work</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=pSi9oHap1so" class="image fit thumb"><img src="images/eden/뇌신 라무.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=pSi9oHap1so" class="image fit thumb"><img src="images/eden/뇌신 라무.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)1층</h3>
 								<p>공명편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=zd1Q7TfRE8s" class="image fit thumb"><img src="images/eden/가루다,이프리트.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=zd1Q7TfRE8s" class="image fit thumb"><img src="images/eden/가루다,이프리트.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)2층</h3>
 								<p>공명편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=_Y3mkvNSFWA" class="image fit thumb"><img src="images/eden/강습자.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=_Y3mkvNSFWA" class="image fit thumb"><img src="images/eden/강습자.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)3층</h3>
 								<p>공명편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=cfa-HaoJLGU" class="image fit thumb"><img src="images/eden/빙신.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=cfa-HaoJLGU" class="image fit thumb"><img src="images/eden/빙신.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)4층 전반</h3>
 								<p>공명편(영웅)4층 전반의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=U28kszvS_Jo&t=3s" class="image fit thumb"><img src="images/eden/갓랑.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=U28kszvS_Jo&t=3s" class="image fit thumb"><img src="images/eden/갓랑.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 공명편(영웅)4층 후반</h3>
 								<p>공명편(영웅)4층 후반의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="drop4.html" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="drop4.html" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>죄송합니다. 더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

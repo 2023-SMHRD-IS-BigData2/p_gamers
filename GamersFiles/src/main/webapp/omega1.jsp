@@ -38,32 +38,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=XVjkUU_ELBg" class="image fit thumb"><img src="images/omega/알테로이테.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=XVjkUU_ELBg" class="image fit thumb"><img src="images/omega/알테로이테.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅) 1층</h3>
 								<p>델타편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=FZ1wme7oLPo" class="image fit thumb"><img src="images/omega/카타스트로피.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=FZ1wme7oLPo" class="image fit thumb"><img src="images/omega/카타스트로피.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅) 2층</h3>
 								<p>델타편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=cP_OV4ey5tQ" class="image fit thumb"><img src="images/omega/할리카르.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=cP_OV4ey5tQ" class="image fit thumb"><img src="images/omega/할리카르.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅) 3층</h3>
 								<p>재생편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=SDJn8FUN-BE" class="image fit thumb"><img src="images/omega/엑스데스.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=SDJn8FUN-BE" class="image fit thumb"><img src="images/omega/엑스데스.png" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅) 4층 전반</h3>
 								<p>델타편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=3Kx0HOyTv1c" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=3Kx0HOyTv1c" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅) 4층 후반</h3>
 								<p>델타편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

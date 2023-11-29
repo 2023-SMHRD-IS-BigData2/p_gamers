@@ -44,22 +44,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=glyIImpfv3U" class="image fit thumb"><img src="images/alex/재주꾼.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=glyIImpfv3U" class="image fit thumb"><img src="images/alex/재주꾼.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 율동편(영웅) 1층</h3>
 								<p>율동편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=JvkBqlSahXA" class="image fit thumb"><img src="images/alex/폭격자.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=JvkBqlSahXA" class="image fit thumb"><img src="images/alex/폭격자.png" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 율동편(영웅) 2층</h3>
 								<p>율동편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=A7xtTABdkh8" class="image fit thumb"><img src="images/alex/싱크스.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=A7xtTABdkh8" class="image fit thumb"><img src="images/alex/싱크스.png" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 율동편(영웅) 3층</h3>
 								<p>율동편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=q6R57-msX5Q" class="image fit thumb"><img src="images/alex/흉포맨.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=q6R57-msX5Q" class="image fit thumb"><img src="images/alex/흉포맨.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 율동편(영웅) 4층</h3>
 								<p>율동편(영웅)4층의 공략입니다.</p>
 							</article>
