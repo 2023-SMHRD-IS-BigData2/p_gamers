@@ -96,6 +96,10 @@ a:hover {
 	outline: none;
 }
 
+#write_msg textarea{
+	resize: none;
+}
+
 /* submit 버튼 */
 #submit1 {
 	display:inline-block;
