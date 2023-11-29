@@ -24,7 +24,8 @@ body {
 	background-image: url('images/배경던전.jpg');
   	background-size: cover; 
  	background-position: center; 
-  	background-repeat: no-repeat; 
+  	background-repeat: no-repeat;
+  	background-color: #BDBDBD; 
 }
 
 .table-tltle {

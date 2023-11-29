@@ -25,6 +25,7 @@ body {
   	background-size: cover; 
  	background-position: center; 
   	background-repeat: no-repeat; 
+  	background-color: #BDBDBD;
 }
 
 .table-tltle {
