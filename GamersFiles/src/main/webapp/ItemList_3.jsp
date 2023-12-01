@@ -95,34 +95,7 @@ table {
 	<%
 	List<ItemDTO> I_List = new ItemDAO().ItemName7(i_name);
 	%>
-	<%
-	session.setAttribute("i_level", "i_level");
-	%>
-	<%
-	String i_level = (String) session.getAttribute("i_level");
-	%>
-	<%
-	List<ItemDTO> I_lev_List = new ItemDAO().ItemLevel7(i_level);
-	%>
-	<%
-	session.setAttribute("e_level", "e_level");
-	%>
-	<%
-	String e_level = (String) session.getAttribute("e_level");
-	%>
-	<%
-	List<ItemDTO> e_List = new ItemDAO().EquipLevel7(e_level);
-	%>
-	<%
-	session.setAttribute("d_location", "d_location");
-	%>
-	<%
-	String d_location = (String) session.getAttribute("d_location");
-	%>
-	<%
-	List<ItemDTO> D_List = new ItemDAO().DropLocation7(d_location);
-	%>
-
+	
 	<%
 	session.setAttribute("i_name", "i_name");
 	%>
@@ -132,33 +105,7 @@ table {
 	<%
 	List<ItemDTO> I_List2 = new ItemDAO().ItemName8(i_name);
 	%>
-	<%
-	session.setAttribute("i_level", "i_level");
-	%>
-	<%
-	String i_level2 = (String) session.getAttribute("i_level");
-	%>
-	<%
-	List<ItemDTO> I_lev_List2 = new ItemDAO().ItemLevel8(i_level);
-	%>
-	<%
-	session.setAttribute("e_level", "e_level");
-	%>
-	<%
-	String e_level2 = (String) session.getAttribute("e_level");
-	%>
-	<%
-	List<ItemDTO> e_List2 = new ItemDAO().EquipLevel8(e_level);
-	%>
-	<%
-	session.setAttribute("d_location", "d_location");
-	%>
-	<%
-	String d_location2 = (String) session.getAttribute("d_location");
-	%>
-	<%
-	List<ItemDTO> D_List2 = new ItemDAO().DropLocation8(d_location);
-	%>
+	
 
 	<%
 	session.setAttribute("i_name", "i_name");
@@ -169,33 +116,7 @@ table {
 	<%
 	List<ItemDTO> I_List3 = new ItemDAO().ItemName9(i_name);
 	%>
-	<%
-	session.setAttribute("i_level", "i_level");
-	%>
-	<%
-	String i_level3 = (String) session.getAttribute("i_level");
-	%>
-	<%
-	List<ItemDTO> I_lev_List3 = new ItemDAO().ItemLevel9(i_level);
-	%>
-	<%
-	session.setAttribute("e_level", "e_level");
-	%>
-	<%
-	String e_level3 = (String) session.getAttribute("e_level");
-	%>
-	<%
-	List<ItemDTO> e_List3 = new ItemDAO().EquipLevel9(e_level);
-	%>
-	<%
-	session.setAttribute("d_location", "d_location");
-	%>
-	<%
-	String d_location3 = (String) session.getAttribute("d_location");
-	%>
-	<%
-	List<ItemDTO> D_List3 = new ItemDAO().DropLocation9(d_location);
-	%>
+	
 
 	<div class="table-tltle">
 		<h1>홍련의 해방자 아이템 리스트</h1>
