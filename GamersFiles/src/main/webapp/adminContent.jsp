@@ -131,7 +131,7 @@ table#allContent td {
 						<td style="text-align: center;"><%=contents.get(i).getC_content4()%></td>
 						<td style="text-align: center;"><%=contents.get(i).getC_content5()%></td>
 						<td style="text-align: center;"><a
-							href="DelConService.do?c_name=<%=contents.get(i).getC_name()%>"><button>삭제</button></a></td>
+							href="DCService.do?c_name=<%=contents.get(i).getC_name()%>"><button>삭제</button></a></td>
 					</tr>
 					<%
 					}

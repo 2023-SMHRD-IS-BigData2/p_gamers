@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.project.controller.DCService;
 import com.project.controller.DGService;
 import com.project.controller.DMService;
 import com.project.controller.DelMessageService;
@@ -76,6 +77,8 @@ public class FrontController extends HttpServlet {
 			service = new RMDService();
 		} else if (result.equals("/UDMService.do")) {
 			service = new UDMService();
+		} else if (result.equals("/DCService.do")) { // 관리자 컨텐츠 삭제
+			service = new DCService();
 		}
 		url = service.execute(request, response);
 		if (url != null) {
