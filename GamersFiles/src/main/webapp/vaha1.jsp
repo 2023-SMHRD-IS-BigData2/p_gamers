@@ -39,32 +39,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=TAW9rmlROGU&t=211s" class="image fit thumb"><img src="images/vaha/뱀.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=TAW9rmlROGU&t=211s" class="image fit thumb"><img src="images/vaha/뱀.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 해후편 1층</h3>
 								<p>해후편 1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=zD4fb85L5mU" class="image fit thumb"><img src="images/vaha/해후2층.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=zD4fb85L5mU" class="image fit thumb"><img src="images/vaha/해후2층.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 해후편 2층</h3>
 								<p>해후편 2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=DKJYLcKuf6g" class="image fit thumb"><img src="images/vaha/해후3층.webp" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=DKJYLcKuf6g" class="image fit thumb"><img src="images/vaha/해후3층.webp" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 해후편 3층</h3>
 								<p>해후편 3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=eCW8N3n85kg" class="image fit thumb"><img src="images/vaha/해후4층.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=eCW8N3n85kg" class="image fit thumb"><img src="images/vaha/해후4층.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 해후편 4층</h3>
 								<p>해후편 4층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=Hdyhg8A43sQ" class="image fit thumb"><img src="images/vaha/쌍두룡.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=Hdyhg8A43sQ" class="image fit thumb"><img src="images/vaha/쌍두룡.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 해후편 5층</h3>
 								<p>해후편 5층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

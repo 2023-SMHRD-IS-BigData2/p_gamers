@@ -39,22 +39,22 @@
 						<h2>목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=rLiZ6Drv1fs&list=PLILq-5vsSR2pVHZiuRDzBIhfTDF4YphKE" class="image fit thumb"><img src="images/ulti/절 알렉.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=rLiZ6Drv1fs&list=PLILq-5vsSR2pVHZiuRDzBIhfTDF4YphKE" class="image fit thumb"><img src="images/ulti/절 알렉.jpg" alt="" width=400px height=300px/></a>
 								<h3>절 알렉산더 토벌전</h3>
 								<p>절 알렉산더 토벌전의 공략입니다</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=qlwfsaa3f8U&list=PLILq-5vsSR2oAcirjPZjHrKRdRO4gIao6" class="image fit thumb"><img src="images/ulti/절테마.jpg" alt="" /></a>
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=qlwfsaa3f8U&list=PLILq-5vsSR2oAcirjPZjHrKRdRO4gIao6" class="image fit thumb"><img src="images/ulti/절테마.jpg" alt="" width=400px height=300px/></a>
 								<h3>절 알테마 웨폰 토벌전</h3>
 								<p>절 알테마 웨폰의 공략입니다.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=lOh_pBUR8xQ&list=PLILq-5vsSR2rdK1wWc0QvJNJ7bJhsbfA7" class="image fit thumb"><img src="images/ulti/절바하.webp" alt="" /></a>
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=lOh_pBUR8xQ&list=PLILq-5vsSR2rdK1wWc0QvJNJ7bJhsbfA7" class="image fit thumb"><img src="images/ulti/절바하.webp" alt="" width=400px height=300px/></a>
 								<h3>절 바하무트 토벌전</h3>
 								<p>절 바하무트 토벌전의 공략입니다</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+							<article class="col-6 col-12-xsmall work">
+								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>컨텐츠 추가 시 업데이트 예정</p>
 							</article>

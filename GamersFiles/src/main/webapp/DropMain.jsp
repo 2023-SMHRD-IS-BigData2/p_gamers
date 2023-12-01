@@ -37,32 +37,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="RealmReborn.jsp" class="image fit thumb"><img src="images/con_logo1.png" alt="" /></a>
+								<a href="RealmReborn.jsp" class="image fit thumb"><img src="images/con_logo1.png" alt="" width=400px height=300px/></a>
 								<h3>신생 에오르제아</h3>
 								<p>대미궁 바하무트</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="HeavenSword.jsp" class="image fit thumb"><img src="images/con_logo2.png" alt="" /></a>
+								<a href="HeavenSword.jsp" class="image fit thumb"><img src="images/con_logo2.png" alt="" width=400px height=300px/></a>
 								<h3>창천의 이슈가르드</h3>
 								<p>기공성 알렉산더</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="StormBlood.jsp" class="image fit thumb"><img src="images/con_logo3.png" alt="" /></a>
+								<a href="StormBlood.jsp" class="image fit thumb"><img src="images/con_logo3.png" alt="" width=400px height=300px/></a>
 								<h3>홍련의 해방자</h3>
 								<p>차원의 틈 오메가</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ShadowBringer.jsp" class="image fit thumb"><img src="images/con_logo4.png" alt="" /></a>
+								<a href="ShadowBringer.jsp" class="image fit thumb"><img src="images/con_logo4.png" alt="" width=400px height=300px/></a>
 								<h3>칠흑의 반역자</h3>
 								<p>희망의 낙원 에덴</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="EndWalker.jsp" class="image fit thumb"><img src="images/con_logo5.png" alt="" /></a>
+								<a href="EndWalker.jsp" class="image fit thumb"><img src="images/con_logo5.png" alt="" width=400px height=300px/></a>
 								<h3>효월의 종언</h3>
 								<p>마의 전당 판데모니움</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="Ulti.jsp" class="image fit thumb"><img src="images/con_logo6.png" alt="" /></a>
+								<a href="Ulti.jsp" class="image fit thumb"><img src="images/con_logo6.png" alt="" width=400px height=300px/></a>
 								<h3>절 난이도</h3>
 								<p>토벌전 및 검증전</p>
 							</article>

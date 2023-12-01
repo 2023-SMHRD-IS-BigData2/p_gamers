@@ -38,32 +38,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=LsbhG7LaGME" class="image fit thumb"><img src="images/omega/마열차.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=LsbhG7LaGME" class="image fit thumb"><img src="images/omega/마열차.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅) 1층</h3>
 								<p>시그마편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=35wbUKm-68Q" class="image fit thumb"><img src="images/omega/차다르누크.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=35wbUKm-68Q" class="image fit thumb"><img src="images/omega/차다르누크.png" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅) 2층</h3>
 								<p>시그마편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=Y-ig7no2qiM" class="image fit thumb"><img src="images/omega/가디언.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=Y-ig7no2qiM" class="image fit thumb"><img src="images/omega/가디언.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅) 3층</h3>
 								<p>시그마편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=X2kKvRNQZH0" class="image fit thumb"><img src="images/omega/케프카.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=X2kKvRNQZH0" class="image fit thumb"><img src="images/omega/케프카.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅) 4층 전반</h3>
 								<p>시그마편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=EvFQmu_Nbtw" class="image fit thumb"><img src="images/갓프카.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=EvFQmu_Nbtw" class="image fit thumb"><img src="images/갓프카.png" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅) 4층 후반</h3>
 								<p>시그마편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

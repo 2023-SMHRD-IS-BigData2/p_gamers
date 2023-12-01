@@ -37,22 +37,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=axx1EH6glV0" class="image fit thumb"><img src="images/alex/재생자.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=axx1EH6glV0" class="image fit thumb"><img src="images/alex/재생자.png" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 천동편(영웅) 1층</h3>
 								<p>천동편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=BaPy93G_j8Y" class="image fit thumb"><img src="images/alex/레임브릭스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=BaPy93G_j8Y" class="image fit thumb"><img src="images/alex/레임브릭스.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 천동편(영웅) 2층</h3>
 								<p>천동편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://https://www.youtube.com/watch?v=Q6PDH1x8YKI" class="image fit thumb"><img src="images/alex/순항추격기.jpg" alt="" /></a>
+								<a href="https://https://www.youtube.com/watch?v=Q6PDH1x8YKI" class="image fit thumb"><img src="images/alex/순항추격기.jpg" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 천동편(영웅) 3층</h3>
 								<p>천동편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=UyFNMN2FfZA" class="image fit thumb"><img src="images/알렉산더프라임.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=UyFNMN2FfZA" class="image fit thumb"><img src="images/알렉산더프라임.png" alt="" width=400px height=300px/></a>
 								<h3>기공성 알렉산더 : 천동편(영웅) 4층</h3>
 								<p>천동편(영웅)4층의 공략입니다.</p>
 							</article>

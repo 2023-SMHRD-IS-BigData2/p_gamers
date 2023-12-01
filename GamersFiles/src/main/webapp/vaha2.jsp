@@ -38,22 +38,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=LhIHCPi2sGs" class="image fit thumb"><img src="images/vaha/라플레시아.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=LhIHCPi2sGs" class="image fit thumb"><img src="images/vaha/라플레시아.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 침공편 1층</h3>
 								<p>침공편 1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=6mmC5QR4bxQ" class="image fit thumb"><img src="images/vaha/멜뤼진.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=6mmC5QR4bxQ" class="image fit thumb"><img src="images/vaha/멜뤼진.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 침공편 2층</h3>
 								<p>침공편 2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=HM4nw761p04" class="image fit thumb"><img src="images/vaha/아바타.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=HM4nw761p04" class="image fit thumb"><img src="images/vaha/아바타.jpg" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 침공편 3층</h3>
 								<p>침공편 3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=XT1BHGL8xVk" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=XT1BHGL8xVk" class="image fit thumb"><img src="images/넬 데우스 다르누스.png" alt="" width=400px height=300px/></a>
 								<h3>대미궁 바하무트 : 침공편 4층</h3>
 								<p>침공편 4층의 공략입니다.</p>
 							</article>

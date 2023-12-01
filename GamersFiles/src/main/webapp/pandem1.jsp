@@ -37,27 +37,27 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=JjM8JwnUYPg" class="image fit thumb"><img src="images/pandem/에리크토니오스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=JjM8JwnUYPg" class="image fit thumb"><img src="images/pandem/에리크토니오스.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅) 1층</h3>
 								<p>변옥편(영웅)1층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=dUCF01EuehA" class="image fit thumb"><img src="images/pandem/히포캄포스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=dUCF01EuehA" class="image fit thumb"><img src="images/pandem/히포캄포스.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅) 2층</h3>
 								<p>변옥편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=Zu0qREXfEeg" class="image fit thumb"><img src="images/pandem/페넥스.webp" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=Zu0qREXfEeg" class="image fit thumb"><img src="images/pandem/페넥스.webp" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅) 3층</h3>
 								<p>변옥편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=4XfxOtXxNys" class="image fit thumb"><img src="images/pandem/헤스페로스.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=4XfxOtXxNys" class="image fit thumb"><img src="images/pandem/헤스페로스.jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅) 4층 전반</h3>
 								<p>변옥편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=5_JAQ9OdFgE" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=5_JAQ9OdFgE" class="image fit thumb"><img src="images/헤스(영식).jpg" alt="" width=400px height=300px/></a>
 								<h3>마의 전당 판데모니움 : 변옥편(영웅) 4층 후반</h3>
 								<p>변옥편(영웅)4층 후반부의 공략입니다.</p>
 							</article>

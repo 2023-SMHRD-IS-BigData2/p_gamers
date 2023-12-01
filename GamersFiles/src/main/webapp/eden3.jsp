@@ -38,32 +38,32 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=qzMLkSXCtfo" class="image fit thumb"><img src="images/eden/어둠의 구름.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=qzMLkSXCtfo" class="image fit thumb"><img src="images/eden/어둠의 구름.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅) 1층</h3>
 								<p>재생편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=cN_UCvTnJXg" class="image fit thumb"><img src="images/eden/그림자의 왕.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=cN_UCvTnJXg" class="image fit thumb"><img src="images/eden/그림자의 왕.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅) 2층</h3>
 								<p>재생편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=thFweT3mOtM" class="image fit thumb"><img src="images/eden/페이트 브레이커.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=thFweT3mOtM" class="image fit thumb"><img src="images/eden/페이트 브레이커.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅) 3층</h3>
 								<p>재생편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=GJvtEvm89i0" class="image fit thumb"><img src="images/eden/에덴의 약속.png" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=GJvtEvm89i0" class="image fit thumb"><img src="images/eden/에덴의 약속.png" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅) 4층 전반</h3>
 								<p>재생편(영웅)4층 전반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=ud64hH9URrM" class="image fit thumb"><img src="images/eden/어둠무녀.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=ud64hH9URrM" class="image fit thumb"><img src="images/eden/어둠무녀.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 재생편(영웅) 4층 후반</h3>
 								<p>재생편(영웅)4층 후반부의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="##" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>추후 업데이트 예정</h3>
 								<p>더 좋은 모습으로 찾아뵙겠습니다.</p>
 							</article>

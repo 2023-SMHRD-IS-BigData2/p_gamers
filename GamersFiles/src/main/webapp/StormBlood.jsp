@@ -38,22 +38,22 @@
 						<h2>던전 목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega1.jsp" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" /></a>
+								<a href="omega1.jsp" class="image fit thumb"><img src="images/네오_엑스데스.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 델타편(영웅)</h3>
 								<p>델타편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega2.jsp" class="image fit thumb"><img src="images/갓프카.png" alt="" /></a>
+								<a href="omega2.jsp" class="image fit thumb"><img src="images/갓프카.png" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 시그마편(영웅)</h3>
 								<p>시그마편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="omega3.jsp" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" /></a>
+								<a href="omega3.jsp" class="image fit thumb"><img src="images/오메가_영웅.jpg" alt="" width=400px height=300px/></a>
 								<h3>차원의 틈 오메가 : 알파편(영웅)</h3>
 								<p>알파편(영웅) 1~4</p>
 							</article>
 							<article class="col-6 col-12-xsmall work">
-								<a href="ItemList_3.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" /></a>
+								<a href="ItemList_3.jsp" class="image fit thumb"><img src="images/보물고.jpg" alt="" width=400px height=300px/></a>
 								<h3>던전별 드롭 아이템</h3>
 								<p>홍련의 해방자 던전별 드롭 아이템입니다.</p>
 							</article>

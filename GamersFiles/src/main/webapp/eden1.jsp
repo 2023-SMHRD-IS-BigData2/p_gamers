@@ -39,22 +39,22 @@
 						<h2>목록</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work">
-								<a href="https://www.youtube.com/watch?v=CqCOl-Bs8zE" class="image fit thumb"><img src="images/eden/에덴프라임.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=CqCOl-Bs8zE" class="image fit thumb"><img src="images/eden/에덴프라임.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 각성편(영웅)1층</h3>
 								<p>각성편(영웅)1층의 공략입니다</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=-eL9TQSLIdE" class="image fit thumb"><img src="images/eden/보이드 워커.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=-eL9TQSLIdE" class="image fit thumb"><img src="images/eden/보이드 워커.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 각성편(영웅)2층</h3>
 								<p>각성편(영웅)2층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=yik5oqvVP1I" class="image fit thumb"><img src="images/eden/레비아탄.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=yik5oqvVP1I" class="image fit thumb"><img src="images/eden/레비아탄.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 각성편(영웅)3층</h3>
 								<p>각성편(영웅)3층의 공략입니다.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/eden/헬창.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=CSrK7LhAGqw" class="image fit thumb"><img src="images/eden/헬창.jpg" alt="" width=400px height=300px/></a>
 								<h3>희망의 낙원 에덴 : 각성편(영웅)4층</h3>
 								<p>각성편(영웅)4층의 공략입니다.</p>
 							</article>
