@@ -31,7 +31,8 @@
 </br>
 
 ## 3. ERD 설계
-![E-R Diagram](https://github.com/2023-SMHRD-IS-BigData2/p_gamers/assets/145329977/51eb366f-9cb2-4903-9d3e-8910120ab113)
+![E-R Diagram](https://github.com/2023-SMHRD-IS-BigData2/p_gamers/assets/145329977/0dbb59d8-30e6-40af-950c-ae632d2ecc37)
+
 
 
 
