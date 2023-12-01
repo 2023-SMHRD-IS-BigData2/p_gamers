@@ -15,16 +15,18 @@
 #### `Back-end`
   - Java 17
   - Apache Tomcat 9.0
-  - Gradle
-  - Spring Data JPA
-  - QueryDSL
-  - H2
+  - JSP/Servlet
   - Oracle SQL Developer
-  - Spring Security
-  - Jsoup
+  - JavaScript
+  - MyBatis
 #### `Front-end`
-  - Vue.js 3.0
-  - Element UI
+  - JavaScript
+  - CSS
+  - Fullcalendar.api
+  - jQuery
+  - Ajax
+  - json
+  - HTML
 
 </br>
 
