@@ -33,7 +33,7 @@
 
 .update-wrapper>h2 {
 	font-size: 24px;
-	color: black;
+	color: white;
 	margin-bottom: 20px;
 }
 
