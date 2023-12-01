@@ -200,11 +200,11 @@ public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
 
 ## 6. 그 외 트러블 슈팅
 <details>
-<summary>npm run dev 실행 오류</summary>
+<summary>Google Calendar 연동</summary>
 <div markdown="1">
 
-- Webpack-dev-server 버전을 3.0.0으로 다운그레이드로 해결
-- `$ npm install —save-dev webpack-dev-server@3.0.0`
+- Google Calendar 연동에 어려움을 겪어, Fullcalendar.api로 대체해 달력 틀 제공
+- ![image](https://github.com/2023-SMHRD-IS-BigData2/p_gamers/assets/145330168/b3636e87-d505-4ccb-998e-5aec77ed82e3)
 
 </div>
 </details>
