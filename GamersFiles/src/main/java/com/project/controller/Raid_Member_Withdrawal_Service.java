@@ -23,7 +23,7 @@ public class Raid_Member_Withdrawal_Service extends HttpServlet {
 		int row = new GroupDAO().groupOutMember(ug);
 		String url;
 		if (row > 0) {
-			System.out.println("공격대 탈퇴 성공");
+			
 			MemberDTO mdto = new MemberDTO(m_id, m_pw);
 			MemberDTO login = new MemberDAO().selectMember(mdto);
 			HttpSession session = request.getSession();
@@ -31,7 +31,6 @@ public class Raid_Member_Withdrawal_Service extends HttpServlet {
 			System.out.println(login);
 			url = "GamersMain.jsp";
 		} else {
-			System.out.println("공격대 탈퇴 실패");
 			url = "GamersMain.jsp";
 		}
 		response.sendRedirect(url);

@@ -16,11 +16,6 @@ public class Cd_delete_Service extends HttpServlet {
 		
 		int delete = new CalendarDAO().deleteCalendar(num);
 		
-		if(delete>0) {
-			System.out.println("삭제 성공");
-		}else {
-			System.err.println("삭제 실패");
-		}
 		response.sendRedirect("calendar.jsp");
 	
 	
