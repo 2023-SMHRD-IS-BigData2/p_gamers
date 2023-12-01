@@ -11,6 +11,7 @@ public class DelMessageService implements Service{
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("[DelMessageServic.do]");
 		try {
+			System.out.println("[AllMessageDelete]");
 			String M_id = request.getParameter("M_id");
 			int cnt = new DeleteDAO().allDelelteMessage(M_id);
 			if(cnt > 0) {
@@ -21,6 +22,7 @@ public class DelMessageService implements Service{
 		} catch (Exception e) {
 			// TODO: handle exception
 		}try {
+			System.out.println("[MessageDelete]");
 			int e_num = Integer.parseInt(request.getParameter("e_num"));
 			System.out.println(e_num);
 			int cnt = new DeleteDAO().DelelteMessage(e_num);

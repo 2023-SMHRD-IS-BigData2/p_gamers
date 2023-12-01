@@ -14,7 +14,7 @@ public class UDMService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("[DeleteMemberService.do]");
+		System.out.println("[UpdateDeleteMemberService.do]");
 		String m_id = request.getParameter("m_id");
 		String g_name = request.getParameter("g_name");
 		GroupDTO group = new GroupDAO().selectGroup(g_name);

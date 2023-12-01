@@ -11,10 +11,9 @@ public class RMDService implements Service {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("[RaidMemberDeleteService.do]");
 		String m_id = request.getParameter("m_id");
-		
 		int cnt = new MemberDAO().nullGroup(m_id);
-		
 		if (cnt > 0) {
 			System.out.println("추방 완료");
 			HttpSession session = request.getSession();

@@ -71,11 +71,11 @@ public class FrontController extends HttpServlet {
 			service = new MessageService();
 		} else if (result.equals("/IAService.do")) { // 파티 가입 신청
 			service = new IAService();
-		} else if (result.equals("/DelMessageService.do")) {
+		} else if (result.equals("/DelMessageService.do")) { // 메세지 삭제 서비스
 			service = new DelMessageService();
-		} else if (result.equals("/RMDService.do")) {
+		} else if (result.equals("/RMDService.do")) { // 파티원 추방
 			service = new RMDService();
-		} else if (result.equals("/UDMService.do")) {
+		} else if (result.equals("/UDMService.do")) { // 회원 탈퇴
 			service = new UDMService();
 		} else if (result.equals("/DCService.do")) { // 관리자 컨텐츠 삭제
 			service = new DCService();
