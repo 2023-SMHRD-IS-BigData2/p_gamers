@@ -9,6 +9,9 @@ import com.project.model.DeleteDAO;
 public class DelMessageService implements Service{
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		// 본인에게 온 메시지를 전부 삭제하는 서비스
+		
 		System.out.println("[DelMessageServic.do]");
 		try {
 			System.out.println("[AllMessageDelete]");
@@ -21,6 +24,9 @@ public class DelMessageService implements Service{
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			
+		// 삭제버튼을 누른 메시지를 삭제하는 서비스
+			
 		}try {
 			System.out.println("[MessageDelete]");
 			int e_num = Integer.parseInt(request.getParameter("e_num"));

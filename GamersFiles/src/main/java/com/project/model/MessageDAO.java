@@ -29,7 +29,7 @@ public class MessageDAO {
 		return cnt;
 	}
 
-	// 메시지 리스트
+	// 본인에게 온 모든 메시지를 가져오는 메소드
 	public List<MessageDTO> showMessage(String e_recipient) {
 		List<MessageDTO> m_list = sqlSession.selectList("com.project.database.MessageMapper.showMessage", e_recipient);
 		sqlSession.close();
@@ -49,7 +49,7 @@ public class MessageDAO {
 		}
 		return messages;
 	}
-	// 메시지 내용확인
+	// 메시지 상세 내용을 확인하는 메소드
 	public MessageDTO detailMessage(int E_num) {
 		MessageDTO message = null;
 		message = sqlSession.selectOne("com.project.database.MessageMapper.detailMessage", E_num);		
