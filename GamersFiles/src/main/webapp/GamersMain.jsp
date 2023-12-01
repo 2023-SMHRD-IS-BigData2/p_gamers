@@ -24,9 +24,9 @@
 	<%
 	MemberDTO login = (MemberDTO) session.getAttribute("login");
 	if (login != null) {
-		session.setAttribute("g_name", login.getG_name());
-		session.setAttribute("m_nick", login.getM_nick());
-		session.setAttribute("m_id", login.getM_id());
+		session.setAttribute("g_name", login.getG_name()); // 파티명 세션에 저장
+		session.setAttribute("m_nick", login.getM_nick()); // 닉네임 세션에 저장
+		session.setAttribute("m_id", login.getM_id()); // 아이디 세션에 저장
 	}
 	%>
 	<!-- Wrapper -->

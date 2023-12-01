@@ -35,12 +35,6 @@ public class Cd_Insert_Service extends HttpServlet {
 		
 		int insert = new CalendarDAO().insertCalendar(dto);
 		
-		if(insert>0) {
-			System.out.println("캘린더 삽입 성공");
-		}else {
-			System.out.println("캘린더 삽입 실패");
-		}
-		
 		response.sendRedirect("calendar.jsp");
 	}
 

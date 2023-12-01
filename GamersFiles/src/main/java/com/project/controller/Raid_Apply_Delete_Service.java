@@ -30,18 +30,11 @@ public class Raid_Apply_Delete_Service extends HttpServlet {
 		}else if(send_pos.equals("힐러")) {
 			send_pos ="m_heal";
 		}
-		System.out.println("바뀐 포지션"+send_pos);
 		
 		ApplyRaidDTO dto = new ApplyRaidDTO(send_nick, send_pos, rcv_id, g_name);
 		
 		
 		int row2 = new ApplyDAO().applyDelete(dto);
-
-		if(row2 > 0) {
-			System.out.println("요청 메세지 삭제 성공");
-		}else {
-			System.out.println("요청 메세지 삭제 실패");
-		}
 
 		response.sendRedirect("Raid_Admin.jsp");
 		
