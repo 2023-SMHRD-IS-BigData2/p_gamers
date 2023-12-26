@@ -48,7 +48,7 @@
 ### 4.1. 전체 흐름
 ![image](https://github.com/2023-SMHRD-IS-BigData2/p_gamers/assets/145330168/d80b1fa2-1bdf-4e3d-9278-13055e65e94b)
 
-
+</details>
 
 ## 5. 핵심 트러블 슈팅
 
