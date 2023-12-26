@@ -44,14 +44,17 @@
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
-
+</details>
+  
 ### 4.1. 전체 흐름
+<details>
 ![image](https://github.com/2023-SMHRD-IS-BigData2/p_gamers/assets/145330168/d80b1fa2-1bdf-4e3d-9278-13055e65e94b)
 
 </details>
 
 ## 5. 핵심 트러블 슈팅
-
+<details>
+</details>
 
 ## 6. 그 외 트러블 슈팅
 <details>
